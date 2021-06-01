@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurementsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurementsMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetSteamGenerationSystemEnergyOutputMeasurementsMessage" targetNamespace="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurementsWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceiveSteamGenerationSystemEnergyOutputMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurementsMessage" schemaLocation="Message_XSDs/SteamGenerationSystemEnergyOutputMeasurementsMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetSteamGenerationSystemEnergyOutputMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/GetSteamGenerationSystemEnergyOutputMeasurementsMessage" schemaLocation="Message_XSDs/GetSteamGenerationSystemEnergyOutputMeasurementsMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelSteamGenerationSystemEnergyOutputMeasurementsRequestMessage">
+    <wsdl:part name="CancelSteamGenerationSystemEnergyOutputMeasurementsRequestMessage" element="msg1:CancelSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledSteamGenerationSystemEnergyOutputMeasurementsEventMessage">
+    <wsdl:part name="CanceledSteamGenerationSystemEnergyOutputMeasurementsEventMessage" element="msg1:CanceledSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeSteamGenerationSystemEnergyOutputMeasurementsRequestMessage">
+    <wsdl:part name="ChangeSteamGenerationSystemEnergyOutputMeasurementsRequestMessage" element="msg1:ChangeSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedSteamGenerationSystemEnergyOutputMeasurementsEventMessage">
+    <wsdl:part name="ChangedSteamGenerationSystemEnergyOutputMeasurementsEventMessage" element="msg1:ChangedSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CloseSteamGenerationSystemEnergyOutputMeasurementsRequestMessage">
+    <wsdl:part name="CloseSteamGenerationSystemEnergyOutputMeasurementsRequestMessage" element="msg1:CloseSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedSteamGenerationSystemEnergyOutputMeasurementsEventMessage">
+    <wsdl:part name="ClosedSteamGenerationSystemEnergyOutputMeasurementsEventMessage" element="msg1:ClosedSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreateSteamGenerationSystemEnergyOutputMeasurementsRequestMessage">
+    <wsdl:part name="CreateSteamGenerationSystemEnergyOutputMeasurementsRequestMessage" element="msg1:CreateSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedSteamGenerationSystemEnergyOutputMeasurementsEventMessage">
+    <wsdl:part name="CreatedSteamGenerationSystemEnergyOutputMeasurementsEventMessage" element="msg1:CreatedSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteSteamGenerationSystemEnergyOutputMeasurementsRequestMessage">
+    <wsdl:part name="DeleteSteamGenerationSystemEnergyOutputMeasurementsRequestMessage" element="msg1:DeleteSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedSteamGenerationSystemEnergyOutputMeasurementsEventMessage">
+    <wsdl:part name="DeletedSteamGenerationSystemEnergyOutputMeasurementsEventMessage" element="msg1:DeletedSteamGenerationSystemEnergyOutputMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="GetSteamGenerationSystemEnergyOutputMeasurementsRequestMessage">
+    <wsdl:part name="GetSteamGenerationSystemEnergyOutputMeasurementsRequestMessage" element="msg1:SteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetSteamGenerationSystemEnergyOutputMeasurementsResponseMessage">
+    <wsdl:part name="GetSteamGenerationSystemEnergyOutputMeasurementsResponseMessage" element="msg1:SteamGenerationSystemEnergyOutputMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:SteamGenerationSystemEnergyOutputMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:SteamGenerationSystemEnergyOutputMeasurementsFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="SteamGenerationSystemEnergyOutputMeasurements_Port">
+    <wsdl:operation name="CancelSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="CancelSteamGenerationSystemEnergyOutputMeasurementsRequest" message="tns:CancelSteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+      <wsdl:output name="CancelSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="CanceledSteamGenerationSystemEnergyOutputMeasurementsEvent" message="tns:CanceledSteamGenerationSystemEnergyOutputMeasurementsEventMessage"/>
+      <wsdl:output name="CanceledSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="ChangeSteamGenerationSystemEnergyOutputMeasurementsRequest" message="tns:ChangeSteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+      <wsdl:output name="ChangeSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="ChangedSteamGenerationSystemEnergyOutputMeasurementsEvent" message="tns:ChangedSteamGenerationSystemEnergyOutputMeasurementsEventMessage"/>
+      <wsdl:output name="ChangedSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="CloseSteamGenerationSystemEnergyOutputMeasurementsRequest" message="tns:CloseSteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+      <wsdl:output name="CloseSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="ClosedSteamGenerationSystemEnergyOutputMeasurementsEvent" message="tns:ClosedSteamGenerationSystemEnergyOutputMeasurementsEventMessage"/>
+      <wsdl:output name="ClosedSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="DeleteSteamGenerationSystemEnergyOutputMeasurementsRequest" message="tns:DeleteSteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+      <wsdl:output name="DeleteSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="DeletedSteamGenerationSystemEnergyOutputMeasurementsEvent" message="tns:DeletedSteamGenerationSystemEnergyOutputMeasurementsEventMessage"/>
+      <wsdl:output name="DeletedSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="CreateSteamGenerationSystemEnergyOutputMeasurementsRequest" message="tns:CreateSteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+      <wsdl:output name="CreateSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="CreatedSteamGenerationSystemEnergyOutputMeasurementsEvent" message="tns:CreatedSteamGenerationSystemEnergyOutputMeasurementsEventMessage"/>
+      <wsdl:output name="CreatedSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="GetSteamGenerationSystemEnergyOutputMeasurementsRequest" message="tns:GetSteamGenerationSystemEnergyOutputMeasurementsRequestMessage"/>
+      <wsdl:output name="GetSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:GetSteamGenerationSystemEnergyOutputMeasurementsResponseMessage"/>
+      <wsdl:fault name="GetSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSteamGenerationSystemEnergyOutputMeasurements">
+      <wsdl:input name="ResponseSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseSteamGenerationSystemEnergyOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseSteamGenerationSystemEnergyOutputMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SteamGenerationSystemEnergyOutputMeasurements_Binding" type="tns:SteamGenerationSystemEnergyOutputMeasurements_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/CancelSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="CancelSteamGenerationSystemEnergyOutputMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="CancelSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/CanceledSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="CanceledSteamGenerationSystemEnergyOutputMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="CanceledSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/ChangeSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="ChangeSteamGenerationSystemEnergyOutputMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="ChangeSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/ChangedSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="ChangedSteamGenerationSystemEnergyOutputMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="ChangedSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/CloseSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="CloseSteamGenerationSystemEnergyOutputMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="CloseSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/ClosedSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="ClosedSteamGenerationSystemEnergyOutputMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="ClosedSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/CreateSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="CreateSteamGenerationSystemEnergyOutputMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="CreateSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/CreatedSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="CreatedSteamGenerationSystemEnergyOutputMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="CreatedSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/DeleteSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="DeleteSteamGenerationSystemEnergyOutputMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="DeleteSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/DeletedSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="DeletedSteamGenerationSystemEnergyOutputMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="DeletedSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetSteamGenerationSystemEnergyOutputMeasurements/GetSteamGenerationSystemEnergyOutputMeasurements" style="document"/>
+      <wsdl:input name="GetSteamGenerationSystemEnergyOutputMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="GetSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSteamGenerationSystemEnergyOutputMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements/ResponseSteamGenerationSystemEnergyOutputMeasurementsResponse" style="document"/>
+      <wsdl:input name="ResponseSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseSteamGenerationSystemEnergyOutputMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseSteamGenerationSystemEnergyOutputMeasurementsFault">
+        <soap:fault name="ResponseSteamGenerationSystemEnergyOutputMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveSteamGenerationSystemEnergyOutputMeasurements">
+    <wsdl:port name="SteamGenerationSystemEnergyOutputMeasurements_Port" binding="tns:SteamGenerationSystemEnergyOutputMeasurements_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:CreateSteamGenerationSystemEnergyOutputMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurementsMessage" xsi:schemaLocation="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurementsMessage ../WSDLs/Message_XSDs/SteamGenerationSystemEnergyOutputMeasurementsMessage.xsd">
+  <tns:Header xmlns="http://iec.ch/TC57/2011/schema/message">
+    <Verb>create</Verb>
+    <Noun>SteamGenerationSystemEnergyOutputMeasurements</Noun>
+    <Timestamp>2019-11-23T23:44:03.569-05:00</Timestamp>
+    <MessageID>f564d213-7371-44a4-8caf-56ed8718e573</MessageID>
+    <CorrelationID>ce98410f-ccc2-4ae6-89ce-15d84ca02b80</CorrelationID>
+    <Comment>Sample IEC 61968-100 ed.1 create(SteamGenerationSystemEnergyOutputMeasurements) message</Comment>
+  </tns:Header>
+  <tns:Payload>
+    <SteamGenerationSystemEnergyOutputMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements#" xsi:schemaLocation="http://epri.com/powergeneration/2020/SteamGenerationSystemEnergyOutputMeasurements# ../WSDLs/XSDs/SteamGenerationSystemEnergyOutputMeasurements.xsd">
+      <GenerationUnit>
+        <mRID>9533a553-aee6-409e-b6a9-36d6ad37d52b</mRID>
+        <Analog>
+          <mRID>ae7ad1e5-13c2-4eab-a605-92c31bc0affd</mRID>
+          <measurementType>ThermalPower</measurementType>
+          <unitMultiplier>M</unitMultiplier>
+          <unitSymbol>BtuPerh</unitSymbol>
+          <MeasurementPoint>
+            <mRID>22f2b545-6320-4b3a-8fd0-24616361c9bb</mRID>
+            <Names>
+              <name>Turbine Throttle Valve Output</name>
+              <NameType>
+                <name>MeasurementPointName</name>
+              </NameType>
+            </Names>
+          </MeasurementPoint>
+          <AnalogValues>
+            <mRID>e2ece8fb-abb4-47b5-a8d1-49d3fd3a625b</mRID>
+            <timeStamp>2019-11-23T22:44:03.569-05:00</timeStamp>
+            <value>3200</value>
+            <MeasurementValueSource>
+              <name>Calculation</name>
+            </MeasurementValueSource>
+          </AnalogValues>
+          <Names>
+            <name>DCS-4125</name>
+            <NameType>
+              <name>DCSHistorianIdentification</name>
+            </NameType>
+          </Names>
+        </Analog>
+        <Names>
+          <name>Palo Verde 1</name>
+          <NameType>
+            <name>UnitID</name>
+          </NameType>
+        </Names>
+      </GenerationUnit>
+    </SteamGenerationSystemEnergyOutputMeasurements>
+  </tns:Payload>
+</tns:CreateSteamGenerationSystemEnergyOutputMeasurements>

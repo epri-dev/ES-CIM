@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:CreateGrossGeneratorActivePowerOutputMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://epri.com/powergeneration/2020/GrossGeneratorActivePowerOutputMeasurementsMessage" xsi:schemaLocation="http://epri.com/powergeneration/2020/GrossGeneratorActivePowerOutputMeasurementsMessage ../WSDLs/Message_XSDs/GrossGeneratorActivePowerOutputMeasurementsMessage.xsd">
+  <tns:Header xmlns="http://iec.ch/TC57/2011/schema/message">
+    <Verb>create</Verb>
+    <Noun>GrossGeneratorActivePowerOutputMeasurements</Noun>
+    <Timestamp>2019-11-23T23:44:03.569-05:00</Timestamp>
+    <MessageID>e4e27d92-b8bc-4320-8db2-678e88ee3a3f</MessageID>
+    <CorrelationID>7346e8d7-59b8-42f3-85f4-81a225cc6bdb</CorrelationID>
+    <Comment>Sample IEC 61968-100 ed.1 create(GrossGeneratorActivePowerOutputMeasurements) message</Comment>
+  </tns:Header>
+  <tns:Payload>
+    <GrossGeneratorActivePowerOutputMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://epri.com/powergeneration/2020/GrossGeneratorActivePowerOutputMeasurements#" xsi:schemaLocation="http://epri.com/powergeneration/2020/GrossGeneratorActivePowerOutputMeasurements# ../WSDLs/XSDs/GrossGeneratorActivePowerOutputMeasurements.xsd">
+      <GenerationUnit>
+        <mRID>9533a553-aee6-409e-b6a9-36d6ad37d52b</mRID>
+        <Analog>
+          <mRID>37e1fb1c-e427-41fb-b36b-a725762e36fc</mRID>
+          <measurementType>ActivePower</measurementType>
+          <unitMultiplier>M</unitMultiplier>
+          <unitSymbol>W</unitSymbol>
+          <MeasurementPoint>
+            <mRID>a61503a3-2232-40c6-8cb6-62724483bd60</mRID>
+            <Names>
+              <name>Electric Generator Output</name>
+              <NameType>
+                <name>MeasurementPointName</name>
+              </NameType>
+            </Names>
+          </MeasurementPoint>
+          <AnalogValues>
+            <mRID>579244ed-df85-418d-af53-1212ff2dc519</mRID>
+            <timeStamp>2019-11-23T22:44:03.569-05:00</timeStamp>
+            <value>875</value>
+            <MeasurementValueSource>
+              <name>Measurement</name>
+            </MeasurementValueSource>
+          </AnalogValues>
+          <Names>
+            <name>DCS-423</name>
+            <NameType>
+              <name>DCSHistorianIdentification</name>
+            </NameType>
+          </Names>
+        </Analog>
+        <Names>
+          <name>Palo Verde 1</name>
+          <NameType>
+            <name>UnitID</name>
+          </NameType>
+        </Names>
+      </GenerationUnit>
+    </GrossGeneratorActivePowerOutputMeasurements>
+  </tns:Payload>
+</tns:CreateGrossGeneratorActivePowerOutputMeasurements>

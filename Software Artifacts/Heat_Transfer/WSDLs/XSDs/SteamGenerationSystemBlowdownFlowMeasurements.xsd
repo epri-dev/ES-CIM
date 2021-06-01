@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:m="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements#" targetNamespace="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="SteamGenerationSystemBlowdownFlowMeasurements" type="m:SteamGenerationSystemBlowdownFlowMeasurements"/>
+	<xs:complexType name="SteamGenerationSystemBlowdownFlowMeasurements">
+		<xs:sequence>
+			<xs:element name="GenerationUnit" type="m:GenerationUnit" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Accumulator" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Accumulator">
+		<xs:annotation>
+			<xs:documentation>Accumulator represents an accumulated (counted) Measurement, e.g. an energy value.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="measurementType" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.measurementType">
+				<xs:annotation>
+					<xs:documentation>Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.</xs:documentation>
+					<xs:documentation>When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uncefactUnitCode" minOccurs="0" maxOccurs="1" type="m:UncefactUnitCode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.uncefactUnitCode">
+				<xs:annotation>
+					<xs:documentation>Contains a string value for units and multipliers from a list maintained by UN/CEFACT and described in recommendation No. 20, "Codes for Units of Measure Used in International Trade". Refer to the UN/CEFACT recommendation for details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitMultiplier" minOccurs="0" maxOccurs="1" type="m:UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitMultiplier">
+				<xs:annotation>
+					<xs:documentation>The unit multiplier of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitSymbol" minOccurs="0" maxOccurs="1" type="m:UnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitSymbol">
+				<xs:annotation>
+					<xs:documentation>The unit of measure of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asset" minOccurs="0" maxOccurs="1" type="m:Asset" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Asset"/>
+			<xs:element name="Equipment" minOccurs="0" maxOccurs="1" type="m:Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Equipment"/>
+			<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="1" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.MeasurementPoint"/>
+			<xs:element name="System" minOccurs="0" maxOccurs="1" type="m:System" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.System"/>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccumulatorValues" minOccurs="0" maxOccurs="unbounded" type="m:AccumulatorValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Accumulator.AccumulatorValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AccumulatorValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AccumulatorValue">
+		<xs:annotation>
+			<xs:documentation>AccumulatorValue represents an accumulated (counted) MeasurementValue.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" minOccurs="0" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AccumulatorValue.value">
+				<xs:annotation>
+					<xs:documentation>The value to supervise. The value is positive.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasurementValueSource" minOccurs="0" maxOccurs="1" type="m:MeasurementValueSource" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.MeasurementValueSource">
+				<xs:annotation>
+					<xs:documentation>A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Analog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog">
+		<xs:annotation>
+			<xs:documentation>Analog represents an analog Measurement.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="measurementType" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.measurementType">
+				<xs:annotation>
+					<xs:documentation>Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.</xs:documentation>
+					<xs:documentation>When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uncefactUnitCode" minOccurs="0" maxOccurs="1" type="m:UncefactUnitCode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.uncefactUnitCode">
+				<xs:annotation>
+					<xs:documentation>Contains a string value for units and multipliers from a list maintained by UN/CEFACT and described in recommendation No. 20, "Codes for Units of Measure Used in International Trade". Refer to the UN/CEFACT recommendation for details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitMultiplier" minOccurs="0" maxOccurs="1" type="m:UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitMultiplier">
+				<xs:annotation>
+					<xs:documentation>The unit multiplier of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitSymbol" minOccurs="0" maxOccurs="1" type="m:UnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitSymbol">
+				<xs:annotation>
+					<xs:documentation>The unit of measure of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asset" minOccurs="0" maxOccurs="1" type="m:Asset" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Asset"/>
+			<xs:element name="Equipment" minOccurs="0" maxOccurs="1" type="m:Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Equipment"/>
+			<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="1" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.MeasurementPoint"/>
+			<xs:element name="System" minOccurs="0" maxOccurs="1" type="m:System" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.System"/>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AnalogValues" minOccurs="0" maxOccurs="unbounded" type="m:AnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValue">
+		<xs:annotation>
+			<xs:documentation>AnalogValue represents an analog MeasurementValue.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sensorAccuracy" minOccurs="0" maxOccurs="1" type="m:PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.sensorAccuracy">
+				<xs:annotation>
+					<xs:documentation>The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeStamp" minOccurs="0" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.timeStamp">
+				<xs:annotation>
+					<xs:documentation>The time when the value was last updated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValue.value">
+				<xs:annotation>
+					<xs:documentation>The value to supervise.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasurementValueSource" minOccurs="0" maxOccurs="1" type="m:MeasurementValueSource" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.MeasurementValueSource">
+				<xs:annotation>
+					<xs:documentation>A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Asset" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Asset">
+		<xs:annotation>
+			<xs:documentation>Tangible resource of the utility, including power system equipment, various end devices, cabinets, buildings, etc. For electrical network equipment, the role of the asset is defined through PowerSystemResource and its subclasses, defined mainly in the Wires model (refer to IEC61970-301 and model package IEC61970::Wires). Asset description places emphasis on the physical characteristics of the equipment fulfilling that role.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Discrete" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Discrete">
+		<xs:annotation>
+			<xs:documentation>Discrete represents a discrete Measurement, i.e. a Measurement representing discrete values, e.g. a Breaker position.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="measurementType" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.measurementType">
+				<xs:annotation>
+					<xs:documentation>Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.</xs:documentation>
+					<xs:documentation>When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uncefactUnitCode" minOccurs="0" maxOccurs="1" type="m:UncefactUnitCode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.uncefactUnitCode">
+				<xs:annotation>
+					<xs:documentation>Contains a string value for units and multipliers from a list maintained by UN/CEFACT and described in recommendation No. 20, "Codes for Units of Measure Used in International Trade". Refer to the UN/CEFACT recommendation for details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitMultiplier" minOccurs="0" maxOccurs="1" type="m:UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitMultiplier">
+				<xs:annotation>
+					<xs:documentation>The unit multiplier of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitSymbol" minOccurs="0" maxOccurs="1" type="m:UnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitSymbol">
+				<xs:annotation>
+					<xs:documentation>The unit of measure of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asset" minOccurs="0" maxOccurs="1" type="m:Asset" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Asset"/>
+			<xs:element name="Equipment" minOccurs="0" maxOccurs="1" type="m:Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Equipment"/>
+			<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="1" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.MeasurementPoint"/>
+			<xs:element name="System" minOccurs="0" maxOccurs="1" type="m:System" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.System"/>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DiscreteValues" minOccurs="0" maxOccurs="unbounded" type="m:DiscreteValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Discrete.DiscreteValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DiscreteValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DiscreteValue">
+		<xs:annotation>
+			<xs:documentation>DiscreteValue represents a discrete MeasurementValue.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sensorAccuracy" minOccurs="0" maxOccurs="1" type="m:PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.sensorAccuracy">
+				<xs:annotation>
+					<xs:documentation>The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeStamp" minOccurs="0" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.timeStamp">
+				<xs:annotation>
+					<xs:documentation>The time when the value was last updated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" minOccurs="0" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DiscreteValue.value">
+				<xs:annotation>
+					<xs:documentation>The value to supervise.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasurementValueSource" minOccurs="0" maxOccurs="1" type="m:MeasurementValueSource" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.MeasurementValueSource">
+				<xs:annotation>
+					<xs:documentation>A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Equipment">
+		<xs:annotation>
+			<xs:documentation>The parts of a power system that are physical devices, electronic or mechanical.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GenerationStation" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#GenerationStation">
+		<xs:annotation>
+			<xs:documentation>A facility containing one or more generating units</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="unbounded" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Asset.MeasurementPoint"/>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GenerationUnit" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#GenerationUnit">
+		<xs:annotation>
+			<xs:documentation>A generation unit is a collection of equipment within a generation station that converts a fuel source into electrical power.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PowerSystemResource.Measurement" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The measurements associated with this power system resource.</xs:documentation>
+				</xs:annotation>
+				<xs:element name="StringMeasurement" type="m:StringMeasurement" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#StringMeasurement"/>
+				<xs:element name="Accumulator" type="m:Accumulator" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Accumulator"/>
+				<xs:element name="Discrete" type="m:Discrete" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Discrete"/>
+				<xs:element name="Analog" type="m:Analog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog"/>
+			</xs:choice>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenerationStation" minOccurs="0" maxOccurs="1" type="m:GenerationStation" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#GenerationUnit.GenerationStation">
+				<xs:annotation>
+					<xs:documentation>The generating units belonging to this generating station</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Measurement" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement">
+		<xs:annotation>
+			<xs:documentation>A Measurement represents any measured, calculated or non-measured non-calculated quantity. Any piece of equipment may contain Measurements, e.g. a substation may have temperature measurements and door open indications, a transformer may have oil temperature and tank pressure measurements, a bay may contain a number of power flow measurements and a Breaker may contain a switch status measurement. </xs:documentation>
+			<xs:documentation>The PSR - Measurement association is intended to capture this use of Measurement and is included in the naming hierarchy based on EquipmentContainer. The naming hierarchy typically has Measurements as leaves, e.g. Substation-VoltageLevel-Bay-Switch-Measurement.</xs:documentation>
+			<xs:documentation>Some Measurements represent quantities related to a particular sensor location in the network, e.g. a voltage transformer (VT) or potential transformer (PT) at a busbar or a current transformer (CT) at the bar between a breaker and an isolator. The sensing position is not captured in the PSR - Measurement association. Instead it is captured by the Measurement - Terminal association that is used to define the sensing location in the network topology. The location is defined by the connection of the Terminal to ConductingEquipment. </xs:documentation>
+			<xs:documentation>If both a Terminal and PSR are associated, and the PSR is of type ConductingEquipment, the associated Terminal should belong to that ConductingEquipment instance.</xs:documentation>
+			<xs:documentation>When the sensor location is needed both Measurement-PSR and Measurement-Terminal are used. The Measurement-Terminal association is never used alone.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asset" minOccurs="0" maxOccurs="1" type="m:Asset" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Asset"/>
+			<xs:element name="Equipment" minOccurs="0" maxOccurs="1" type="m:Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Equipment"/>
+			<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="1" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.MeasurementPoint"/>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="System" minOccurs="0" maxOccurs="1" type="m:System" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.System"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementPoint">
+		<xs:annotation>
+			<xs:documentation>The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeasurementValueSource" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValueSource">
+		<xs:annotation>
+			<xs:documentation>MeasurementValueSource describes the alternative sources updating a MeasurementValue. User conventions for how to use the MeasurementValueSource attributes are defined in IEC 61970-301.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name">
+		<xs:annotation>
+			<xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b&gt;not&lt;/b&gt; to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.name">
+				<xs:annotation>
+					<xs:documentation>Any free text that name the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NameType" minOccurs="1" maxOccurs="1" type="m:NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.NameType">
+				<xs:annotation>
+					<xs:documentation>Type of this name.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType">
+		<xs:annotation>
+			<xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:</xs:documentation>
+			<xs:documentation>The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.description">
+				<xs:annotation>
+					<xs:documentation>Description of the name type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.name">
+				<xs:annotation>
+					<xs:documentation>Name of the name type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NameTypeAuthority" minOccurs="0" maxOccurs="1" type="m:NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.NameTypeAuthority">
+				<xs:annotation>
+					<xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority">
+		<xs:annotation>
+			<xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.description">
+				<xs:annotation>
+					<xs:documentation>Description of the name type authority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.name">
+				<xs:annotation>
+					<xs:documentation>Name of the name type authority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PerCent">
+		<xs:annotation>
+			<xs:documentation>Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:float"/>
+	</xs:simpleType>
+	<xs:complexType name="PowerSystemResource" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PowerSystemResource">
+		<xs:annotation>
+			<xs:documentation>A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="StringMeasurement" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#StringMeasurement">
+		<xs:annotation>
+			<xs:documentation>StringMeasurement represents a measurement with values of type string.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="measurementType" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.measurementType">
+				<xs:annotation>
+					<xs:documentation>Specifies the type of measurement.  For example, this specifies if the measurement represents an indoor temperature, outdoor temperature, bus voltage, line flow, etc.</xs:documentation>
+					<xs:documentation>When the measurementType is set to "Specialization", the type of Measurement is defined in more detail by the specialized class which inherits from Measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uncefactUnitCode" minOccurs="0" maxOccurs="1" type="m:UncefactUnitCode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.uncefactUnitCode">
+				<xs:annotation>
+					<xs:documentation>Contains a string value for units and multipliers from a list maintained by UN/CEFACT and described in recommendation No. 20, "Codes for Units of Measure Used in International Trade". Refer to the UN/CEFACT recommendation for details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitMultiplier" minOccurs="0" maxOccurs="1" type="m:UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitMultiplier">
+				<xs:annotation>
+					<xs:documentation>The unit multiplier of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitSymbol" minOccurs="0" maxOccurs="1" type="m:UnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.unitSymbol">
+				<xs:annotation>
+					<xs:documentation>The unit of measure of the measured quantity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asset" minOccurs="0" maxOccurs="1" type="m:Asset" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Asset"/>
+			<xs:element name="Equipment" minOccurs="0" maxOccurs="1" type="m:Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.Equipment"/>
+			<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="1" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.MeasurementPoint"/>
+			<xs:element name="System" minOccurs="0" maxOccurs="1" type="m:System" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement.System"/>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StringMeasurementValues" minOccurs="0" maxOccurs="unbounded" type="m:StringMeasurementValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#StringMeasurement.StringMeasurementValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StringMeasurementValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#StringMeasurementValue">
+		<xs:annotation>
+			<xs:documentation>StringMeasurementValue represents a measurement value of type string.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sensorAccuracy" minOccurs="0" maxOccurs="1" type="m:PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.sensorAccuracy">
+				<xs:annotation>
+					<xs:documentation>The limit, expressed as a percentage of the sensor maximum, that errors will not exceed when the sensor is used under  reference conditions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeStamp" minOccurs="0" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.timeStamp">
+				<xs:annotation>
+					<xs:documentation>The time when the value was last updated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#StringMeasurementValue.value">
+				<xs:annotation>
+					<xs:documentation>The value to supervise.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasurementValueSource" minOccurs="0" maxOccurs="1" type="m:MeasurementValueSource" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.MeasurementValueSource">
+				<xs:annotation>
+					<xs:documentation>A reference to the type of source that updates the MeasurementValue, e.g. SCADA, CCLink, manual, etc. User conventions for the names of sources are contained in the introduction to IEC 61970-301.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="System" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#System">
+		<xs:annotation>
+			<xs:documentation>A collection of things (e.g., equipment) within a generation unit that work together to perform a function.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+					<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.description">
+				<xs:annotation>
+					<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="UncefactUnitCode" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UncefactUnitCode">
+		<xs:annotation>
+			<xs:documentation>Contains a string value for units and multipliers from a list maintained by UN/CEFACT and described in recommendation No. 20, "Codes for Units of Measure Used in International Trade". Refer to the UN/CEFACT recommendation for details.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier">
+		<xs:annotation>
+			<xs:documentation>The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. </xs:documentation>
+			<xs:documentation>For example, if a unit symbol is "m2Pers" and the multiplier is "k", then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol "Þ" represents the derived unit "m2Pers", then applying the multiplier "k" can be conceptualized simply as "kÞ".</xs:documentation>
+			<xs:documentation>For example, the SI unit for mass is "kg" and not "g".  If the unit symbol is defined as "kg", then the multiplier is applied to "kg" as a whole and does not replace the "k" in front of the "g". In this case, the multiplier of "m" would be used with the unit symbol of "kg" to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the "kg" as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the "kg" were replaced by a symbol "Þ", then it is easier to conceptualize the multiplier "m" as creating the proper unit "mÞ", and not the forbidden unit "mkg".</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="E" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.E">
+				<xs:annotation>
+					<xs:documentation>Exa 10**18.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="G" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.G">
+				<xs:annotation>
+					<xs:documentation>Giga 10**9.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.M">
+				<xs:annotation>
+					<xs:documentation>Mega 10**6.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="P" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.P">
+				<xs:annotation>
+					<xs:documentation>Peta 10**15.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="T" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.T">
+				<xs:annotation>
+					<xs:documentation>Tera 10**12.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Y" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.Y">
+				<xs:annotation>
+					<xs:documentation>Yotta 10**24.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Z" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.Z">
+				<xs:annotation>
+					<xs:documentation>Zetta 10**21.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="a" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.a">
+				<xs:annotation>
+					<xs:documentation>Atto 10**-18.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="c" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.c">
+				<xs:annotation>
+					<xs:documentation>Centi 10**-2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="d" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.d">
+				<xs:annotation>
+					<xs:documentation>Deci 10**-1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="da" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.da">
+				<xs:annotation>
+					<xs:documentation>Deca 10**1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="f" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.f">
+				<xs:annotation>
+					<xs:documentation>Femto 10**-15.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="h" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.h">
+				<xs:annotation>
+					<xs:documentation>Hecto 10**2.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="k" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.k">
+				<xs:annotation>
+					<xs:documentation>Kilo 10**3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.m">
+				<xs:annotation>
+					<xs:documentation>Milli 10**-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="micro" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.micro">
+				<xs:annotation>
+					<xs:documentation>Micro 10**-6.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="n" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.n">
+				<xs:annotation>
+					<xs:documentation>Nano 10**-9.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.none">
+				<xs:annotation>
+					<xs:documentation>No multiplier or equivalently multiply by 1.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="p" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.p">
+				<xs:annotation>
+					<xs:documentation>Pico 10**-12.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="y" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.y">
+				<xs:annotation>
+					<xs:documentation>Yocto 10**-24.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="z" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier.z">
+				<xs:annotation>
+					<xs:documentation>Zepto 10**-21.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol">
+		<xs:annotation>
+			<xs:documentation>The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as "F" instead of "CPerV". In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as "kgPerm3". With the exception of the "kg", which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. </xs:documentation>
+			<xs:documentation>Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.</xs:documentation>
+			<xs:documentation>To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol "/" is replaced by the letters "Per". Exponents are written in plain text after the unit as "m3" instead of being formatted as in "m&lt;sup&gt;3&lt;/sup&gt;" or introducing a symbol as in "m^3". The degree symbol "°" is replaced with the letters "deg". Any clarification of the meaning for a substitution is included in the description for the unit symbol.</xs:documentation>
+			<xs:documentation>Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.A">
+				<xs:annotation>
+					<xs:documentation>Current in amperes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="A2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.A2">
+				<xs:annotation>
+					<xs:documentation>Amperes squared (A²).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="A2h" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.A2h">
+				<xs:annotation>
+					<xs:documentation>Ampere-squared hour, ampere-squared hour.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="A2s" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.A2s">
+				<xs:annotation>
+					<xs:documentation>Ampere squared time in square amperes (A²s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="APerA" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.APerA">
+				<xs:annotation>
+					<xs:documentation>Current, ratio of amperages.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mA/A’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="APerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.APerm">
+				<xs:annotation>
+					<xs:documentation>A/m, magnetic field strength, amperes per metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ah" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Ah">
+				<xs:annotation>
+					<xs:documentation>Ampere-hours, ampere-hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="As" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.As">
+				<xs:annotation>
+					<xs:documentation>Ampere seconds (A·s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Bq" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Bq">
+				<xs:annotation>
+					<xs:documentation>Radioactivity in becquerels (1/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Btu" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Btu">
+				<xs:annotation>
+					<xs:documentation>Energy, British Thermal Units.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BtuPerh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.BtuPerh">
+				<xs:annotation>
+					<xs:documentation>British Thermal Units per hour</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.C">
+				<xs:annotation>
+					<xs:documentation>Electric charge in coulombs (A·s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CPerkg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.CPerkg">
+				<xs:annotation>
+					<xs:documentation>Exposure (x rays), coulombs per kilogram.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CPerm2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.CPerm2">
+				<xs:annotation>
+					<xs:documentation>Surface charge density, coulombs per square metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CPerm3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.CPerm3">
+				<xs:annotation>
+					<xs:documentation>Electric charge density, coulombs per cubic metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ci" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Ci">
+				<xs:annotation>
+					<xs:documentation>Curie, unit of radioactivity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CiPerl" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.CiPerl">
+				<xs:annotation>
+					<xs:documentation>Curies per litre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="F" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.F">
+				<xs:annotation>
+					<xs:documentation>Electric capacitance in farads (C/V).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FPerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.FPerm">
+				<xs:annotation>
+					<xs:documentation>Permittivity, farads per metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="G" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.G">
+				<xs:annotation>
+					<xs:documentation>Magnetic flux density, gausses (1 G = 10-4 T).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Gy" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Gy">
+				<xs:annotation>
+					<xs:documentation>Absorbed dose in grays (J/kg).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GyPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.GyPers">
+				<xs:annotation>
+					<xs:documentation>Absorbed dose rate, grays per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="H" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.H">
+				<xs:annotation>
+					<xs:documentation>Electric inductance in henrys (Wb/A).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HPerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.HPerm">
+				<xs:annotation>
+					<xs:documentation>Permeability, henrys per metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Hz" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Hz">
+				<xs:annotation>
+					<xs:documentation>Frequency in hertz (1/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HzPerHz" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.HzPerHz">
+				<xs:annotation>
+					<xs:documentation>Frequency, rate of frequency change.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mHz/Hz’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HzPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.HzPers">
+				<xs:annotation>
+					<xs:documentation>Rate of change of frequency in hertz per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="J" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.J">
+				<xs:annotation>
+					<xs:documentation>Energy in joules (N·m = C·V = W·s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPerK" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPerK">
+				<xs:annotation>
+					<xs:documentation>Heat capacity in joules/kelvin.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPerkg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPerkg">
+				<xs:annotation>
+					<xs:documentation>Specific energy, Joules / kg.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPerkgK" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPerkgK">
+				<xs:annotation>
+					<xs:documentation>Specific heat capacity, specific entropy, joules per kilogram Kelvin.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPerm2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPerm2">
+				<xs:annotation>
+					<xs:documentation>Insulation energy density, joules per square metre or watt second per square metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPerm3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPerm3">
+				<xs:annotation>
+					<xs:documentation>Energy density, joules per cubic metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPermol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPermol">
+				<xs:annotation>
+					<xs:documentation>Molar energy, joules per mole.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPermolK" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPermolK">
+				<xs:annotation>
+					<xs:documentation>Molar entropy, molar heat capacity, joules per mole kelvin.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="JPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.JPers">
+				<xs:annotation>
+					<xs:documentation>Energy rate in joules per second (J/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="K" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.K">
+				<xs:annotation>
+					<xs:documentation>Temperature in kelvins.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.KPers">
+				<xs:annotation>
+					<xs:documentation>Temperature change rate in kelvins per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.M">
+				<xs:annotation>
+					<xs:documentation>Length, nautical miles (1 M = 1852 m).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Mx" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Mx">
+				<xs:annotation>
+					<xs:documentation>Magnetic flux, maxwells (1 Mx = 10-8 Wb).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="N" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.N">
+				<xs:annotation>
+					<xs:documentation>Force in newtons (kg·m/s²).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NPerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.NPerm">
+				<xs:annotation>
+					<xs:documentation>Surface tension, newton per metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NTU" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.NTU">
+				<xs:annotation>
+					<xs:documentation>Nephelometric Turbidity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Nm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Nm">
+				<xs:annotation>
+					<xs:documentation>Moment of force, newton metres.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Oe" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Oe">
+				<xs:annotation>
+					<xs:documentation>Magnetic field in oersteds, (1 Oe = (103/4p) A/m).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Pa" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Pa">
+				<xs:annotation>
+					<xs:documentation>Pressure in pascals (N/m²). Note: the absolute or relative measurement of pressure is implied with this entry. See below for more explicit forms.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PaPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.PaPers">
+				<xs:annotation>
+					<xs:documentation>Pressure change rate in pascals per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Pas" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Pas">
+				<xs:annotation>
+					<xs:documentation>Dynamic viscosity, pascal seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Q" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Q">
+				<xs:annotation>
+					<xs:documentation>Quantity power, Q.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Qh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Qh">
+				<xs:annotation>
+					<xs:documentation>Quantity energy, Qh.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="S" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.S">
+				<xs:annotation>
+					<xs:documentation>Conductance in siemens.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SPercm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.SPercm">
+				<xs:annotation>
+					<xs:documentation>Conductance per length (S/cm).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SPerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.SPerm">
+				<xs:annotation>
+					<xs:documentation>Conductance per length (S/m).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Sv" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Sv">
+				<xs:annotation>
+					<xs:documentation>Dose equivalent in sieverts (J/kg).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="T" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.T">
+				<xs:annotation>
+					<xs:documentation>Magnetic flux density in teslas (Wb/m2).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="V" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.V">
+				<xs:annotation>
+					<xs:documentation>Electric potential in volts (W/A).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="V2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.V2">
+				<xs:annotation>
+					<xs:documentation>Volt squared (W²/A²).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="V2h" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.V2h">
+				<xs:annotation>
+					<xs:documentation>Volt-squared hour, volt-squared-hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VA" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VA">
+				<xs:annotation>
+					<xs:documentation>Apparent power in volt amperes. See also real power and reactive power.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VAh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VAh">
+				<xs:annotation>
+					<xs:documentation>Apparent energy in volt ampere hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VAr" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VAr">
+				<xs:annotation>
+					<xs:documentation>Reactive power in volt amperes reactive. The “reactive” or “imaginary” component of electrical power (VIsin(phi)). (See also real power and apparent power).</xs:documentation>
+					<xs:documentation>Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VArh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VArh">
+				<xs:annotation>
+					<xs:documentation>Reactive energy in volt ampere reactive hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VPerHz" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VPerHz">
+				<xs:annotation>
+					<xs:documentation>Magnetic flux in volt per hertz.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VPerV" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VPerV">
+				<xs:annotation>
+					<xs:documentation>Voltage, ratio of voltages.  Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mV/V’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VPerVA" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VPerVA">
+				<xs:annotation>
+					<xs:documentation>Power factor, PF, the ratio of the active power to the apparent power.  Note: The sign convention used for power factor will differ between IEC meters and EEI (ANSI) meters. It is assumed that the data consumers understand the type of meter being used and agree on the sign convention in use at any given utility.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VPerVAr" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VPerVAr">
+				<xs:annotation>
+					<xs:documentation>Power factor, PF, the ratio of the active power to the apparent power. Note: The sign convention used for power factor will differ between IEC meters and EEI (ANSI) meters. It is assumed that the data consumers understand the type of meter being used and agree on the sign convention in use at any given utility.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VPerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.VPerm">
+				<xs:annotation>
+					<xs:documentation>Electric field strength, volts per metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Vh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Vh">
+				<xs:annotation>
+					<xs:documentation>Volt-hour, Volt hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Vs" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Vs">
+				<xs:annotation>
+					<xs:documentation>Volt seconds (Ws/A).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="W" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.W">
+				<xs:annotation>
+					<xs:documentation>Real power in watts (J/s). Electrical power may have real and reactive components. The real portion of electrical power (I&amp;#178;R or VIcos(phi)), is expressed in Watts. See also apparent power and reactive power.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPerA" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPerA">
+				<xs:annotation>
+					<xs:documentation>Active power per current flow, watts per Ampere.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPerW" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPerW">
+				<xs:annotation>
+					<xs:documentation>Signal Strength, ratio of power.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mW/W’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPerm2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPerm2">
+				<xs:annotation>
+					<xs:documentation>Heat flux density, irradiance, watts per square metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPerm2sr" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPerm2sr">
+				<xs:annotation>
+					<xs:documentation>Radiance, watts per square metre steradian.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPermK" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPermK">
+				<xs:annotation>
+					<xs:documentation>Thermal conductivity in watt/metres kelvin.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPers">
+				<xs:annotation>
+					<xs:documentation>Ramp rate in watts per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WPersr" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.WPersr">
+				<xs:annotation>
+					<xs:documentation>Radiant intensity, watts per steradian.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Wb" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Wb">
+				<xs:annotation>
+					<xs:documentation>Magnetic flux in webers (V·s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Wh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.Wh">
+				<xs:annotation>
+					<xs:documentation>Real energy in watt hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="anglemin" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.anglemin">
+				<xs:annotation>
+					<xs:documentation>Plane angle, minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="anglesec" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.anglesec">
+				<xs:annotation>
+					<xs:documentation>Plane angle, seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="bar" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.bar">
+				<xs:annotation>
+					<xs:documentation>Pressure in bars, (1 bar = 100 kPa).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ccPerkg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ccPerkg">
+				<xs:annotation>
+					<xs:documentation>Inverse concentration. Cubic centimetres per kilogram.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cd" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.cd">
+				<xs:annotation>
+					<xs:documentation>Luminous intensity in candelas.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="charPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.charPers">
+				<xs:annotation>
+					<xs:documentation>Data rate (baud) in characters per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="character" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.character">
+				<xs:annotation>
+					<xs:documentation>Number of characters.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cosPhi" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.cosPhi">
+				<xs:annotation>
+					<xs:documentation>Power factor, dimensionless.</xs:documentation>
+					<xs:documentation>Note 1: This definition of power factor only holds for balanced systems. See the alternative definition under code 153.</xs:documentation>
+					<xs:documentation>Note 2 : Beware of differing sign conventions in use between the IEC and EEI. It is assumed that the data consumer understands the type of meter in use and the sign convention in use by the utility.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="count" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.count">
+				<xs:annotation>
+					<xs:documentation>Amount of substance, Counter value.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="d" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.d">
+				<xs:annotation>
+					<xs:documentation>Time in days, day = 24 h = 86400 s.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dB" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.dB">
+				<xs:annotation>
+					<xs:documentation>Sound pressure level in decibels. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dBm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.dBm">
+				<xs:annotation>
+					<xs:documentation>Power level (logarithmic ratio of signal strength , Bel-mW), normalized to 1mW. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="deg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.deg">
+				<xs:annotation>
+					<xs:documentation>Plane angle in degrees.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="degC" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.degC">
+				<xs:annotation>
+					<xs:documentation>Relative temperature in degrees Celsius.</xs:documentation>
+					<xs:documentation>In the SI unit system the symbol is °C. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius from coulomb the symbol used in the UML is degC. The reason for not using °C is that the special character ° is difficult to manage in software.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="degF" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.degF">
+				<xs:annotation>
+					<xs:documentation>Temperature in degrees Fahrenheit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ft" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ft">
+				<xs:annotation>
+					<xs:documentation>Length in feet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ft2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ft2">
+				<xs:annotation>
+					<xs:documentation>Area in square feet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ft3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ft3">
+				<xs:annotation>
+					<xs:documentation>Volume, cubic feet.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gPerg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.gPerg">
+				<xs:annotation>
+					<xs:documentation>Concentration, The ratio of the mass of a solute divided by the mass of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µg/g’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gPerl" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.gPerl">
+				<xs:annotation>
+					<xs:documentation>Concentration in grams per litre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gal" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.gal">
+				<xs:annotation>
+					<xs:documentation>Volume in gallons, US gallon (1 gal = 231 in3 = 128 fl ounce).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="galPerd" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.galPerd">
+				<xs:annotation>
+					<xs:documentation>Gallons per day</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="galPerh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.galPerh">
+				<xs:annotation>
+					<xs:documentation>Gallons per hour</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="h" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.h">
+				<xs:annotation>
+					<xs:documentation>Time in hours, hour = 60 min = 3600 s.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ha" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ha">
+				<xs:annotation>
+					<xs:documentation>Area, hectares.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="in" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.in">
+				<xs:annotation>
+					<xs:documentation>Length in inches</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="in2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.in2">
+				<xs:annotation>
+					<xs:documentation>Area in square inches</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="in3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.in3">
+				<xs:annotation>
+					<xs:documentation>Volume in cubic inches</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kat" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kat">
+				<xs:annotation>
+					<xs:documentation>Catalytic activity, katal = mol / s.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="katPerm3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.katPerm3">
+				<xs:annotation>
+					<xs:documentation>Catalytic activity concentration, katals per cubic metre.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kg">
+				<xs:annotation>
+					<xs:documentation>Mass in kilograms.  Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kgPerJ" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kgPerJ">
+				<xs:annotation>
+					<xs:documentation>Weight per energy in kilograms per joule (kg/J). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kgPerd" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kgPerd">
+				<xs:annotation>
+					<xs:documentation>kilograms per day</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kgPerh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kgPerh">
+				<xs:annotation>
+					<xs:documentation>kilograms per hour</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kgPerm3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kgPerm3">
+				<xs:annotation>
+					<xs:documentation>Density in kilogram/cubic metres (kg/m³). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kgm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kgm">
+				<xs:annotation>
+					<xs:documentation>Moment of mass in kilogram metres (kg·m) (first moment of mass). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kgm2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kgm2">
+				<xs:annotation>
+					<xs:documentation>Moment of mass in kilogram square metres (kg·m²) (Second moment of mass, commonly called the moment of inertia). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kn" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.kn">
+				<xs:annotation>
+					<xs:documentation>Speed, knots (1 kn = 1852/3600) m/s.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="l" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.l">
+				<xs:annotation>
+					<xs:documentation>Volume in litres, litre = dm3 = m3/1000.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lPerh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.lPerh">
+				<xs:annotation>
+					<xs:documentation>Volumetric flow rate, litres per hour.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lPerkg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.lPerkg">
+				<xs:annotation>
+					<xs:documentation>Concentration. Litres per kg.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lPerl" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.lPerl">
+				<xs:annotation>
+					<xs:documentation>Concentration, The ratio of the volume of a solute divided by the volume of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µL/L’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.lPers">
+				<xs:annotation>
+					<xs:documentation>Volumetric flow rate in litres per second.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.lm">
+				<xs:annotation>
+					<xs:documentation>Luminous flux in lumens (cd·sr).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lx" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.lx">
+				<xs:annotation>
+					<xs:documentation>Illuminance in lux (lm/m²).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m">
+				<xs:annotation>
+					<xs:documentation>Length in metres.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m2">
+				<xs:annotation>
+					<xs:documentation>Area in square metres (m²).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m2Pers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m2Pers">
+				<xs:annotation>
+					<xs:documentation>Viscosity in square metres / second (m²/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m3">
+				<xs:annotation>
+					<xs:documentation>Volume in cubic metres (m³).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3Compensated" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m3Compensated">
+				<xs:annotation>
+					<xs:documentation>Volume, cubic metres, with the value compensated for weather effects.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3Perh" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m3Perh">
+				<xs:annotation>
+					<xs:documentation>Volumetric flow rate, cubic metres per hour.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3Perkg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m3Perkg">
+				<xs:annotation>
+					<xs:documentation>Specific volume, cubic metres per kilogram, v.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3Pers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m3Pers">
+				<xs:annotation>
+					<xs:documentation>Volumetric flow rate in cubic metres per second (m³/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m3Uncompensated" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.m3Uncompensated">
+				<xs:annotation>
+					<xs:documentation>Volume, cubic metres, with the value uncompensated for weather effects.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mPerm3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.mPerm3">
+				<xs:annotation>
+					<xs:documentation>Fuel efficiency in metres per cubic metres (m/m³).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.mPers">
+				<xs:annotation>
+					<xs:documentation>Velocity in metres per second (m/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mPers2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.mPers2">
+				<xs:annotation>
+					<xs:documentation>Acceleration in metres per second squared (m/s²).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="min" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.min">
+				<xs:annotation>
+					<xs:documentation>Time in minutes, minute  = 60 s.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mmHg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.mmHg">
+				<xs:annotation>
+					<xs:documentation>Pressure, millimetres of mercury (1 mmHg is approximately 133.3 Pa).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.mol">
+				<xs:annotation>
+					<xs:documentation>Amount of substance in moles.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="molPerkg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.molPerkg">
+				<xs:annotation>
+					<xs:documentation>Concentration, Molality, the amount of solute in moles and the amount of solvent in kilograms.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="molPerm3" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.molPerm3">
+				<xs:annotation>
+					<xs:documentation>Concentration, The amount of substance concentration, (c), the amount of solvent in moles divided by the volume of solution in m³.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="molPermol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.molPermol">
+				<xs:annotation>
+					<xs:documentation>Concentration, Molar fraction, the ratio of the molar amount of a solute divided by the molar amount of the solution.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.none">
+				<xs:annotation>
+					<xs:documentation>Dimension less quantity, e.g. count, per unit, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ohm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ohm">
+				<xs:annotation>
+					<xs:documentation>Electric resistance in ohms (V/A).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ohmPerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ohmPerm">
+				<xs:annotation>
+					<xs:documentation>Electric resistance per length in ohms per metre ((V/A)/m).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ohmm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ohmm">
+				<xs:annotation>
+					<xs:documentation>Resistivity, ohm metres, (rho).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="onePerHz" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.onePerHz">
+				<xs:annotation>
+					<xs:documentation>Reciprocal of frequency (1/Hz).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="onePerm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.onePerm">
+				<xs:annotation>
+					<xs:documentation>Wavenumber, reciprocal metres,  (1/m).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pH" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.pH">
+				<xs:annotation>
+					<xs:documentation>Unit of acidity or alkalinity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="perCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.perCent"/>
+			<xs:enumeration value="ppm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.ppm">
+				<xs:annotation>
+					<xs:documentation>Concentration in parts per million.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="psia" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.psia">
+				<xs:annotation>
+					<xs:documentation>Pounds per square inch absolute</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="psig" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.psig">
+				<xs:annotation>
+					<xs:documentation>Pounds per square inch gauge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rad" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.rad">
+				<xs:annotation>
+					<xs:documentation>Plane angle in radians (m/m).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="radPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.radPers">
+				<xs:annotation>
+					<xs:documentation>Angular velocity in radians per second (rad/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="radPers2" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.radPers2">
+				<xs:annotation>
+					<xs:documentation>Angular acceleration, radians per second squared.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rev" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.rev">
+				<xs:annotation>
+					<xs:documentation>Amount of rotation, revolutions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rotPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.rotPers">
+				<xs:annotation>
+					<xs:documentation>Rotations per second (1/s). See also Hz (1/s).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="s" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.s">
+				<xs:annotation>
+					<xs:documentation>Time in seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sPers" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.sPers">
+				<xs:annotation>
+					<xs:documentation>Time, Ratio of time.  Note: Users may need to supply a prefix such as ‘&amp;#181;’ to show rates such as ‘&amp;#181;s/s’.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sr" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.sr">
+				<xs:annotation>
+					<xs:documentation>Solid angle in steradians (m2/m2).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="therm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.therm">
+				<xs:annotation>
+					<xs:documentation>Energy, therms.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tonne" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitSymbol.tonne">
+				<xs:annotation>
+					<xs:documentation>Mass in tons, “tonne” or “metric  ton” (1000 kg = 1 Mg).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

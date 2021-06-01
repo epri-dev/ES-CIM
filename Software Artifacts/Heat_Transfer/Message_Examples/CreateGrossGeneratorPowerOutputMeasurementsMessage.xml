@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:CreateGrossGeneratorPowerOutputMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurementsMessage" xsi:schemaLocation="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurementsMessage ../WSDLs/Message_XSDs/GrossGeneratorPowerOutputMeasurementsMessage.xsd">
+  <tns:Header xmlns="http://iec.ch/TC57/2011/schema/message">
+    <Verb>create</Verb>
+    <Noun>GrossGeneratorPowerOutputMeasurements</Noun>
+    <Timestamp>2019-11-23T23:44:03.569-05:00</Timestamp>
+    <MessageID>f82798a9-fcfe-4e86-b0b3-4c102b2665c6</MessageID>
+    <CorrelationID>44fe7031-b046-4ef6-a4dc-3e5514267b5a</CorrelationID>
+    <Comment>Sample IEC 61968-100 ed.1 create(GrossGeneratorPowerOutputMeasurements) message</Comment>
+  </tns:Header>
+  <tns:Payload>
+    <GrossGeneratorPowerOutputMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements#" xsi:schemaLocation="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements# ../WSDLs/XSDs/GrossGeneratorPowerOutputMeasurements.xsd">
+      <GenerationUnit>
+        <mRID>9533a553-aee6-409e-b6a9-36d6ad37d52b</mRID>
+        <Analog>
+          <mRID>fbe89c54-2284-45ac-bb3f-422c1e81cf91</mRID>
+          <measurementType>ThermalPower</measurementType>
+          <unitMultiplier>M</unitMultiplier>
+          <unitSymbol>BtuPerh</unitSymbol>
+          <MeasurementPoint>
+            <mRID>a61503a3-2232-40c6-8cb6-62724483bd60</mRID>
+            <Names>
+              <name>Electric Generator Output</name>
+              <NameType>
+                <name>MeasurementPointName</name>
+              </NameType>
+            </Names>
+          </MeasurementPoint>
+          <AnalogValues>
+            <mRID>cd257a0b-dde5-401c-bf0f-88afe4b1ad25</mRID>
+            <timeStamp>2019-11-23T22:44:03.569-05:00</timeStamp>
+            <value>3000</value>
+            <MeasurementValueSource>
+              <name>Calculation</name>
+            </MeasurementValueSource>
+          </AnalogValues>
+          <Names>
+            <name>DCS-4122</name>
+            <NameType>
+              <name>DCSHistorianIdentification</name>
+            </NameType>
+          </Names>
+        </Analog>
+        <Names>
+          <name>Palo Verde 1</name>
+          <NameType>
+            <name>UnitID</name>
+          </NameType>
+        </Names>
+      </GenerationUnit>
+    </GrossGeneratorPowerOutputMeasurements>
+  </tns:Payload>
+</tns:CreateGrossGeneratorPowerOutputMeasurements>

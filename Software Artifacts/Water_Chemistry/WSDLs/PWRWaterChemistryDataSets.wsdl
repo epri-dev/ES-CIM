@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSetsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSetsMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetPWRWaterChemistryDataSetsMessage" targetNamespace="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSetsWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceivePWRWaterChemistryDataSets" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSetsMessage" schemaLocation="Message_XSDs/PWRWaterChemistryDataSetsMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetPWRWaterChemistryDataSets" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/GetPWRWaterChemistryDataSetsMessage" schemaLocation="Message_XSDs/GetPWRWaterChemistryDataSetsMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelPWRWaterChemistryDataSetsRequestMessage">
+    <wsdl:part name="CancelPWRWaterChemistryDataSetsRequestMessage" element="msg1:CancelPWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledPWRWaterChemistryDataSetsEventMessage">
+    <wsdl:part name="CanceledPWRWaterChemistryDataSetsEventMessage" element="msg1:CanceledPWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="ChangePWRWaterChemistryDataSetsRequestMessage">
+    <wsdl:part name="ChangePWRWaterChemistryDataSetsRequestMessage" element="msg1:ChangePWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedPWRWaterChemistryDataSetsEventMessage">
+    <wsdl:part name="ChangedPWRWaterChemistryDataSetsEventMessage" element="msg1:ChangedPWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="ClosePWRWaterChemistryDataSetsRequestMessage">
+    <wsdl:part name="ClosePWRWaterChemistryDataSetsRequestMessage" element="msg1:ClosePWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedPWRWaterChemistryDataSetsEventMessage">
+    <wsdl:part name="ClosedPWRWaterChemistryDataSetsEventMessage" element="msg1:ClosedPWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="CreatePWRWaterChemistryDataSetsRequestMessage">
+    <wsdl:part name="CreatePWRWaterChemistryDataSetsRequestMessage" element="msg1:CreatePWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedPWRWaterChemistryDataSetsEventMessage">
+    <wsdl:part name="CreatedPWRWaterChemistryDataSetsEventMessage" element="msg1:CreatedPWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="DeletePWRWaterChemistryDataSetsRequestMessage">
+    <wsdl:part name="DeletePWRWaterChemistryDataSetsRequestMessage" element="msg1:DeletePWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedPWRWaterChemistryDataSetsEventMessage">
+    <wsdl:part name="DeletedPWRWaterChemistryDataSetsEventMessage" element="msg1:DeletedPWRWaterChemistryDataSets"/>
+  </wsdl:message>
+  <wsdl:message name="GetPWRWaterChemistryDataSetsRequestMessage">
+    <wsdl:part name="GetPWRWaterChemistryDataSetsRequestMessage" element="msg2:GetPWRWaterChemistryDataSetsRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetPWRWaterChemistryDataSetsResponseMessage">
+    <wsdl:part name="GetPWRWaterChemistryDataSetsResponseMessage" element="msg2:GetPWRWaterChemistryDataSetsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:PWRWaterChemistryDataSetsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:PWRWaterChemistryDataSetsFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="PWRWaterChemistryDataSets_Port">
+    <wsdl:operation name="CancelPWRWaterChemistryDataSets">
+      <wsdl:input name="CancelPWRWaterChemistryDataSetsRequest" message="tns:CancelPWRWaterChemistryDataSetsRequestMessage"/>
+      <wsdl:output name="CancelPWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledPWRWaterChemistryDataSets">
+      <wsdl:input name="CanceledPWRWaterChemistryDataSetsEvent" message="tns:CanceledPWRWaterChemistryDataSetsEventMessage"/>
+      <wsdl:output name="CanceledPWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePWRWaterChemistryDataSets">
+      <wsdl:input name="ChangePWRWaterChemistryDataSetsRequest" message="tns:ChangePWRWaterChemistryDataSetsRequestMessage"/>
+      <wsdl:output name="ChangePWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangePWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedPWRWaterChemistryDataSets">
+      <wsdl:input name="ChangedPWRWaterChemistryDataSetsEvent" message="tns:ChangedPWRWaterChemistryDataSetsEventMessage"/>
+      <wsdl:output name="ChangedPWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePWRWaterChemistryDataSets">
+      <wsdl:input name="ClosePWRWaterChemistryDataSetsRequest" message="tns:ClosePWRWaterChemistryDataSetsRequestMessage"/>
+      <wsdl:output name="ClosePWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosePWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedPWRWaterChemistryDataSets">
+      <wsdl:input name="ClosedPWRWaterChemistryDataSetsEvent" message="tns:ClosedPWRWaterChemistryDataSetsEventMessage"/>
+      <wsdl:output name="ClosedPWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePWRWaterChemistryDataSets">
+      <wsdl:input name="DeletePWRWaterChemistryDataSetsRequest" message="tns:DeletePWRWaterChemistryDataSetsRequestMessage"/>
+      <wsdl:output name="DeletePWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletePWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedPWRWaterChemistryDataSets">
+      <wsdl:input name="DeletedPWRWaterChemistryDataSetsEvent" message="tns:DeletedPWRWaterChemistryDataSetsEventMessage"/>
+      <wsdl:output name="DeletedPWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePWRWaterChemistryDataSets">
+      <wsdl:input name="CreatePWRWaterChemistryDataSetsRequest" message="tns:CreatePWRWaterChemistryDataSetsRequestMessage"/>
+      <wsdl:output name="CreatePWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatePWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedPWRWaterChemistryDataSets">
+      <wsdl:input name="CreatedPWRWaterChemistryDataSetsEvent" message="tns:CreatedPWRWaterChemistryDataSetsEventMessage"/>
+      <wsdl:output name="CreatedPWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetPWRWaterChemistryDataSets">
+      <wsdl:input name="GetPWRWaterChemistryDataSetsRequest" message="tns:GetPWRWaterChemistryDataSetsRequestMessage"/>
+      <wsdl:output name="GetPWRWaterChemistryDataSetsResponse" message="tns:GetPWRWaterChemistryDataSetsResponseMessage"/>
+      <wsdl:fault name="GetPWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponsePWRWaterChemistryDataSets">
+      <wsdl:input name="ResponsePWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponsePWRWaterChemistryDataSetsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponsePWRWaterChemistryDataSetsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PWRWaterChemistryDataSets_Binding" type="tns:PWRWaterChemistryDataSets_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/CancelPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="CancelPWRWaterChemistryDataSetsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelPWRWaterChemistryDataSetsFault">
+        <soap:fault name="CancelPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/CanceledPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="CanceledPWRWaterChemistryDataSetsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledPWRWaterChemistryDataSetsFault">
+        <soap:fault name="CanceledPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/ChangePWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="ChangePWRWaterChemistryDataSetsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangePWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangePWRWaterChemistryDataSetsFault">
+        <soap:fault name="ChangePWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/ChangedPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="ChangedPWRWaterChemistryDataSetsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedPWRWaterChemistryDataSetsFault">
+        <soap:fault name="ChangedPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/ClosePWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="ClosePWRWaterChemistryDataSetsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosePWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosePWRWaterChemistryDataSetsFault">
+        <soap:fault name="ClosePWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/ClosedPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="ClosedPWRWaterChemistryDataSetsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedPWRWaterChemistryDataSetsFault">
+        <soap:fault name="ClosedPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/CreatePWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="CreatePWRWaterChemistryDataSetsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatePWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatePWRWaterChemistryDataSetsFault">
+        <soap:fault name="CreatePWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/CreatedPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="CreatedPWRWaterChemistryDataSetsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedPWRWaterChemistryDataSetsFault">
+        <soap:fault name="CreatedPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/DeletePWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="DeletePWRWaterChemistryDataSetsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletePWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletePWRWaterChemistryDataSetsFault">
+        <soap:fault name="DeletePWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/DeletedPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="DeletedPWRWaterChemistryDataSetsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedPWRWaterChemistryDataSetsFault">
+        <soap:fault name="DeletedPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetPWRWaterChemistryDataSets/GetPWRWaterChemistryDataSets" style="document"/>
+      <wsdl:input name="GetPWRWaterChemistryDataSetsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetPWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetPWRWaterChemistryDataSetsFault">
+        <soap:fault name="GetPWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponsePWRWaterChemistryDataSets">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets/ResponsePWRWaterChemistryDataSetsResponse" style="document"/>
+      <wsdl:input name="ResponsePWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponsePWRWaterChemistryDataSetsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponsePWRWaterChemistryDataSetsFault">
+        <soap:fault name="ResponsePWRWaterChemistryDataSetsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceivePWRWaterChemistryDataSets">
+    <wsdl:port name="PWRWaterChemistryDataSets_Port" binding="tns:PWRWaterChemistryDataSets_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

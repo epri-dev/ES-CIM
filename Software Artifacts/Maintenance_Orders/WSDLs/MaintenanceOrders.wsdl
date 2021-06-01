@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/MaintenanceOrdersWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/MaintenanceOrdersMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetMaintenanceOrdersMessage" targetNamespace="http://epri.com/powergeneration/2020/MaintenanceOrdersWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceiveMaintenanceOrders" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/MaintenanceOrdersMessage" schemaLocation="Message_XSDs/MaintenanceOrdersMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetMaintenanceOrders" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/GetMaintenanceOrdersMessage" schemaLocation="Message_XSDs/GetMaintenanceOrdersMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelMaintenanceOrdersRequestMessage">
+    <wsdl:part name="CancelMaintenanceOrdersRequestMessage" element="msg1:CancelMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledMaintenanceOrdersEventMessage">
+    <wsdl:part name="CanceledMaintenanceOrdersEventMessage" element="msg1:CanceledMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeMaintenanceOrdersRequestMessage">
+    <wsdl:part name="ChangeMaintenanceOrdersRequestMessage" element="msg1:ChangeMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedMaintenanceOrdersEventMessage">
+    <wsdl:part name="ChangedMaintenanceOrdersEventMessage" element="msg1:ChangedMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="CloseMaintenanceOrdersRequestMessage">
+    <wsdl:part name="CloseMaintenanceOrdersRequestMessage" element="msg1:CloseMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedMaintenanceOrdersEventMessage">
+    <wsdl:part name="ClosedMaintenanceOrdersEventMessage" element="msg1:ClosedMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="CreateMaintenanceOrdersRequestMessage">
+    <wsdl:part name="CreateMaintenanceOrdersRequestMessage" element="msg1:CreateMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedMaintenanceOrdersEventMessage">
+    <wsdl:part name="CreatedMaintenanceOrdersEventMessage" element="msg1:CreatedMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteMaintenanceOrdersRequestMessage">
+    <wsdl:part name="DeleteMaintenanceOrdersRequestMessage" element="msg1:DeleteMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedMaintenanceOrdersEventMessage">
+    <wsdl:part name="DeletedMaintenanceOrdersEventMessage" element="msg1:DeletedMaintenanceOrders"/>
+  </wsdl:message>
+  <wsdl:message name="GetMaintenanceOrdersRequestMessage">
+    <wsdl:part name="GetMaintenanceOrdersRequestMessage" element="msg2:GetMaintenanceOrdersRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetMaintenanceOrdersResponseMessage">
+    <wsdl:part name="GetMaintenanceOrdersResponseMessage" element="msg2:GetMaintenanceOrdersResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:MaintenanceOrdersResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:MaintenanceOrdersFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="MaintenanceOrders_Port">
+    <wsdl:operation name="CancelMaintenanceOrders">
+      <wsdl:input name="CancelMaintenanceOrdersRequest" message="tns:CancelMaintenanceOrdersRequestMessage"/>
+      <wsdl:output name="CancelMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledMaintenanceOrders">
+      <wsdl:input name="CanceledMaintenanceOrdersEvent" message="tns:CanceledMaintenanceOrdersEventMessage"/>
+      <wsdl:output name="CanceledMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeMaintenanceOrders">
+      <wsdl:input name="ChangeMaintenanceOrdersRequest" message="tns:ChangeMaintenanceOrdersRequestMessage"/>
+      <wsdl:output name="ChangeMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedMaintenanceOrders">
+      <wsdl:input name="ChangedMaintenanceOrdersEvent" message="tns:ChangedMaintenanceOrdersEventMessage"/>
+      <wsdl:output name="ChangedMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseMaintenanceOrders">
+      <wsdl:input name="CloseMaintenanceOrdersRequest" message="tns:CloseMaintenanceOrdersRequestMessage"/>
+      <wsdl:output name="CloseMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedMaintenanceOrders">
+      <wsdl:input name="ClosedMaintenanceOrdersEvent" message="tns:ClosedMaintenanceOrdersEventMessage"/>
+      <wsdl:output name="ClosedMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaintenanceOrders">
+      <wsdl:input name="DeleteMaintenanceOrdersRequest" message="tns:DeleteMaintenanceOrdersRequestMessage"/>
+      <wsdl:output name="DeleteMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedMaintenanceOrders">
+      <wsdl:input name="DeletedMaintenanceOrdersEvent" message="tns:DeletedMaintenanceOrdersEventMessage"/>
+      <wsdl:output name="DeletedMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMaintenanceOrders">
+      <wsdl:input name="CreateMaintenanceOrdersRequest" message="tns:CreateMaintenanceOrdersRequestMessage"/>
+      <wsdl:output name="CreateMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedMaintenanceOrders">
+      <wsdl:input name="CreatedMaintenanceOrdersEvent" message="tns:CreatedMaintenanceOrdersEventMessage"/>
+      <wsdl:output name="CreatedMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaintenanceOrders">
+      <wsdl:input name="GetMaintenanceOrdersRequest" message="tns:GetMaintenanceOrdersRequestMessage"/>
+      <wsdl:output name="GetMaintenanceOrdersResponse" message="tns:GetMaintenanceOrdersResponseMessage"/>
+      <wsdl:fault name="GetMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseMaintenanceOrders">
+      <wsdl:input name="ResponseMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseMaintenanceOrdersFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MaintenanceOrders_Binding" type="tns:MaintenanceOrders_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/CancelMaintenanceOrders" style="document"/>
+      <wsdl:input name="CancelMaintenanceOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelMaintenanceOrdersFault">
+        <soap:fault name="CancelMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/CanceledMaintenanceOrders" style="document"/>
+      <wsdl:input name="CanceledMaintenanceOrdersEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledMaintenanceOrdersFault">
+        <soap:fault name="CanceledMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/ChangeMaintenanceOrders" style="document"/>
+      <wsdl:input name="ChangeMaintenanceOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeMaintenanceOrdersFault">
+        <soap:fault name="ChangeMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/ChangedMaintenanceOrders" style="document"/>
+      <wsdl:input name="ChangedMaintenanceOrdersEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedMaintenanceOrdersFault">
+        <soap:fault name="ChangedMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/CloseMaintenanceOrders" style="document"/>
+      <wsdl:input name="CloseMaintenanceOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseMaintenanceOrdersFault">
+        <soap:fault name="CloseMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/ClosedMaintenanceOrders" style="document"/>
+      <wsdl:input name="ClosedMaintenanceOrdersEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedMaintenanceOrdersFault">
+        <soap:fault name="ClosedMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/CreateMaintenanceOrders" style="document"/>
+      <wsdl:input name="CreateMaintenanceOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateMaintenanceOrdersFault">
+        <soap:fault name="CreateMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/CreatedMaintenanceOrders" style="document"/>
+      <wsdl:input name="CreatedMaintenanceOrdersEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedMaintenanceOrdersFault">
+        <soap:fault name="CreatedMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/DeleteMaintenanceOrders" style="document"/>
+      <wsdl:input name="DeleteMaintenanceOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteMaintenanceOrdersFault">
+        <soap:fault name="DeleteMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/DeletedMaintenanceOrders" style="document"/>
+      <wsdl:input name="DeletedMaintenanceOrdersEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedMaintenanceOrdersFault">
+        <soap:fault name="DeletedMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetMaintenanceOrders/GetMaintenanceOrders" style="document"/>
+      <wsdl:input name="GetMaintenanceOrdersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetMaintenanceOrdersFault">
+        <soap:fault name="GetMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseMaintenanceOrders">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/MaintenanceOrders/ResponseMaintenanceOrdersResponse" style="document"/>
+      <wsdl:input name="ResponseMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseMaintenanceOrdersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseMaintenanceOrdersFault">
+        <soap:fault name="ResponseMaintenanceOrdersFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveMaintenanceOrders">
+    <wsdl:port name="MaintenanceOrders_Port" binding="tns:MaintenanceOrders_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
