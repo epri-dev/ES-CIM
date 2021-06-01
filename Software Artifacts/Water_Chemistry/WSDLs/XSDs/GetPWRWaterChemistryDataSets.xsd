@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:m="http://epri.com/powergeneration/2020/GetPWRWaterChemistryDataSets#" targetNamespace="http://epri.com/powergeneration/2020/GetPWRWaterChemistryDataSets#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="GetPWRWaterChemistryDataSets" type="m:GetPWRWaterChemistryDataSets"/>
+	<xs:complexType name="GetPWRWaterChemistryDataSets">
+		<xs:sequence>
+			<xs:element name="DateInterval" type="m:DateInterval" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="MeasurementPoint" type="m:MeasurementPoint" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="NuclearOperatingCycle" type="m:NuclearOperatingCycle" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="PWRNuclearGenerationUnit" type="m:PWRNuclearGenerationUnit" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DateInterval" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DateInterval">
+		<xs:annotation>
+			<xs:documentation>Interval between two dates.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="end" minOccurs="0" maxOccurs="1" type="xs:date" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DateInterval.end">
+				<xs:annotation>
+					<xs:documentation>End date of this interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="start" minOccurs="0" maxOccurs="1" type="xs:date" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DateInterval.start">
+				<xs:annotation>
+					<xs:documentation>Start date of this interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementPoint">
+		<xs:annotation>
+			<xs:documentation>The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NuclearOperatingCycle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NuclearOperatingCycle">
+		<xs:annotation>
+			<xs:documentation>Period of time between refueling outages that a nuclear generating plant is operational</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PWRNuclearGenerationUnit" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PWRNuclearGenerationUnit">
+		<xs:annotation>
+			<xs:documentation>A pressurized water reactor nuclear generation unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

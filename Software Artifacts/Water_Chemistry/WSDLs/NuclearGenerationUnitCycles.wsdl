@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/NuclearGenerationUnitCyclesWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/NuclearGenerationUnitCyclesMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetNuclearGenerationUnitCyclesMessage" targetNamespace="http://epri.com/powergeneration/2020/NuclearGenerationUnitCyclesWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceiveNuclearGenerationUnitCycles" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/NuclearGenerationUnitCyclesMessage" schemaLocation="Message_XSDs/NuclearGenerationUnitCyclesMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetNuclearGenerationUnitCycles" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/GetNuclearGenerationUnitCyclesMessage" schemaLocation="Message_XSDs/GetNuclearGenerationUnitCyclesMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelNuclearGenerationUnitCyclesRequestMessage">
+    <wsdl:part name="CancelNuclearGenerationUnitCyclesRequestMessage" element="msg1:CancelNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledNuclearGenerationUnitCyclesEventMessage">
+    <wsdl:part name="CanceledNuclearGenerationUnitCyclesEventMessage" element="msg1:CanceledNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeNuclearGenerationUnitCyclesRequestMessage">
+    <wsdl:part name="ChangeNuclearGenerationUnitCyclesRequestMessage" element="msg1:ChangeNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedNuclearGenerationUnitCyclesEventMessage">
+    <wsdl:part name="ChangedNuclearGenerationUnitCyclesEventMessage" element="msg1:ChangedNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="CloseNuclearGenerationUnitCyclesRequestMessage">
+    <wsdl:part name="CloseNuclearGenerationUnitCyclesRequestMessage" element="msg1:CloseNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedNuclearGenerationUnitCyclesEventMessage">
+    <wsdl:part name="ClosedNuclearGenerationUnitCyclesEventMessage" element="msg1:ClosedNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="CreateNuclearGenerationUnitCyclesRequestMessage">
+    <wsdl:part name="CreateNuclearGenerationUnitCyclesRequestMessage" element="msg1:CreateNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedNuclearGenerationUnitCyclesEventMessage">
+    <wsdl:part name="CreatedNuclearGenerationUnitCyclesEventMessage" element="msg1:CreatedNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteNuclearGenerationUnitCyclesRequestMessage">
+    <wsdl:part name="DeleteNuclearGenerationUnitCyclesRequestMessage" element="msg1:DeleteNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedNuclearGenerationUnitCyclesEventMessage">
+    <wsdl:part name="DeletedNuclearGenerationUnitCyclesEventMessage" element="msg1:DeletedNuclearGenerationUnitCycles"/>
+  </wsdl:message>
+  <wsdl:message name="GetNuclearGenerationUnitCyclesRequestMessage">
+    <wsdl:part name="GetNuclearGenerationUnitCyclesRequestMessage" element="msg2:GetNuclearGenerationUnitCyclesRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetNuclearGenerationUnitCyclesResponseMessage">
+    <wsdl:part name="GetNuclearGenerationUnitCyclesResponseMessage" element="msg2:GetNuclearGenerationUnitCyclesResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:NuclearGenerationUnitCyclesResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:NuclearGenerationUnitCyclesFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="NuclearGenerationUnitCycles_Port">
+    <wsdl:operation name="CancelNuclearGenerationUnitCycles">
+      <wsdl:input name="CancelNuclearGenerationUnitCyclesRequest" message="tns:CancelNuclearGenerationUnitCyclesRequestMessage"/>
+      <wsdl:output name="CancelNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledNuclearGenerationUnitCycles">
+      <wsdl:input name="CanceledNuclearGenerationUnitCyclesEvent" message="tns:CanceledNuclearGenerationUnitCyclesEventMessage"/>
+      <wsdl:output name="CanceledNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNuclearGenerationUnitCycles">
+      <wsdl:input name="ChangeNuclearGenerationUnitCyclesRequest" message="tns:ChangeNuclearGenerationUnitCyclesRequestMessage"/>
+      <wsdl:output name="ChangeNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedNuclearGenerationUnitCycles">
+      <wsdl:input name="ChangedNuclearGenerationUnitCyclesEvent" message="tns:ChangedNuclearGenerationUnitCyclesEventMessage"/>
+      <wsdl:output name="ChangedNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseNuclearGenerationUnitCycles">
+      <wsdl:input name="CloseNuclearGenerationUnitCyclesRequest" message="tns:CloseNuclearGenerationUnitCyclesRequestMessage"/>
+      <wsdl:output name="CloseNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedNuclearGenerationUnitCycles">
+      <wsdl:input name="ClosedNuclearGenerationUnitCyclesEvent" message="tns:ClosedNuclearGenerationUnitCyclesEventMessage"/>
+      <wsdl:output name="ClosedNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNuclearGenerationUnitCycles">
+      <wsdl:input name="DeleteNuclearGenerationUnitCyclesRequest" message="tns:DeleteNuclearGenerationUnitCyclesRequestMessage"/>
+      <wsdl:output name="DeleteNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedNuclearGenerationUnitCycles">
+      <wsdl:input name="DeletedNuclearGenerationUnitCyclesEvent" message="tns:DeletedNuclearGenerationUnitCyclesEventMessage"/>
+      <wsdl:output name="DeletedNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNuclearGenerationUnitCycles">
+      <wsdl:input name="CreateNuclearGenerationUnitCyclesRequest" message="tns:CreateNuclearGenerationUnitCyclesRequestMessage"/>
+      <wsdl:output name="CreateNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedNuclearGenerationUnitCycles">
+      <wsdl:input name="CreatedNuclearGenerationUnitCyclesEvent" message="tns:CreatedNuclearGenerationUnitCyclesEventMessage"/>
+      <wsdl:output name="CreatedNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetNuclearGenerationUnitCycles">
+      <wsdl:input name="GetNuclearGenerationUnitCyclesRequest" message="tns:GetNuclearGenerationUnitCyclesRequestMessage"/>
+      <wsdl:output name="GetNuclearGenerationUnitCyclesResponse" message="tns:GetNuclearGenerationUnitCyclesResponseMessage"/>
+      <wsdl:fault name="GetNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseNuclearGenerationUnitCycles">
+      <wsdl:input name="ResponseNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseNuclearGenerationUnitCyclesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseNuclearGenerationUnitCyclesFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NuclearGenerationUnitCycles_Binding" type="tns:NuclearGenerationUnitCycles_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/CancelNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="CancelNuclearGenerationUnitCyclesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelNuclearGenerationUnitCyclesFault">
+        <soap:fault name="CancelNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/CanceledNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="CanceledNuclearGenerationUnitCyclesEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledNuclearGenerationUnitCyclesFault">
+        <soap:fault name="CanceledNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/ChangeNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="ChangeNuclearGenerationUnitCyclesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeNuclearGenerationUnitCyclesFault">
+        <soap:fault name="ChangeNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/ChangedNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="ChangedNuclearGenerationUnitCyclesEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedNuclearGenerationUnitCyclesFault">
+        <soap:fault name="ChangedNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/CloseNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="CloseNuclearGenerationUnitCyclesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseNuclearGenerationUnitCyclesFault">
+        <soap:fault name="CloseNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/ClosedNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="ClosedNuclearGenerationUnitCyclesEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedNuclearGenerationUnitCyclesFault">
+        <soap:fault name="ClosedNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/CreateNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="CreateNuclearGenerationUnitCyclesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateNuclearGenerationUnitCyclesFault">
+        <soap:fault name="CreateNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/CreatedNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="CreatedNuclearGenerationUnitCyclesEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedNuclearGenerationUnitCyclesFault">
+        <soap:fault name="CreatedNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/DeleteNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="DeleteNuclearGenerationUnitCyclesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteNuclearGenerationUnitCyclesFault">
+        <soap:fault name="DeleteNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/DeletedNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="DeletedNuclearGenerationUnitCyclesEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedNuclearGenerationUnitCyclesFault">
+        <soap:fault name="DeletedNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetNuclearGenerationUnitCycles/GetNuclearGenerationUnitCycles" style="document"/>
+      <wsdl:input name="GetNuclearGenerationUnitCyclesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetNuclearGenerationUnitCyclesFault">
+        <soap:fault name="GetNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseNuclearGenerationUnitCycles">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/NuclearGenerationUnitCycles/ResponseNuclearGenerationUnitCyclesResponse" style="document"/>
+      <wsdl:input name="ResponseNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseNuclearGenerationUnitCyclesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseNuclearGenerationUnitCyclesFault">
+        <soap:fault name="ResponseNuclearGenerationUnitCyclesFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveNuclearGenerationUnitCycles">
+    <wsdl:port name="NuclearGenerationUnitCycles_Port" binding="tns:NuclearGenerationUnitCycles_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

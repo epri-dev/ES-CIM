@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurementsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurementsMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetGrossGeneratorPowerOutputMeasurementsMessage" targetNamespace="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurementsWsdl">
+    <wsdl:types>
+        <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceiveGrossGeneratorPowerOutputMeasurements" elementFormDefault="qualified">
+            <xs:import namespace="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurementsMessage" schemaLocation="Message_XSDs/GrossGeneratorPowerOutputMeasurementsMessage.xsd"/>
+        </xs:schema>
+        <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetGrossGeneratorPowerOutputMeasurements" elementFormDefault="qualified">
+            <xs:import namespace="http://epri.com/powergeneration/2020/GetGrossGeneratorPowerOutputMeasurementsMessage" schemaLocation="Message_XSDs/GetGrossGeneratorPowerOutputMeasurementsMessage.xsd"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="CancelGrossGeneratorPowerOutputMeasurementsRequestMessage">
+        <wsdl:part name="CancelGrossGeneratorPowerOutputMeasurementsRequestMessage" element="msg1:CancelGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="CanceledGrossGeneratorPowerOutputMeasurementsEventMessage">
+        <wsdl:part name="CanceledGrossGeneratorPowerOutputMeasurementsEventMessage" element="msg1:CanceledGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="ChangeGrossGeneratorPowerOutputMeasurementsRequestMessage">
+        <wsdl:part name="ChangeGrossGeneratorPowerOutputMeasurementsRequestMessage" element="msg1:ChangeGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="ChangedGrossGeneratorPowerOutputMeasurementsEventMessage">
+        <wsdl:part name="ChangedGrossGeneratorPowerOutputMeasurementsEventMessage" element="msg1:ChangedGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="CloseGrossGeneratorPowerOutputMeasurementsRequestMessage">
+        <wsdl:part name="CloseGrossGeneratorPowerOutputMeasurementsRequestMessage" element="msg1:CloseGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="ClosedGrossGeneratorPowerOutputMeasurementsEventMessage">
+        <wsdl:part name="ClosedGrossGeneratorPowerOutputMeasurementsEventMessage" element="msg1:ClosedGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="CreateGrossGeneratorPowerOutputMeasurementsRequestMessage">
+        <wsdl:part name="CreateGrossGeneratorPowerOutputMeasurementsRequestMessage" element="msg1:CreateGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="CreatedGrossGeneratorPowerOutputMeasurementsEventMessage">
+        <wsdl:part name="CreatedGrossGeneratorPowerOutputMeasurementsEventMessage" element="msg1:CreatedGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteGrossGeneratorPowerOutputMeasurementsRequestMessage">
+        <wsdl:part name="DeleteGrossGeneratorPowerOutputMeasurementsRequestMessage" element="msg1:DeleteGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="DeletedGrossGeneratorPowerOutputMeasurementsEventMessage">
+        <wsdl:part name="DeletedGrossGeneratorPowerOutputMeasurementsEventMessage" element="msg1:DeletedGrossGeneratorPowerOutputMeasurements"/>
+    </wsdl:message>
+    <wsdl:message name="GetGrossGeneratorPowerOutputMeasurementsRequestMessage">
+        <wsdl:part name="GetGrossGeneratorPowerOutputMeasurementsRequestMessage" element="msg1:GrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+    </wsdl:message>
+    <wsdl:message name="GetGrossGeneratorPowerOutputMeasurementsResponseMessage">
+        <wsdl:part name="GetGrossGeneratorPowerOutputMeasurementsResponseMessage" element="msg1:GrossGeneratorPowerOutputMeasurementsResponseMessage"/>
+    </wsdl:message>
+    <wsdl:message name="ResponseMessage">
+        <wsdl:part name="ResponseMessage" element="msg1:GrossGeneratorPowerOutputMeasurementsResponseMessage"/>
+    </wsdl:message>
+    <wsdl:message name="FaultMessage">
+        <wsdl:part name="FaultMessage" element="msg1:GrossGeneratorPowerOutputMeasurementsFaultMessage"/>
+    </wsdl:message>
+    <wsdl:portType name="GrossGeneratorPowerOutputMeasurements_Port">
+        <wsdl:operation name="CancelGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="CancelGrossGeneratorPowerOutputMeasurementsRequest" message="tns:CancelGrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+            <wsdl:output name="CancelGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="CancelGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CanceledGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="CanceledGrossGeneratorPowerOutputMeasurementsEvent" message="tns:CanceledGrossGeneratorPowerOutputMeasurementsEventMessage"/>
+            <wsdl:output name="CanceledGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="CanceledGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ChangeGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="ChangeGrossGeneratorPowerOutputMeasurementsRequest" message="tns:ChangeGrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+            <wsdl:output name="ChangeGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="ChangeGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ChangedGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="ChangedGrossGeneratorPowerOutputMeasurementsEvent" message="tns:ChangedGrossGeneratorPowerOutputMeasurementsEventMessage"/>
+            <wsdl:output name="ChangedGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="ChangedGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CloseGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="CloseGrossGeneratorPowerOutputMeasurementsRequest" message="tns:CloseGrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+            <wsdl:output name="CloseGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="CloseGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ClosedGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="ClosedGrossGeneratorPowerOutputMeasurementsEvent" message="tns:ClosedGrossGeneratorPowerOutputMeasurementsEventMessage"/>
+            <wsdl:output name="ClosedGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="ClosedGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="DeleteGrossGeneratorPowerOutputMeasurementsRequest" message="tns:DeleteGrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+            <wsdl:output name="DeleteGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="DeleteGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeletedGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="DeletedGrossGeneratorPowerOutputMeasurementsEvent" message="tns:DeletedGrossGeneratorPowerOutputMeasurementsEventMessage"/>
+            <wsdl:output name="DeletedGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="DeletedGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreateGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="CreateGrossGeneratorPowerOutputMeasurementsRequest" message="tns:CreateGrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+            <wsdl:output name="CreateGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="CreateGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreatedGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="CreatedGrossGeneratorPowerOutputMeasurementsEvent" message="tns:CreatedGrossGeneratorPowerOutputMeasurementsEventMessage"/>
+            <wsdl:output name="CreatedGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="CreatedGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="GetGrossGeneratorPowerOutputMeasurementsRequest" message="tns:GetGrossGeneratorPowerOutputMeasurementsRequestMessage"/>
+            <wsdl:output name="GetGrossGeneratorPowerOutputMeasurementsResponse" message="tns:GetGrossGeneratorPowerOutputMeasurementsResponseMessage"/>
+            <wsdl:fault name="GetGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ResponseGrossGeneratorPowerOutputMeasurements">
+            <wsdl:input name="ResponseGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:output name="ResponseGrossGeneratorPowerOutputMeasurementsResponse" message="tns:ResponseMessage"/>
+            <wsdl:fault name="ResponseGrossGeneratorPowerOutputMeasurementsFault" message="tns:FaultMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="GrossGeneratorPowerOutputMeasurements_Binding" type="tns:GrossGeneratorPowerOutputMeasurements_Port">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CancelGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/CancelGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="CancelGrossGeneratorPowerOutputMeasurementsRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CancelGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CancelGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="CancelGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CanceledGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/CanceledGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="CanceledGrossGeneratorPowerOutputMeasurementsEvent">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CanceledGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CanceledGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="CanceledGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ChangeGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/ChangeGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="ChangeGrossGeneratorPowerOutputMeasurementsRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ChangeGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ChangeGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="ChangeGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ChangedGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/ChangedGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="ChangedGrossGeneratorPowerOutputMeasurementsEvent">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ChangedGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ChangedGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="ChangedGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CloseGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/CloseGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="CloseGrossGeneratorPowerOutputMeasurementsRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CloseGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CloseGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="CloseGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ClosedGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/ClosedGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="ClosedGrossGeneratorPowerOutputMeasurementsEvent">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ClosedGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ClosedGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="ClosedGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CreateGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/CreateGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="CreateGrossGeneratorPowerOutputMeasurementsRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CreateGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CreateGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="CreateGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="CreatedGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/CreatedGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="CreatedGrossGeneratorPowerOutputMeasurementsEvent">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CreatedGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="CreatedGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="CreatedGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/DeleteGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="DeleteGrossGeneratorPowerOutputMeasurementsRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="DeleteGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="DeleteGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="DeleteGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="DeletedGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/DeletedGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="DeletedGrossGeneratorPowerOutputMeasurementsEvent">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="DeletedGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="DeletedGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="DeletedGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GetGrossGeneratorPowerOutputMeasurements/GetGrossGeneratorPowerOutputMeasurements" style="document"/>
+            <wsdl:input name="GetGrossGeneratorPowerOutputMeasurementsRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="GetGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="GetGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="ResponseGrossGeneratorPowerOutputMeasurements">
+            <soap:operation soapAction="http://epri.com/powergeneration/2020/GrossGeneratorPowerOutputMeasurements/ResponseGrossGeneratorPowerOutputMeasurementsResponse" style="document"/>
+            <wsdl:input name="ResponseGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ResponseGrossGeneratorPowerOutputMeasurementsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ResponseGrossGeneratorPowerOutputMeasurementsFault">
+                <soap:fault name="ResponseGrossGeneratorPowerOutputMeasurementsFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ReceiveGrossGeneratorPowerOutputMeasurements">
+        <wsdl:port name="GrossGeneratorPowerOutputMeasurements_Port" binding="tns:GrossGeneratorPowerOutputMeasurements_Binding">
+            <soap:address location="http://www.example.com"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

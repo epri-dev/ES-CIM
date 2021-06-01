@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:m="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets#" targetNamespace="http://epri.com/powergeneration/2020/PWRWaterChemistryDataSets#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PWRWaterChemistryDataSets" type="m:PWRWaterChemistryDataSets"/>
+	<xs:complexType name="PWRWaterChemistryDataSets">
+		<xs:sequence>
+			<xs:element name="PWRWaterChemistryDataSet" type="m:PWRWaterChemistryDataSet" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AlkalinityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AlkalinityAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:AlkalinityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AlkalinityAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AlkalinityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AlkalinityUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="mg/l" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AlkalinityUnitSymbol.mg/l"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Analog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog">
+		<xs:annotation>
+			<xs:documentation>Analog represents an analog Measurement.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="AnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValue">
+		<xs:annotation>
+			<xs:documentation>AnalogValue represents an analog MeasurementValue.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="timeStamp" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.timeStamp">
+				<xs:annotation>
+					<xs:documentation>The time when the value was last updated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValue.value">
+				<xs:annotation>
+					<xs:documentation>The value to supervise.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AnalogValueQualifierKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="greaterThan" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.greaterThan"/>
+			<xs:enumeration value="greaterThanOrEqualTo" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.greaterThanOrEqualTo"/>
+			<xs:enumeration value="lessThan" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.lessThan"/>
+			<xs:enumeration value="lessThanOrEqualTo" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.lessThanOrEqualTo"/>
+			<xs:enumeration value="limitOfQuantitation" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.limitOfQuantitation"/>
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.none"/>
+			<xs:enumeration value="other" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValueQualifierKind.other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="BacterialCountAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:BacterialCountUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="BacterialCountUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="planktonicCount" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountUnitSymbol.planktonicCount"/>
+			<xs:enumeration value="sessileCount" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountUnitSymbol.sessileCount"/>
+			<xs:enumeration value="speciesCount" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountUnitSymbol.speciesCount"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ConcentrationAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:ConcentrationUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ConcentrationUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="cm3/kg" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationUnitSymbol.cm3/kg"/>
+			<xs:enumeration value="ppb" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationUnitSymbol.ppb"/>
+			<xs:enumeration value="ppm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationUnitSymbol.ppm"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ConductivityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConductivityAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:ConductivityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConductivityAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ConductivityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConductivityUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="µS/cm" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConductivityUnitSymbol.µS/cm"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CorrosionRateAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CorrosionRateAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:CorrosionRateUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CorrosionRateAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="CorrosionRateUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CorrosionRateUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="mils/yr" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CorrosionRateUnitSymbol.mils/yr"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="HardnessAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#HardnessAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:HardnessUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#HardnessAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="HardnessUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#HardnessUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="mg/l" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#HardnessUnitSymbol.mg/l"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MassAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MassAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:MassUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MassAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="MassUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MassUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="g" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MassUnitSymbol.g"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Measurement" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Measurement">
+		<xs:annotation>
+			<xs:documentation>A Measurement represents any measured, calculated or non-measured non-calculated quantity. Any piece of equipment may contain Measurements, e.g. a substation may have temperature measurements and door open indications, a transformer may have oil temperature and tank pressure measurements, a bay may contain a number of power flow measurements and a Breaker may contain a switch status measurement. </xs:documentation>
+			<xs:documentation>The PSR - Measurement association is intended to capture this use of Measurement and is included in the naming hierarchy based on EquipmentContainer. The naming hierarchy typically has Measurements as leaves, e.g. Substation-VoltageLevel-Bay-Switch-Measurement.</xs:documentation>
+			<xs:documentation>Some Measurements represent quantities related to a particular sensor location in the network, e.g. a voltage transformer (VT) or potential transformer (PT) at a busbar or a current transformer (CT) at the bar between a breaker and an isolator. The sensing position is not captured in the PSR - Measurement association. Instead it is captured by the Measurement - Terminal association that is used to define the sensing location in the network topology. The location is defined by the connection of the Terminal to ConductingEquipment. </xs:documentation>
+			<xs:documentation>If both a Terminal and PSR are associated, and the PSR is of type ConductingEquipment, the associated Terminal should belong to that ConductingEquipment instance.</xs:documentation>
+			<xs:documentation>When the sensor location is needed both Measurement-PSR and Measurement-Terminal are used. The Measurement-Terminal association is never used alone.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementPoint">
+		<xs:annotation>
+			<xs:documentation>The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementPoint.Measurement" minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="ConcentrationAnalog" type="m:ConcentrationAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConcentrationAnalog"/>
+				<xs:element name="VolumeFlowRateAnalog" type="m:VolumeFlowRateAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VolumeFlowRateAnalog"/>
+				<xs:element name="SpecificActivityAnalog" type="m:SpecificActivityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SpecificActivityAnalog"/>
+				<xs:element name="PercentAnalog" type="m:PercentAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PercentAnalog"/>
+				<xs:element name="PressureAnalog" type="m:PressureAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PressureAnalog"/>
+				<xs:element name="TemperatureAnalog" type="m:TemperatureAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TemperatureAnalog"/>
+				<xs:element name="pHAnalog" type="m:pHAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#pHAnalog"/>
+				<xs:element name="AlkalinityAnalog" type="m:AlkalinityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AlkalinityAnalog"/>
+				<xs:element name="HardnessAnalog" type="m:HardnessAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#HardnessAnalog"/>
+				<xs:element name="TurbidityAnalog" type="m:TurbidityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TurbidityAnalog"/>
+				<xs:element name="ConductivityAnalog" type="m:ConductivityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ConductivityAnalog"/>
+				<xs:element name="NormalizedLevelAnalog" type="m:NormalizedLevelAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NormalizedLevelAnalog"/>
+				<xs:element name="CorrosionRateAnalog" type="m:CorrosionRateAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CorrosionRateAnalog"/>
+				<xs:element name="ScalingIndexAnalog" type="m:ScalingIndexAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ScalingIndexAnalog"/>
+				<xs:element name="BacterialCountAnalog" type="m:BacterialCountAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#BacterialCountAnalog"/>
+				<xs:element name="MassAnalog" type="m:MassAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MassAnalog"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeasurementValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue">
+		<xs:annotation>
+			<xs:documentation>The current state for a measurement. A state value is an instance of a measurement from a specific source. Measurements can be associated with many state values, each representing a different source for the measurement.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="NormalizedLevelAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NormalizedLevelAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:NormalizedLevelUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NormalizedLevelAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="NormalizedLevelUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NormalizedLevelUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NormalizedLevelUnitSymbol.none"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="NuclearOperatingCycle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NuclearOperatingCycle">
+		<xs:annotation>
+			<xs:documentation>Period of time between refueling outages that a nuclear generating plant is operational</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cycleNumber" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NuclearOperatingCycle.cycleNumber"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PWRNuclearGenerationUnit" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PWRNuclearGenerationUnit">
+		<xs:annotation>
+			<xs:documentation>A pressurized water reactor nuclear generation unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PWRWaterChemistryDataSet" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PWRWaterChemistryDataSet">
+		<xs:annotation>
+			<xs:documentation>A set of data and measurements resulting from laboratory analysis of water samples taken from a pressurised water reactor nuclear generating plant</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MeasurementPoint" minOccurs="1" maxOccurs="unbounded" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PWRWaterChemistryDataSet.MeasurementPoint"/>
+			<xs:element name="NuclearOperatingCycle" minOccurs="0" maxOccurs="1" type="m:NuclearOperatingCycle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ProcedureDataSet.NuclearOperatingCycle"/>
+			<xs:element name="PWRNuclearGenerationUnit" minOccurs="1" maxOccurs="1" type="m:PWRNuclearGenerationUnit" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PWRWaterChemistryDataSet.PWRNuclearGenerationUnit"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PercentAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PercentAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:PercentUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PercentAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PercentUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PercentUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PercentUnitSymbol.none"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PressureAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PressureAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:PressureUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PressureAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PressureUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PressureUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="psi" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PressureUnitSymbol.psi"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#QualifiedAnalogValue">
+		<xs:sequence>
+			<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#AnalogValue.value">
+				<xs:annotation>
+					<xs:documentation>The value to supervise.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeStamp" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#MeasurementValue.timeStamp">
+				<xs:annotation>
+					<xs:documentation>The time when the value was last updated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="analogValueQualifierKind" minOccurs="0" maxOccurs="1" type="m:AnalogValueQualifierKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#QualifiedAnalogValue.analogValueQualifierKind"/>
+			<xs:element name="analogValueQualifierKindOther" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#QualifiedAnalogValue.analogValueQualifierKindOther"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ScalingIndexAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ScalingIndexAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:ScalingIndexUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ScalingIndexAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ScalingIndexUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ScalingIndexUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#ScalingIndexUnitSymbol.none"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SpecificActivityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SpecificActivityAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:SpecificActivityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SpecificActivityAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SpecificActivityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SpecificActivityUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="µCi/ml" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#SpecificActivityUnitSymbol.µCi/ml"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TemperatureAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TemperatureAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:TemperatureUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TemperatureAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TemperatureUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TemperatureUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="degF" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TemperatureUnitSymbol.degF"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TurbidityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TurbidityAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:TurbidityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TurbidityAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TurbidityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TurbidityUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NTU" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TurbidityUnitSymbol.NTU"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VolumeFlowRateAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VolumeFlowRateAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:VolumeFlowRateUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VolumeFlowRateAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="VolumeFlowRateUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VolumeFlowRateUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="gal/d" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VolumeFlowRateUnitSymbol.gal/d"/>
+			<xs:enumeration value="gal/min" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#VolumeFlowRateUnitSymbol.gal/min"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="pHAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#pHAnalog">
+		<xs:sequence>
+			<xs:element name="AnalogValues" minOccurs="1" maxOccurs="unbounded" type="m:QualifiedAnalogValue" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Analog.AnalogValues">
+				<xs:annotation>
+					<xs:documentation>The values connected to this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.name">
+				<xs:annotation>
+					<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:pHUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#pHAnalog.unitOfMeasure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="pHUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#pHUnitSymbol">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#pHUnitSymbol.none"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<xs:schema xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurementsMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurements#" targetNamespace="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurementsMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+  <!-- Base Message Definitions -->
+  <xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="../../../Part100_XSDs/Message.xsd"/>
+  <!-- CIM Information Object Definition -->
+  <xs:import namespace="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurements#" schemaLocation="../XSDs/SteamGenerationSystemOutputPressureMeasurements.xsd"/>
+  <!-- RequestType Definition -->
+  <xs:complexType name="SteamGenerationSystemOutputPressureMeasurementsRequestType">
+    <xs:annotation>
+      <xs:documentation>Request type definition</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>Request package is typically used to supply parameters for 'get' requests</xs:documentation>
+      </xs:annotation>
+      <xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Start time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>End time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Option" type="msg:OptionType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Request type specialization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Object ID for request</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attributeGroup ref="msg:IDatts"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element ref="obj:SteamGenerationSystemOutputPressureMeasurements"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- PayloadType Definition -->
+  <xs:complexType name="SteamGenerationSystemOutputPressureMeasurementsPayloadType">
+    <xs:sequence>
+      <xs:element ref="obj:SteamGenerationSystemOutputPressureMeasurements"/>
+      <xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
+      <xs:element name="Compressed" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Format" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Message Types -->
+  <!-- RequestMessageType -->
+  <xs:complexType name="SteamGenerationSystemOutputPressureMeasurementsRequestMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Request" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestType" minOccurs="0"/>
+      <xs:element name="Payload" type="tns:SteamGenerationSystemOutputPressureMeasurementsPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- ResponseMessageType -->
+  <xs:complexType name="SteamGenerationSystemOutputPressureMeasurementsResponseMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+      <xs:element name="Payload" type="tns:SteamGenerationSystemOutputPressureMeasurementsPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- EventMessageType -->
+  <xs:complexType name="SteamGenerationSystemOutputPressureMeasurementsEventMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Payload" type="tns:SteamGenerationSystemOutputPressureMeasurementsPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- FaultMessageType -->
+  <xs:complexType name="SteamGenerationSystemOutputPressureMeasurementsFaultMessageType">
+    <xs:sequence>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestMessageType"/>
+  <xs:element name="ChangeSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestMessageType"/>
+  <xs:element name="CancelSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestMessageType"/>
+  <xs:element name="CloseSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestMessageType"/>
+  <xs:element name="DeleteSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestMessageType"/>
+  <xs:element name="CreatedSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsEventMessageType"/>
+  <xs:element name="ChangedSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsEventMessageType"/>
+  <xs:element name="CanceledSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsEventMessageType"/>
+  <xs:element name="ClosedSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsEventMessageType"/>
+  <xs:element name="DeletedSteamGenerationSystemOutputPressureMeasurements" type="tns:SteamGenerationSystemOutputPressureMeasurementsEventMessageType"/>
+  <xs:element name="SteamGenerationSystemOutputPressureMeasurementsRequestMessage" type="tns:SteamGenerationSystemOutputPressureMeasurementsRequestMessageType"/>
+  <xs:element name="SteamGenerationSystemOutputPressureMeasurementsResponseMessage" type="tns:SteamGenerationSystemOutputPressureMeasurementsResponseMessageType"/>
+  <xs:element name="SteamGenerationSystemOutputPressureMeasurementsFaultMessage" type="tns:SteamGenerationSystemOutputPressureMeasurementsFaultMessageType"/>
+</xs:schema>

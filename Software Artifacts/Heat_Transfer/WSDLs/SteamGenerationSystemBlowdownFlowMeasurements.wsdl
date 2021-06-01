@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurementsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurementsMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetSteamGenerationSystemBlowdownFlowMeasurementsMessage" targetNamespace="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurementsWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceiveSteamGenerationSystemBlowdownFlowMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurementsMessage" schemaLocation="Message_XSDs/SteamGenerationSystemBlowdownFlowMeasurementsMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetSteamGenerationSystemBlowdownFlowMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/GetSteamGenerationSystemBlowdownFlowMeasurementsMessage" schemaLocation="Message_XSDs/GetSteamGenerationSystemBlowdownFlowMeasurementsMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage">
+    <wsdl:part name="CancelSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage" element="msg1:CancelSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsEventMessage">
+    <wsdl:part name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsEventMessage" element="msg1:CanceledSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage">
+    <wsdl:part name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage" element="msg1:ChangeSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage">
+    <wsdl:part name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage" element="msg1:ChangedSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CloseSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage">
+    <wsdl:part name="CloseSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage" element="msg1:CloseSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage">
+    <wsdl:part name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage" element="msg1:ClosedSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreateSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage">
+    <wsdl:part name="CreateSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage" element="msg1:CreateSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage">
+    <wsdl:part name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage" element="msg1:CreatedSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage">
+    <wsdl:part name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage" element="msg1:DeleteSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage">
+    <wsdl:part name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage" element="msg1:DeletedSteamGenerationSystemBlowdownFlowMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="GetSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage">
+    <wsdl:part name="GetSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage" element="msg1:SteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetSteamGenerationSystemBlowdownFlowMeasurementsResponseMessage">
+    <wsdl:part name="GetSteamGenerationSystemBlowdownFlowMeasurementsResponseMessage" element="msg1:SteamGenerationSystemBlowdownFlowMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:SteamGenerationSystemBlowdownFlowMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:SteamGenerationSystemBlowdownFlowMeasurementsFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="SteamGenerationSystemBlowdownFlowMeasurements_Port">
+    <wsdl:operation name="CancelSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="CancelSteamGenerationSystemBlowdownFlowMeasurementsRequest" message="tns:CancelSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+      <wsdl:output name="CancelSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsEvent" message="tns:CanceledSteamGenerationSystemBlowdownFlowMeasurementsEventMessage"/>
+      <wsdl:output name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsRequest" message="tns:ChangeSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+      <wsdl:output name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsEvent" message="tns:ChangedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage"/>
+      <wsdl:output name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="CloseSteamGenerationSystemBlowdownFlowMeasurementsRequest" message="tns:CloseSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+      <wsdl:output name="CloseSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsEvent" message="tns:ClosedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage"/>
+      <wsdl:output name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsRequest" message="tns:DeleteSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+      <wsdl:output name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsEvent" message="tns:DeletedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage"/>
+      <wsdl:output name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="CreateSteamGenerationSystemBlowdownFlowMeasurementsRequest" message="tns:CreateSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+      <wsdl:output name="CreateSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsEvent" message="tns:CreatedSteamGenerationSystemBlowdownFlowMeasurementsEventMessage"/>
+      <wsdl:output name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="GetSteamGenerationSystemBlowdownFlowMeasurementsRequest" message="tns:GetSteamGenerationSystemBlowdownFlowMeasurementsRequestMessage"/>
+      <wsdl:output name="GetSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:GetSteamGenerationSystemBlowdownFlowMeasurementsResponseMessage"/>
+      <wsdl:fault name="GetSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSteamGenerationSystemBlowdownFlowMeasurements">
+      <wsdl:input name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SteamGenerationSystemBlowdownFlowMeasurements_Binding" type="tns:SteamGenerationSystemBlowdownFlowMeasurements_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/CancelSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="CancelSteamGenerationSystemBlowdownFlowMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="CancelSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/CanceledSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="CanceledSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/ChangeSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="ChangeSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/ChangedSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="ChangedSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/CloseSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="CloseSteamGenerationSystemBlowdownFlowMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="CloseSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/ClosedSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="ClosedSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/CreateSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="CreateSteamGenerationSystemBlowdownFlowMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="CreateSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/CreatedSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="CreatedSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/DeleteSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="DeleteSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/DeletedSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="DeletedSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetSteamGenerationSystemBlowdownFlowMeasurements/GetSteamGenerationSystemBlowdownFlowMeasurements" style="document"/>
+      <wsdl:input name="GetSteamGenerationSystemBlowdownFlowMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="GetSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSteamGenerationSystemBlowdownFlowMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements/ResponseSteamGenerationSystemBlowdownFlowMeasurementsResponse" style="document"/>
+      <wsdl:input name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsFault">
+        <soap:fault name="ResponseSteamGenerationSystemBlowdownFlowMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveSteamGenerationSystemBlowdownFlowMeasurements">
+    <wsdl:port name="SteamGenerationSystemBlowdownFlowMeasurements_Port" binding="tns:SteamGenerationSystemBlowdownFlowMeasurements_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

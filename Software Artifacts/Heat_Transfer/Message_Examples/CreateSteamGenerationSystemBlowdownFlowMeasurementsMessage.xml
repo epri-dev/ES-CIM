@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:CreateSteamGenerationSystemBlowdownFlowMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurementsMessage" xsi:schemaLocation="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurementsMessage ../WSDLs/Message_XSDs/SteamGenerationSystemBlowdownFlowMeasurementsMessage.xsd">
+  <tns:Header xmlns="http://iec.ch/TC57/2011/schema/message">
+    <Verb>create</Verb>
+    <Noun>SteamGenerationSystemBlowdownFlowMeasurements</Noun>
+    <Timestamp>2019-11-23T23:44:03.569-05:00</Timestamp>
+    <MessageID>cf4d01d7-a94a-4388-a7e1-ec6c5482f4da</MessageID>
+    <CorrelationID>97f52ed0-fb21-4ff3-b1f2-e1edd10ee2b7</CorrelationID>
+    <Comment>Sample IEC 61968-100 ed.1 create(SteamGenerationSystemBlowdownFlowMeasurements) message</Comment>
+  </tns:Header>
+  <tns:Payload>
+    <SteamGenerationSystemBlowdownFlowMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements#" xsi:schemaLocation="http://epri.com/powergeneration/2020/SteamGenerationSystemBlowdownFlowMeasurements# ../WSDLs/XSDs/SteamGenerationSystemBlowdownFlowMeasurements.xsd">
+      <GenerationUnit>
+        <mRID>9533a553-aee6-409e-b6a9-36d6ad37d52b</mRID>
+        <Analog>
+          <mRID>37e1fb1c-e427-41fb-b36b-a725762e36fc</mRID>
+          <measurementType>MassFlowRate</measurementType>
+          <unitMultiplier>M</unitMultiplier>
+          <unitSymbol>kgPerh</unitSymbol>
+          <MeasurementPoint>
+            <mRID>afda7630-b83c-485e-8b9c-b1f8fdd6aa67</mRID>
+            <Names>
+              <name>Blowdown Valve Output</name>
+              <NameType>
+                <name>MeasurementPointName</name>
+              </NameType>
+            </Names>
+          </MeasurementPoint>
+          <AnalogValues>
+            <mRID>51908b3e-3114-4893-b5fb-305fee29b543</mRID>
+            <timeStamp>2019-11-23T22:44:03.569-05:00</timeStamp>
+            <value>0.018</value>
+            <MeasurementValueSource>
+              <name>Measurement</name>
+            </MeasurementValueSource>
+          </AnalogValues>
+          <Names>
+            <name>DCS-555</name>
+            <NameType>
+              <name>DCSHistorianIdentification</name>
+            </NameType>
+          </Names>
+        </Analog>
+        <Names>
+          <name>Palo Verde 1</name>
+          <NameType>
+            <name>UnitID</name>
+          </NameType>
+        </Names>
+      </GenerationUnit>
+    </SteamGenerationSystemBlowdownFlowMeasurements>
+  </tns:Payload>
+</tns:CreateSteamGenerationSystemBlowdownFlowMeasurements>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:CreateSteamGenerationSystemOutputPressureMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurementsMessage" xsi:schemaLocation="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurementsMessage ../WSDLs/Message_XSDs/SteamGenerationSystemOutputPressureMeasurementsMessage.xsd">
+  <tns:Header xmlns="http://iec.ch/TC57/2011/schema/message">
+    <Verb>create</Verb>
+    <Noun>SteamGenerationSystemOutputPressureMeasurements</Noun>
+    <Timestamp>2019-11-23T23:44:03.569-05:00</Timestamp>
+    <MessageID>b7740417-db0f-45aa-8fbd-fe62af654e3e</MessageID>
+    <CorrelationID>f647070a-833e-44ca-a2f5-1ecb73228331</CorrelationID>
+    <Comment>Sample IEC 61968-100 ed.1 create(SteamGenerationSystemOutputPressureMeasurements) message</Comment>
+  </tns:Header>
+  <tns:Payload>
+    <SteamGenerationSystemOutputPressureMeasurements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurements#" xsi:schemaLocation="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputPressureMeasurements# ../WSDLs/XSDs/SteamGenerationSystemOutputPressureMeasurements.xsd">
+      <GenerationUnit>
+        <mRID>9533a553-aee6-409e-b6a9-36d6ad37d52b</mRID>
+        <Analog>
+          <mRID>76719cdc-3b2f-465c-937a-3e064b842bb3</mRID>
+          <measurementType>Pressure</measurementType>
+          <unitMultiplier>none</unitMultiplier>
+          <unitSymbol>psia</unitSymbol>
+          <MeasurementPoint>
+            <mRID>22f2b545-6320-4b3a-8fd0-24616361c9bb</mRID>
+            <Names>
+              <name>Turbine Throttle Valve Output</name>
+              <NameType>
+                <name>MeasurementPointName</name>
+              </NameType>
+            </Names>
+          </MeasurementPoint>
+          <AnalogValues>
+            <mRID>5e47ec54-eacb-4d8c-a4c9-7e52fca5132a</mRID>
+            <timeStamp>2019-11-23T22:44:03.569-05:00</timeStamp>
+            <value>1375</value>
+            <MeasurementValueSource>
+              <name>Measurement</name>
+            </MeasurementValueSource>
+          </AnalogValues>
+          <Names>
+            <name>DCS-666</name>
+            <NameType>
+              <name>DCSHistorianIdentification</name>
+            </NameType>
+          </Names>
+        </Analog>
+        <Names>
+          <name>Palo Verde 1</name>
+          <NameType>
+            <name>UnitID</name>
+          </NameType>
+        </Names>
+      </GenerationUnit>
+    </SteamGenerationSystemOutputPressureMeasurements>
+  </tns:Payload>
+</tns:CreateSteamGenerationSystemOutputPressureMeasurements>

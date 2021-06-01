@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by Robert Ward (Ward Software Architects) -->
+<wsdl:definitions xmlns:tns="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurementsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurementsMessage" xmlns:msg2="http://epri.com/powergeneration/2020/GetSteamGenerationSystemOutputTemperatureMeasurementsMessage" targetNamespace="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurementsWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/ReceiveSteamGenerationSystemOutputTemperatureMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurementsMessage" schemaLocation="Message_XSDs/SteamGenerationSystemOutputTemperatureMeasurementsMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/powergeneration/2020/GetSteamGenerationSystemOutputTemperatureMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/powergeneration/2020/GetSteamGenerationSystemOutputTemperatureMeasurementsMessage" schemaLocation="Message_XSDs/GetSteamGenerationSystemOutputTemperatureMeasurementsMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage">
+    <wsdl:part name="CancelSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage" element="msg1:CancelSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsEventMessage">
+    <wsdl:part name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsEventMessage" element="msg1:CanceledSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage">
+    <wsdl:part name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage" element="msg1:ChangeSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage">
+    <wsdl:part name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage" element="msg1:ChangedSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CloseSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage">
+    <wsdl:part name="CloseSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage" element="msg1:CloseSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage">
+    <wsdl:part name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage" element="msg1:ClosedSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreateSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage">
+    <wsdl:part name="CreateSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage" element="msg1:CreateSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage">
+    <wsdl:part name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage" element="msg1:CreatedSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage">
+    <wsdl:part name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage" element="msg1:DeleteSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage">
+    <wsdl:part name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage" element="msg1:DeletedSteamGenerationSystemOutputTemperatureMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="GetSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage">
+    <wsdl:part name="GetSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage" element="msg1:SteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetSteamGenerationSystemOutputTemperatureMeasurementsResponseMessage">
+    <wsdl:part name="GetSteamGenerationSystemOutputTemperatureMeasurementsResponseMessage" element="msg1:SteamGenerationSystemOutputTemperatureMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:SteamGenerationSystemOutputTemperatureMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:SteamGenerationSystemOutputTemperatureMeasurementsFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="SteamGenerationSystemOutputTemperatureMeasurements_Port">
+    <wsdl:operation name="CancelSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="CancelSteamGenerationSystemOutputTemperatureMeasurementsRequest" message="tns:CancelSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+      <wsdl:output name="CancelSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsEvent" message="tns:CanceledSteamGenerationSystemOutputTemperatureMeasurementsEventMessage"/>
+      <wsdl:output name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsRequest" message="tns:ChangeSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+      <wsdl:output name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsEvent" message="tns:ChangedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage"/>
+      <wsdl:output name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="CloseSteamGenerationSystemOutputTemperatureMeasurementsRequest" message="tns:CloseSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+      <wsdl:output name="CloseSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsEvent" message="tns:ClosedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage"/>
+      <wsdl:output name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsRequest" message="tns:DeleteSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+      <wsdl:output name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsEvent" message="tns:DeletedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage"/>
+      <wsdl:output name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="CreateSteamGenerationSystemOutputTemperatureMeasurementsRequest" message="tns:CreateSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+      <wsdl:output name="CreateSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsEvent" message="tns:CreatedSteamGenerationSystemOutputTemperatureMeasurementsEventMessage"/>
+      <wsdl:output name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="GetSteamGenerationSystemOutputTemperatureMeasurementsRequest" message="tns:GetSteamGenerationSystemOutputTemperatureMeasurementsRequestMessage"/>
+      <wsdl:output name="GetSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:GetSteamGenerationSystemOutputTemperatureMeasurementsResponseMessage"/>
+      <wsdl:fault name="GetSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSteamGenerationSystemOutputTemperatureMeasurements">
+      <wsdl:input name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SteamGenerationSystemOutputTemperatureMeasurements_Binding" type="tns:SteamGenerationSystemOutputTemperatureMeasurements_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/CancelSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="CancelSteamGenerationSystemOutputTemperatureMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="CancelSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/CanceledSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="CanceledSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/ChangeSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="ChangeSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/ChangedSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="ChangedSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/CloseSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="CloseSteamGenerationSystemOutputTemperatureMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="CloseSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/ClosedSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="ClosedSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/CreateSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="CreateSteamGenerationSystemOutputTemperatureMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="CreateSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/CreatedSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="CreatedSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/DeleteSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="DeleteSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/DeletedSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="DeletedSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetSteamGenerationSystemOutputTemperatureMeasurements/GetSteamGenerationSystemOutputTemperatureMeasurements" style="document"/>
+      <wsdl:input name="GetSteamGenerationSystemOutputTemperatureMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="GetSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSteamGenerationSystemOutputTemperatureMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SteamGenerationSystemOutputTemperatureMeasurements/ResponseSteamGenerationSystemOutputTemperatureMeasurementsResponse" style="document"/>
+      <wsdl:input name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsFault">
+        <soap:fault name="ResponseSteamGenerationSystemOutputTemperatureMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveSteamGenerationSystemOutputTemperatureMeasurements">
+    <wsdl:port name="SteamGenerationSystemOutputTemperatureMeasurements_Port" binding="tns:SteamGenerationSystemOutputTemperatureMeasurements_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
