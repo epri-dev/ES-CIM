@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://epri.com/es-cim/2021/SpectroscopyMeasurementsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/es-cim/2021/SpectroscopyMeasurementsMessage" xmlns:msg2="http://epri.com/es-cim/2021/GetSpectroscopyMeasurementsMessage" targetNamespace="http://epri.com/es-cim/2021/SpectroscopyMeasurementsWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/es-cim/2021/ReceiveSpectroscopyMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/es-cim/2021/SpectroscopyMeasurementsMessage" schemaLocation="Message_XSDs/SpectroscopyMeasurementsMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/es-cim/2021/GetSpectroscopyMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/es-cim/2021/GetSpectroscopyMeasurementsMessage" schemaLocation="Message_XSDs/GetSpectroscopyMeasurementsMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelSpectroscopyMeasurementsRequestMessage">
+    <wsdl:part name="CancelSpectroscopyMeasurementsRequestMessage" element="msg1:CancelSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledSpectroscopyMeasurementsEventMessage">
+    <wsdl:part name="CanceledSpectroscopyMeasurementsEventMessage" element="msg1:CanceledSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeSpectroscopyMeasurementsRequestMessage">
+    <wsdl:part name="ChangeSpectroscopyMeasurementsRequestMessage" element="msg1:ChangeSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedSpectroscopyMeasurementsEventMessage">
+    <wsdl:part name="ChangedSpectroscopyMeasurementsEventMessage" element="msg1:ChangedSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CloseSpectroscopyMeasurementsRequestMessage">
+    <wsdl:part name="CloseSpectroscopyMeasurementsRequestMessage" element="msg1:CloseSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedSpectroscopyMeasurementsEventMessage">
+    <wsdl:part name="ClosedSpectroscopyMeasurementsEventMessage" element="msg1:ClosedSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreateSpectroscopyMeasurementsRequestMessage">
+    <wsdl:part name="CreateSpectroscopyMeasurementsRequestMessage" element="msg1:CreateSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedSpectroscopyMeasurementsEventMessage">
+    <wsdl:part name="CreatedSpectroscopyMeasurementsEventMessage" element="msg1:CreatedSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteSpectroscopyMeasurementsRequestMessage">
+    <wsdl:part name="DeleteSpectroscopyMeasurementsRequestMessage" element="msg1:DeleteSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedSpectroscopyMeasurementsEventMessage">
+    <wsdl:part name="DeletedSpectroscopyMeasurementsEventMessage" element="msg1:DeletedSpectroscopyMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="GetSpectroscopyMeasurementsRequestMessage">
+    <wsdl:part name="GetSpectroscopyMeasurementsRequestMessage" element="msg2:GetSpectroscopyMeasurementsRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetSpectroscopyMeasurementsResponseMessage">
+    <wsdl:part name="GetSpectroscopyMeasurementsResponseMessage" element="msg2:GetSpectroscopyMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:SpectroscopyMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:SpectroscopyMeasurementsFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="SpectroscopyMeasurements_Port">
+    <wsdl:operation name="CancelSpectroscopyMeasurements">
+      <wsdl:input name="CancelSpectroscopyMeasurementsRequest" message="tns:CancelSpectroscopyMeasurementsRequestMessage"/>
+      <wsdl:output name="CancelSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSpectroscopyMeasurements">
+      <wsdl:input name="CanceledSpectroscopyMeasurementsEvent" message="tns:CanceledSpectroscopyMeasurementsEventMessage"/>
+      <wsdl:output name="CanceledSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSpectroscopyMeasurements">
+      <wsdl:input name="ChangeSpectroscopyMeasurementsRequest" message="tns:ChangeSpectroscopyMeasurementsRequestMessage"/>
+      <wsdl:output name="ChangeSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSpectroscopyMeasurements">
+      <wsdl:input name="ChangedSpectroscopyMeasurementsEvent" message="tns:ChangedSpectroscopyMeasurementsEventMessage"/>
+      <wsdl:output name="ChangedSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSpectroscopyMeasurements">
+      <wsdl:input name="CloseSpectroscopyMeasurementsRequest" message="tns:CloseSpectroscopyMeasurementsRequestMessage"/>
+      <wsdl:output name="CloseSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSpectroscopyMeasurements">
+      <wsdl:input name="ClosedSpectroscopyMeasurementsEvent" message="tns:ClosedSpectroscopyMeasurementsEventMessage"/>
+      <wsdl:output name="ClosedSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpectroscopyMeasurements">
+      <wsdl:input name="DeleteSpectroscopyMeasurementsRequest" message="tns:DeleteSpectroscopyMeasurementsRequestMessage"/>
+      <wsdl:output name="DeleteSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSpectroscopyMeasurements">
+      <wsdl:input name="DeletedSpectroscopyMeasurementsEvent" message="tns:DeletedSpectroscopyMeasurementsEventMessage"/>
+      <wsdl:output name="DeletedSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSpectroscopyMeasurements">
+      <wsdl:input name="CreateSpectroscopyMeasurementsRequest" message="tns:CreateSpectroscopyMeasurementsRequestMessage"/>
+      <wsdl:output name="CreateSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSpectroscopyMeasurements">
+      <wsdl:input name="CreatedSpectroscopyMeasurementsEvent" message="tns:CreatedSpectroscopyMeasurementsEventMessage"/>
+      <wsdl:output name="CreatedSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpectroscopyMeasurements">
+      <wsdl:input name="GetSpectroscopyMeasurementsRequest" message="tns:GetSpectroscopyMeasurementsRequestMessage"/>
+      <wsdl:output name="GetSpectroscopyMeasurementsResponse" message="tns:GetSpectroscopyMeasurementsResponseMessage"/>
+      <wsdl:fault name="GetSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSpectroscopyMeasurements">
+      <wsdl:input name="ResponseSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseSpectroscopyMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseSpectroscopyMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SpectroscopyMeasurements_Binding" type="tns:SpectroscopyMeasurements_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/CancelSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="CancelSpectroscopyMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelSpectroscopyMeasurementsFault">
+        <soap:fault name="CancelSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/CanceledSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="CanceledSpectroscopyMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledSpectroscopyMeasurementsFault">
+        <soap:fault name="CanceledSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/ChangeSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="ChangeSpectroscopyMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeSpectroscopyMeasurementsFault">
+        <soap:fault name="ChangeSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/ChangedSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="ChangedSpectroscopyMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedSpectroscopyMeasurementsFault">
+        <soap:fault name="ChangedSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/CloseSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="CloseSpectroscopyMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseSpectroscopyMeasurementsFault">
+        <soap:fault name="CloseSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/ClosedSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="ClosedSpectroscopyMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedSpectroscopyMeasurementsFault">
+        <soap:fault name="ClosedSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/CreateSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="CreateSpectroscopyMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateSpectroscopyMeasurementsFault">
+        <soap:fault name="CreateSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/CreatedSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="CreatedSpectroscopyMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedSpectroscopyMeasurementsFault">
+        <soap:fault name="CreatedSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/DeleteSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="DeleteSpectroscopyMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteSpectroscopyMeasurementsFault">
+        <soap:fault name="DeleteSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/DeletedSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="DeletedSpectroscopyMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedSpectroscopyMeasurementsFault">
+        <soap:fault name="DeletedSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetSpectroscopyMeasurements/GetSpectroscopyMeasurements" style="document"/>
+      <wsdl:input name="GetSpectroscopyMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetSpectroscopyMeasurementsFault">
+        <soap:fault name="GetSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseSpectroscopyMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/SpectroscopyMeasurements/ResponseSpectroscopyMeasurementsResponse" style="document"/>
+      <wsdl:input name="ResponseSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseSpectroscopyMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseSpectroscopyMeasurementsFault">
+        <soap:fault name="ResponseSpectroscopyMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveSpectroscopyMeasurements">
+    <wsdl:port name="SpectroscopyMeasurements_Port" binding="tns:SpectroscopyMeasurements_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

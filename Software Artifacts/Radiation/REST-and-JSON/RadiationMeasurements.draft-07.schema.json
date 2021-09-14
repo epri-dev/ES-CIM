@@ -1,0 +1,379 @@
+{
+     "$id": "http://iec.ch/TC57/2021/RadiationMeasurements.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "RadiationMeasurements",
+     "description": "",
+     "namespace": "http://iec.ch/TC57/2021/RadiationMeasurements#",
+     "type": "object",
+     "properties": {
+         "NuclearGenerationUnit": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/NuclearGenerationUnit"
+             },
+             "minItems": 1
+         }
+     },
+     "required": [
+         "NuclearGenerationUnit"
+     ],
+     "definitions": {
+          "AnalogValue": {
+              "$id": "#AnalogValue",
+              "title": "AnalogValue",
+              "description": "AnalogValue represents an analog MeasurementValue.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#AnalogValue",
+              "type": "object",
+              "properties": {
+                  "timeStamp": {
+                      "description": "The time when the value was last updated.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementValue.timeStamp",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "value": {
+                      "description": "The value to supervise.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#AnalogValue.value",
+                      "type": "number"
+                  }
+              },
+              "required": [
+                  "timeStamp",
+                  "value"
+              ]
+          },
+          "Equipment": {
+              "$id": "#Equipment",
+              "title": "Equipment",
+              "description": "The parts of a power system that are physical devices, electronic or mechanical.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#Equipment",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Measurements": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Equipment.Measurements",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/RadiationDoseRateAnalog"
+                      }
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "MeasurementDevice": {
+              "$id": "#MeasurementDevice",
+              "title": "MeasurementDevice",
+              "description": "A tool (detector, probe, meter, sensor, etc.) used to count any quantitative information such as temperature, pressure, flow rate, etc.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementDevice",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "MeasurementsDeviceConditions": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementDevice.MeasurementsDeviceConditions",
+                      "$ref": "#/definitions/MeasurementDeviceConditions"
+                  }
+              }
+          },
+          "MeasurementDeviceConditions": {
+              "$id": "#MeasurementDeviceConditions",
+              "title": "MeasurementDeviceConditions",
+              "description": "Parameters that are not permanent but do not change frequently for a device such as calibration information.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementDeviceConditions",
+              "type": "object",
+              "properties": {
+                  "bias": {
+                      "description": "EPDs are generally biased to read higher than predicted dose rates. EPD biasing procedures can vary between plants but the general goal is to ensure the difference between the real-time EPD and final DOLR value as determined by LTD/OSTD is minimized. An EPD bias value of 5 to 10% relative to a Cs-137 standard is typical, however, subsequent differences in accumulated dose values for personnel are usually only a few percent.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementDeviceConditions.bias",
+                      "$ref": "#/definitions/PerCent"
+                  },
+                  "effectiveStarting": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementDeviceConditions.effectiveStarting",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  }
+              },
+              "required": [
+                  "bias",
+                  "effectiveStarting"
+              ]
+          },
+          "MeasurementPoint": {
+              "$id": "#MeasurementPoint",
+              "title": "MeasurementPoint",
+              "description": "The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed. The name and description should be used from the inherited IdentifiedObject class.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPoint",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "MeasurementPointConditions": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPoint.MeasurementPointConditions",
+                      "$ref": "#/definitions/MeasurementPointConditions"
+                  }
+              },
+              "required": [
+                  "MeasurementPointConditions"
+              ]
+          },
+          "MeasurementPointConditions": {
+              "$id": "#MeasurementPointConditions",
+              "title": "MeasurementPointConditions",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions",
+              "type": "object",
+              "properties": {
+                  "affectedByHotSpots": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.affectedByHotSpots",
+                      "type": "boolean"
+                  },
+                  "effectiveStarting": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.effectiveStarting",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "locationChanged": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.locationChanged",
+                      "type": "boolean"
+                  },
+                  "locationMarked": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.locationMarked",
+                      "type": "boolean"
+                  },
+                  "shieldingBetweenDeviceAndTarget": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.shieldingBetweenDeviceAndTarget",
+                      "type": "boolean"
+                  },
+                  "shieldingChanged": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.shieldingChanged",
+                      "type": "boolean"
+                  }
+              },
+              "required": [
+                  "affectedByHotSpots",
+                  "effectiveStarting",
+                  "locationChanged",
+                  "locationMarked",
+                  "shieldingBetweenDeviceAndTarget",
+                  "shieldingChanged"
+              ]
+          },
+          "Name": {
+              "$id": "#Name",
+              "title": "Name",
+              "description": "The Name class provides the means to define any number of human readable names for an object. A name is <b>not</b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#Name",
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "description": "Any free text that name the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Name.name",
+                      "type": "string"
+                  },
+                  "NameType": {
+                      "description": "Type of this name.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Name.NameType",
+                      "$ref": "#/definitions/NameType"
+                  }
+              },
+              "required": [
+                  "name",
+                  "NameType"
+              ]
+          },
+          "NameType": {
+              "$id": "#NameType",
+              "title": "NameType",
+              "description": "Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is: The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameType",
+              "type": "object",
+              "properties": {
+                  "description": {
+                      "description": "Description of the name type.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameType.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "Name of the name type.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameType.name",
+                      "type": "string"
+                  },
+                  "NameTypeAuthority": {
+                      "description": "Authority responsible for managing names of this type.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameType.NameTypeAuthority",
+                      "$ref": "#/definitions/NameTypeAuthority"
+                  }
+              },
+              "required": [
+                  "name"
+              ]
+          },
+          "NameTypeAuthority": {
+              "$id": "#NameTypeAuthority",
+              "title": "NameTypeAuthority",
+              "description": "Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameTypeAuthority",
+              "type": "object",
+              "properties": {
+                  "description": {
+                      "description": "Description of the name type authority.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameTypeAuthority.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "Name of the name type authority.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NameTypeAuthority.name",
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "name"
+              ]
+          },
+          "NuclearGenerationUnit": {
+              "$id": "#NuclearGenerationUnit",
+              "title": "NuclearGenerationUnit",
+              "description": "A GenerationUnit that generates electricity using nuclear energy",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#NuclearGenerationUnit",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "Equipments": {
+                      "description": "Contained equipment.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#EquipmentContainer.Equipments",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Equipment"
+                      }
+                  }
+              }
+          },
+          "RadiationDoseRateAnalog": {
+              "$id": "#RadiationDoseRateAnalog",
+              "title": "RadiationDoseRateAnalog",
+              "description": "<b>Description to be filled out by EPRI SME. Specifically is this absorbed dose, equivalent dose, or effective dose?</b>",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#RadiationDoseRateAnalog",
+              "type": "object",
+              "properties": {
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#RadiationDoseRateAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/RadiationDoseRateUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/AnalogValue"
+                      },
+                      "minItems": 1
+                  },
+                  "MeasurementDevice": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Measurement.MeasurementDevice",
+                      "$ref": "#/definitions/MeasurementDevice"
+                  },
+                  "MeasurementPoint": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Measurement.MeasurementPoint",
+                      "$ref": "#/definitions/MeasurementPoint"
+                  }
+              },
+              "required": [
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "RadiationDoseRateUnitSymbol": {
+              "$id": "#RadiationDoseRateUnitSymbol",
+              "title": "RadiationDoseRateUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "mrem/h",
+                  "rem/h"
+              ]
+          },
+          "PerCent": {
+              "$id": "#PerCent",
+              "title": "PerCent",
+              "description": "Percentage on a defined base. For example, specify as 100 to indicate at the defined base.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#PerCent",
+              "type": "object",
+              "properties": {
+                  "value": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#PerCent.value",
+                      "type" : "number"
+                  }
+              },
+              "required": [
+                  "value"
+              ]
+          },
+          "RadiationMeasurements": {
+               "$ref": "#"
+          }
+     }
+}

@@ -1,0 +1,3102 @@
+{
+     "$id": "http://epri.com/powergeneration/2020/MaintenanceOrders.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "MaintenanceOrders",
+     "description": "",
+     "namespace": "http://epri.com/powergeneration/2020/MaintenanceOrders#",
+     "type": "object",
+     "properties": {
+         "Document": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/Document"
+             }
+         },
+         "MaintenanceOrder": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/MaintenanceOrder"
+             }
+         },
+         "Procedure": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/Procedure"
+             }
+         }
+     },
+     "definitions": {
+          "Address": {
+              "$id": "#Address",
+              "title": "Address",
+              "description": "General purpose street and postal address information.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "addressKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.addressKind",
+                      "$ref": "#/definitions/AddressKind"
+                  },
+                  "addressKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.addressKindOther",
+                      "type": "string"
+                  },
+                  "cityCode": {
+                      "description": "City code.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.cityCode",
+                      "type": "string"
+                  },
+                  "cityName": {
+                      "description": "City name.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.cityName",
+                      "type": "string"
+                  },
+                  "country": {
+                      "description": "Name of the country.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.country",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "nearestIntersection": {
+                      "description": "The names of streets at the nearest intersection to work area.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.nearestIntersection",
+                      "type": "string"
+                  },
+                  "poBox": {
+                      "description": "Post office box.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.poBox",
+                      "type": "string"
+                  },
+                  "postalCode": {
+                      "description": "Postal code for the address.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.postalCode",
+                      "type": "string"
+                  },
+                  "stateOrProvince": {
+                      "description": "Name of the state or province.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.stateOrProvince",
+                      "type": "string"
+                  },
+                  "streetCode": {
+                      "description": "(if applicable) Utilities often make use of external reference systems, such as those of the town-planner's department or surveyor general's mapping system, that allocate global reference codes to streets.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.streetCode",
+                      "type": "string"
+                  },
+                  "streetName": {
+                      "description": "Name of the street.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.streetName",
+                      "type": "string"
+                  },
+                  "streetNumber": {
+                      "description": "Designator of the specific location on the street.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.streetNumber",
+                      "type": "string"
+                  },
+                  "streetPrefix": {
+                      "description": "Prefix to the street name. For example: North, South, East, West.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.streetPrefix",
+                      "type": "string"
+                  },
+                  "streetSuffix": {
+                      "description": "Suffix to the street name. For example: North, South, East, West.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.streetSuffix",
+                      "type": "string"
+                  },
+                  "streetType": {
+                      "description": "Type of street. Examples include: street, circle, boulevard, avenue, road, drive, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.streetType",
+                      "type": "string"
+                  },
+                  "suiteNumber": {
+                      "description": "Number of the apartment or suite.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.suiteNumber",
+                      "type": "string"
+                  },
+                  "withinCityLimits": {
+                      "description": "True if this street is within the legal geographical boundaries of the specified town (default).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Address.withinCityLimits",
+                      "type": "boolean"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "AddressKind": {
+              "$id": "#AddressKind",
+              "title": "AddressKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "billing",
+                  "other",
+                  "physical",
+                  "postal",
+                  "street"
+              ]
+          },
+          "Approver": {
+              "$id": "#Approver",
+              "title": "Approver",
+              "description": "Person who accepted/signed or rejected the document.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Approver",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "Person": {
+                      "description": "Person having this role.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PersonRole.Person",
+                      "$ref": "#/definitions/Person"
+                  }
+              }
+          },
+          "Asset": {
+              "$id": "#Asset",
+              "title": "Asset",
+              "description": "The Asset business object includes legal (e.g. ownership), commercial, (e.g. supplier), financial (e.g. different type of cost), technical and managerial information for substation and network, energy resource (including distributed energy resource (DER), and non-electrical assets. Identification numbers (specification number, product number, serial number) are central items that allows for collection of additional information associated with the asset.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "baselineCondition": {
+                      "description": "Condition of asset at last baseline. Examples include new, rebuilt, overhaul required, other. Refer to inspection data for information on the most current condition of the asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.baselineCondition",
+                      "type": "string"
+                  },
+                  "baselineLossOfLife": {
+                      "description": "Percentage of initial life expectancy that has been lost as of the last life expectancy baseline. Represents(initial life expectancy - current life expectancy) / initial life expectancy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.baselineLossOfLife",
+                      "$ref": "#/definitions/PerCent"
+                  },
+                  "critical": {
+                      "description": "True if asset is considered critical for some reason (for example, a pole with critical attachments).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.critical",
+                      "type": "boolean"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "inUseState": {
+                      "description": "Indication of whether asset is currently deployed (in use), ready to be put into use or not available for use.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.inUseState",
+                      "$ref": "#/definitions/InUseStateKind"
+                  },
+                  "kind": {
+                      "description": "Kind of asset. Used in description of asset components in asset instance templates.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.kind",
+                      "$ref": "#/definitions/AssetKind"
+                  },
+                  "kindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.kindOther",
+                      "type": "string"
+                  },
+                  "lifecycleState": {
+                      "description": "Current lifecycle state of asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.lifecycleState",
+                      "$ref": "#/definitions/AssetLifecycleStateKind"
+                  },
+                  "lotNumber": {
+                      "description": "Lot number for this asset. Even for the same model and version number, many assets are manufactured in lots.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.lotNumber",
+                      "type": "string"
+                  },
+                  "position": {
+                      "description": "Position of asset or asset component. May often be in relation to other assets or components.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.position",
+                      "type": "string"
+                  },
+                  "serialNumber": {
+                      "description": "Serial number of this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.serialNumber",
+                      "type": "string"
+                  },
+                  "type": {
+                      "description": "Utility-specific classification of Asset and its subtypes, according to their corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.type",
+                      "type": "string"
+                  },
+                  "utcNumber": {
+                      "description": "Uniquely tracked commodity (UTC) number.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.utcNumber",
+                      "type": "string"
+                  },
+                  "AssetContainer": {
+                      "description": "Container of this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.AssetContainer",
+                      "$ref": "#/definitions/AssetContainer"
+                  },
+                  "AssetStatus": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.AssetStatus",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/AssetStatus"
+                      }
+                  },
+                  "Document": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.Document",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/DocumentRef"
+                      }
+                  },
+                  "ElectronicAddress": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.ElectronicAddress",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/ElectronicAddress"
+                      }
+                  },
+                  "InternalLocation": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.InternalLocation",
+                      "$ref": "#/definitions/InternalLocation"
+                  },
+                  "inUseDate": {
+                      "description": "In use dates for this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.inUseDate",
+                      "$ref": "#/definitions/InUseDate"
+                  },
+                  "lifecycleDate": {
+                      "description": "<was lifecycle>Lifecycle dates for this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.lifecycleDate",
+                      "$ref": "#/definitions/LifecycleDate"
+                  },
+                  "Location": {
+                      "description": "Location of this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.Location",
+                      "$ref": "#/definitions/Location"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "PowerSystemResource": {
+                      "description": "All power system resources used to electrically model this asset. For example, transformer asset is electrically modelled with a transformer and its windings and tap changer.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.PowerSystemResource",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Equipment"
+                      }
+                  },
+                  "ProductAssetModel": {
+                      "description": "The model of this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.ProductAssetModel",
+                      "$ref": "#/definitions/ProductAssetModel"
+                  },
+                  "purchasePrice": {
+                      "description": "Purchase price of asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.purchasePrice",
+                      "$ref": "#/definitions/Money"
+                  },
+                  "status": {
+                      "description": "Status of this asset.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Asset.status",
+                      "$ref": "#/definitions/Status"
+                  }
+              }
+          },
+          "AssetContainer": {
+              "$id": "#AssetContainer",
+              "title": "AssetContainer",
+              "description": "Asset that is aggregation of other assets such as conductors, transformers, switchgear, land, fences, buildings, equipment, vehicles, etc.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetContainer",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "AssetKind": {
+              "$id": "#AssetKind",
+              "title": "AssetKind",
+              "description": "Kinds of assets or asset components.",
+              "type": "string",
+              "enum": [
+                  "breakerAirBlastBreaker",
+                  "breakerBulkOilBreaker",
+                  "breakerInsulatingStackAssembly",
+                  "breakerMinimumOilBreaker",
+                  "breakerSF6DeadTankBreaker",
+                  "breakerSF6LiveTankBreaker",
+                  "breakerTankAssembly",
+                  "other",
+                  "transformer",
+                  "transformerTank"
+              ]
+          },
+          "AssetLifecycleStateKind": {
+              "$id": "#AssetLifecycleStateKind",
+              "title": "AssetLifecycleStateKind",
+              "description": "Lifecycle states an asset can be in. While the possible lifecycle states are standardized, the allowed transitions are not - they are intended to be defined by the business process requirements of local implementations.",
+              "type": "string",
+              "enum": [
+                  "disposedOf",
+                  "manufactured",
+                  "purchased",
+                  "received",
+                  "retired"
+              ]
+          },
+          "AssetMeasurementTrigger": {
+              "$id": "#AssetMeasurementTrigger",
+              "title": "AssetMeasurementTrigger",
+              "description": "Defines a condition trigger that will require maintenance to be performed.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetMeasurementTrigger",
+              "type": "object",
+              "properties": {
+                  "conditionOccurenceLimit": {
+                      "description": "Indicates the number of times a condition must occur before the maintenance is required (e.g. 5 breaker operations).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetMeasurementTrigger.conditionOccurenceLimit",
+                      "type": "integer"
+                  },
+                  "conditionOccurenceTimePeriod": {
+                      "description": "Indicates the number of occurences of the conditionOccurrenceTimeUnit within which the condition occur (e.g. 6 in conjunction with conditionOccurrenceTimeUnit = Months).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetMeasurementTrigger.conditionOccurenceTimePeriod",
+                      "type": "integer"
+                  },
+                  "conditionOccurenceTimeUnit": {
+                      "description": "Indicates the unit of time (e.g. day, week, etc.) in which the condition occurs.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetMeasurementTrigger.conditionOccurenceTimeUnit",
+                      "type": "string"
+                  },
+                  "conditionType": {
+                      "description": "Indicates the specific type of condition in terms of a measurement that the trigger is based on.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetMeasurementTrigger.conditionType",
+                      "type": "string"
+                  }
+              }
+          },
+          "AssetModelUsageKind": {
+              "$id": "#AssetModelUsageKind",
+              "title": "AssetModelUsageKind",
+              "description": "Usage for an asset model.",
+              "type": "string",
+              "enum": [
+                  "customerSubstation",
+                  "distributionOverhead",
+                  "distributionUnderground",
+                  "other",
+                  "streetlight",
+                  "substation",
+                  "transmission",
+                  "unknown"
+              ]
+          },
+          "AssetStatus": {
+              "$id": "#AssetStatus",
+              "title": "AssetStatus",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetStatus",
+              "type": "object",
+              "properties": {
+                  "statusType": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetStatus.statusType",
+                      "type": "string"
+                  },
+                  "assetStatus": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#AssetStatus.assetStatus",
+                      "$ref": "#/definitions/Status"
+                  }
+              }
+          },
+          "Author": {
+              "$id": "#Author",
+              "title": "Author",
+              "description": "Person who created document or activity record.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Author",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "Person": {
+                      "description": "Person having this role.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PersonRole.Person",
+                      "$ref": "#/definitions/Person"
+                  }
+              }
+          },
+          "CoordinateSystem": {
+              "$id": "#CoordinateSystem",
+              "title": "CoordinateSystem",
+              "description": "Coordinate reference system.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CoordinateSystem",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "crsUrn": {
+                      "description": "A Uniform Resource Name (URN) for the coordinate reference system (crs) used to define 'Location.PositionPoints'. An example would be the European Petroleum Survey Group (EPSG) code for a coordinate reference system, defined in URN under the Open Geospatial Consortium (OGC) namespace as: urn:ogc:def:crs:EPSG::XXXX, where XXXX is an EPSG code (a full list of codes can be found at the EPSG Registry web site http://www.epsg-registry.org/). To define the coordinate system as being WGS84 (latitude, longitude) using an EPSG OGC, this attribute would be urn:ogc:def:crs:EPSG::4236. A profile should limit this code to a set of allowed URNs agreed to by all sending and receiving parties.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CoordinateSystem.crsUrn",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "CorporateStandardKind": {
+              "$id": "#CorporateStandardKind",
+              "title": "CorporateStandardKind",
+              "description": "Kind of corporate standard.",
+              "type": "string",
+              "enum": [
+                  "experimental",
+                  "other",
+                  "standard",
+                  "underEvaluation"
+              ]
+          },
+          "CostCategoryKind": {
+              "$id": "#CostCategoryKind",
+              "title": "CostCategoryKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "capital",
+                  "o&m",
+                  "other"
+              ]
+          },
+          "Crew": {
+              "$id": "#Crew",
+              "title": "Crew",
+              "description": "Group of people with specific skills, tools, and vehicles.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Crew",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "CrewAssignment": {
+                      "description": "All members of this crew.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Crew.CrewAssignment",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/CrewAssignment"
+                      }
+                  },
+                  "CrewType": {
+                      "description": "Type of this crew.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Crew.CrewType",
+                      "$ref": "#/definitions/CrewType"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "CrewAssignment": {
+              "$id": "#CrewAssignment",
+              "title": "CrewAssignment",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CrewAssignment",
+              "type": "object",
+              "properties": {
+                  "CrewMember": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CrewAssignment.CrewMember",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/CrewMember"
+                      }
+                  },
+                  "effectiveDateTimeInterval": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CrewAssignment.effectiveDateTimeInterval",
+                      "$ref": "#/definitions/DateTimeInterval"
+                  }
+              }
+          },
+          "CrewMember": {
+              "$id": "#CrewMember",
+              "title": "CrewMember",
+              "description": "Member of a crew.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CrewMember",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "Person": {
+                      "description": "Person having this role.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PersonRole.Person",
+                      "$ref": "#/definitions/Person"
+                  }
+              }
+          },
+          "CrewType": {
+              "$id": "#CrewType",
+              "title": "CrewType",
+              "description": "Custom description of the type of crew. This may be used to determine the type of work the crew can be assigned to. Examples include repair, tree trimming, switching, etc.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#CrewType",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "Currency": {
+              "$id": "#Currency",
+              "title": "Currency",
+              "description": "Monetary currencies. ISO 4217 standard including 3-character currency code.",
+              "type": "string",
+              "enum": [
+                  "AED",
+                  "AFN",
+                  "ALL",
+                  "AMD",
+                  "ANG",
+                  "AOA",
+                  "ARS",
+                  "AUD",
+                  "AWG",
+                  "AZN",
+                  "BAM",
+                  "BBD",
+                  "BDT",
+                  "BGN",
+                  "BHD",
+                  "BIF",
+                  "BMD",
+                  "BND",
+                  "BOB",
+                  "BOV",
+                  "BRL",
+                  "BSD",
+                  "BTN",
+                  "BWP",
+                  "BYR",
+                  "BZD",
+                  "CAD",
+                  "CDF",
+                  "CHF",
+                  "CLF",
+                  "CLP",
+                  "CNY",
+                  "COP",
+                  "COU",
+                  "CRC",
+                  "CUC",
+                  "CUP",
+                  "CVE",
+                  "CZK",
+                  "DJF",
+                  "DKK",
+                  "DOP",
+                  "DZD",
+                  "EEK",
+                  "EGP",
+                  "ERN",
+                  "ETB",
+                  "EUR",
+                  "FJD",
+                  "FKP",
+                  "GBP",
+                  "GEL",
+                  "GHS",
+                  "GIP",
+                  "GMD",
+                  "GNF",
+                  "GTQ",
+                  "GYD",
+                  "HKD",
+                  "HNL",
+                  "HRK",
+                  "HTG",
+                  "HUF",
+                  "IDR",
+                  "ILS",
+                  "INR",
+                  "IQD",
+                  "IRR",
+                  "ISK",
+                  "JMD",
+                  "JOD",
+                  "JPY",
+                  "KES",
+                  "KGS",
+                  "KHR",
+                  "KMF",
+                  "KPW",
+                  "KRW",
+                  "KWD",
+                  "KYD",
+                  "KZT",
+                  "LAK",
+                  "LBP",
+                  "LKR",
+                  "LRD",
+                  "LSL",
+                  "LTL",
+                  "LVL",
+                  "LYD",
+                  "MAD",
+                  "MDL",
+                  "MGA",
+                  "MKD",
+                  "MMK",
+                  "MNT",
+                  "MOP",
+                  "MRO",
+                  "MUR",
+                  "MVR",
+                  "MWK",
+                  "MXN",
+                  "MYR",
+                  "MZN",
+                  "NAD",
+                  "NGN",
+                  "NIO",
+                  "NOK",
+                  "NPR",
+                  "NZD",
+                  "OMR",
+                  "PAB",
+                  "PEN",
+                  "PGK",
+                  "PHP",
+                  "PKR",
+                  "PLN",
+                  "PYG",
+                  "QAR",
+                  "RON",
+                  "RSD",
+                  "RUB",
+                  "RWF",
+                  "SAR",
+                  "SBD",
+                  "SCR",
+                  "SDG",
+                  "SEK",
+                  "SGD",
+                  "SHP",
+                  "SLL",
+                  "SOS",
+                  "SRD",
+                  "STD",
+                  "SYP",
+                  "SZL",
+                  "THB",
+                  "TJS",
+                  "TMT",
+                  "TND",
+                  "TOP",
+                  "TRY",
+                  "TTD",
+                  "TWD",
+                  "TZS",
+                  "UAH",
+                  "UGX",
+                  "USD",
+                  "UYU",
+                  "UZS",
+                  "VEF",
+                  "VND",
+                  "VUV",
+                  "WST",
+                  "XAF",
+                  "XCD",
+                  "XOF",
+                  "XPF",
+                  "YER",
+                  "ZAR",
+                  "ZMK",
+                  "ZWL"
+              ]
+          },
+          "DateTimeInterval": {
+              "$id": "#DateTimeInterval",
+              "title": "DateTimeInterval",
+              "description": "Interval between two date and time points, where the interval includes the start time but excludes end time.",
+              "type": "object",
+              "properties": {
+                  "end": {
+                      "description": "End date and time of this interval. The end date and time where the interval is defined up to, but excluded.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#DateTimeInterval.end",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "start": {
+                      "description": "Start date and time of this interval. The start date and time is included in the defined interval.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#DateTimeInterval.start",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  }
+              }
+          },
+          "DayOfWeekKind": {
+              "$id": "#DayOfWeekKind",
+              "title": "DayOfWeekKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "Friday",
+                  "Monday",
+                  "Saturday",
+                  "Sunday",
+                  "Thursday",
+                  "Tuesday",
+                  "Wednesday"
+              ]
+          },
+          "Document": {
+              "$id": "#Document",
+              "title": "Document",
+              "description": "Parent class for different groupings of information collected and managed as a part of a business process. It will frequently contain references to other objects, such as assets, people and power system resources.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "comment": {
+                      "description": "Free text comment.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.comment",
+                      "type": "string"
+                  },
+                  "createdDateTime": {
+                      "description": "Date and time that this document was created.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.createdDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "documentKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.documentKind",
+                      "$ref": "#/definitions/DocumentKind"
+                  },
+                  "documentKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.documentKindOther",
+                      "type": "string"
+                  },
+                  "isRecord": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.isRecord",
+                      "type": "boolean"
+                  },
+                  "lastModifiedDateTime": {
+                      "description": "Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.lastModifiedDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "revisionNumber": {
+                      "description": "Revision number for this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.revisionNumber",
+                      "type": "string"
+                  },
+                  "subject": {
+                      "description": "Document subject.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.subject",
+                      "type": "string"
+                  },
+                  "title": {
+                      "description": "Document title.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.title",
+                      "type": "string"
+                  },
+                  "type": {
+                      "description": "Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.type",
+                      "type": "string"
+                  },
+                  "url": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.url",
+                      "type": "string"
+                  },
+                  "Approver": {
+                      "description": "Approver of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.Approver",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Approver"
+                      }
+                  },
+                  "Author": {
+                      "description": "Author of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.Author",
+                      "$ref": "#/definitions/Author"
+                  },
+                  "docStatus": {
+                      "description": "Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.Example values for 'docStatus.status' are draft, approved, cancelled, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.docStatus",
+                      "$ref": "#/definitions/Status"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "RelatedDocument": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.RelatedDocument",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/DocumentRef"
+                      }
+                  },
+                  "status": {
+                      "description": "Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.status",
+                      "$ref": "#/definitions/Status"
+                  }
+              }
+          },
+          "DocumentKind": {
+              "$id": "#DocumentKind",
+              "title": "DocumentKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "agreement",
+                  "application",
+                  "billOfMaterials",
+                  "blueprint",
+                  "drawing",
+                  "inspectionReport",
+                  "instruction",
+                  "invoice",
+                  "log",
+                  "map",
+                  "other",
+                  "partsList",
+                  "photograph",
+                  "procedure",
+                  "specification",
+                  "video"
+              ]
+          },
+          "ElectronicAddress": {
+              "$id": "#ElectronicAddress",
+              "title": "ElectronicAddress",
+              "description": "Electronic address information. ",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_",
+              "type": "object",
+              "properties": {
+                  "lan": {
+                      "description": "Address on local area network.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_.lan",
+                      "type": "string"
+                  },
+                  "mac": {
+                      "description": "MAC (Media Access Control) address.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_.mac",
+                      "type": "string"
+                  },
+                  "password": {
+                      "description": "Password needed to log in.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_.password",
+                      "type": "string"
+                  },
+                  "radio": {
+                      "description": "Radio address.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_.radio",
+                      "type": "string"
+                  },
+                  "userID": {
+                      "description": "User ID needed to log in, which can be for an individual person, an organisation, a location, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_.userID",
+                      "type": "string"
+                  },
+                  "web": {
+                      "description": "World wide web address.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress__new_.web",
+                      "type": "string"
+                  }
+              }
+          },
+          "EmailAddress": {
+              "$id": "#EmailAddress",
+              "title": "EmailAddress",
+              "description": "Electronic address information. ",
+              "type": "object",
+              "properties": {
+                  "email1": {
+                      "description": "Primary email address.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ElectronicAddress.email1",
+                      "type": "string"
+                  }
+              }
+          },
+          "Equipment": {
+              "$id": "#Equipment",
+              "title": "Equipment",
+              "description": "The parts of a power system that are physical devices, electronic or mechanical.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Equipment",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "inService": {
+                      "description": "If true, the equipment is in service.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Equipment.inService",
+                      "type": "boolean"
+                  },
+                  "normallyInService": {
+                      "description": "If true, the equipment is normally in service.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Equipment.normallyInService",
+                      "type": "boolean"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "System": {
+                      "description": "System that contains Equipment",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Equipment.System",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/System"
+                      }
+                  }
+              }
+          },
+          "EquipmentContainer": {
+              "$id": "#EquipmentContainer",
+              "title": "EquipmentContainer",
+              "description": "A modelling construct to provide a root class for containing equipment.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#EquipmentContainer",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "Facility": {
+              "$id": "#Facility",
+              "title": "Facility",
+              "description": "A facility may contain buildings, storage facilities, switching facilities, power generation, manufacturing facilities, maintenance facilities, etc.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Facility",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "FrequencyKind": {
+              "$id": "#FrequencyKind",
+              "title": "FrequencyKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "daily",
+                  "monthly",
+                  "weekly",
+                  "yearly"
+              ]
+          },
+          "InUseDate": {
+              "$id": "#InUseDate",
+              "title": "InUseDate",
+              "description": "Dates associated with asset 'in use' status. May have multiple in use dates for this device and a compound type allows a query to return multiple dates.",
+              "type": "object",
+              "properties": {
+                  "inUseDate": {
+                      "description": "Date asset was most recently put in use.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InUseDate.inUseDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "notReadyForUseDate": {
+                      "description": "Date of most recent asset transition to not ready for use state.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InUseDate.notReadyForUseDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "readyForUseDate": {
+                      "description": "Date of most recent asset transition to ready for use state.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InUseDate.readyForUseDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  }
+              }
+          },
+          "InUseStateKind": {
+              "$id": "#InUseStateKind",
+              "title": "InUseStateKind",
+              "description": "Possible 'in use' states that an asset can be in.",
+              "type": "string",
+              "enum": [
+                  "inUse",
+                  "notReadyForUse",
+                  "readyForUse"
+              ]
+          },
+          "IntegerQuantity": {
+              "$id": "#IntegerQuantity",
+              "title": "IntegerQuantity",
+              "description": "Quantity with integer value and associated unit information.",
+              "type": "object",
+              "properties": {
+                  "multiplier": {
+                      "description": "Unit multiplier of this quantity.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IntegerQuantity.multiplier",
+                      "$ref": "#/definitions/UnitMultiplier"
+                  },
+                  "unit": {
+                      "description": "Unit of this quantity.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IntegerQuantity.unit",
+                      "$ref": "#/definitions/UnitSymbol"
+                  },
+                  "value": {
+                      "description": "Value of this quantity.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IntegerQuantity.value",
+                      "type": "integer"
+                  }
+              }
+          },
+          "InternalLocation": {
+              "$id": "#InternalLocation",
+              "title": "InternalLocation",
+              "description": "Description of location internal to a building.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InternalLocation",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "buildingName": {
+                      "description": "Name of building where location is.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InternalLocation.buildingName",
+                      "type": "string"
+                  },
+                  "buildingNumber": {
+                      "description": "Number of building where location is.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InternalLocation.buildingNumber",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "floor": {
+                      "description": "Floor of location.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InternalLocation.floor",
+                      "type": "integer"
+                  },
+                  "roomNumber": {
+                      "description": "Room number of location.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InternalLocation.roomNumber",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "TelephoneNumber": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#InternalLocation.TelephoneNumber",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/TelephoneNumber"
+                      }
+                  }
+              }
+          },
+          "LifecycleDate": {
+              "$id": "#LifecycleDate",
+              "title": "LifecycleDate",
+              "description": "Dates for asset lifecycle state changes. May have multiple lifecycle dates for this device and a compound type allows a query to return multiple dates.",
+              "type": "object",
+              "properties": {
+                  "installationDate": {
+                      "description": "Date current installation was completed, which may not be the same as the in-service date. Asset may have been installed at other locations previously. Ignored if asset is (1) not currently installed (e.g., stored in a depot) or (2) not intended to be installed (e.g., vehicle, tool).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#LifecycleDate.installationDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "manufacturedDate": {
+                      "description": "Date the asset was manufactured.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#LifecycleDate.manufacturedDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "purchaseDate": {
+                      "description": "Date the asset was purchased. Note that even though an asset may have been purchased, it may not have been received into inventory at the time of purchase.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#LifecycleDate.purchaseDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "receivedDate": {
+                      "description": "Date the asset was received and first placed into inventory.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#LifecycleDate.receivedDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "removalDate": {
+                      "description": "Date when the asset was last removed from service. Ignored if (1) not intended to be in service, or (2) currently in service.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#LifecycleDate.removalDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "retiredDate": {
+                      "description": "Date the asset is permanently retired from service and may be scheduled for disposal. Ignored if asset is (1) currently in service, or (2) permanently removed from service.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#LifecycleDate.retiredDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  }
+              }
+          },
+          "Location": {
+              "$id": "#Location",
+              "title": "Location",
+              "description": "The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more postition points (coordinates) in a given coordinate system.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "accessMethod": {
+                      "description": "Method for the service person to access this service location. For example, a description of where to obtain a key if the facility is unmanned and secured",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.accessMethod",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "directions": {
+                      "description": "Directions for finding a given location. For example, the location of a streetlight may be located at the 'NW' (northwest) corner of the customer's site or the location of a usage point may be located on the second floor of an apartment building.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.directions",
+                      "type": "string"
+                  },
+                  "locationType": {
+                      "description": "Classification of what the location represents (e.g. a utility service territory or region within the territory, political boundary).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.locationType",
+                      "type": "string"
+                  },
+                  "siteAccessProblem": {
+                      "description": "Problems previously encountered when visiting or performing work on this location. Examples include: bad dog, violent customer, verbally abusive occupant, obstructions, safety hazards, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.siteAccessProblem",
+                      "type": "string"
+                  },
+                  "Address": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.Address",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Address"
+                      }
+                  },
+                  "CoordinateSystem": {
+                      "description": "Coordinate system used to describe position points of this location.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.CoordinateSystem",
+                      "$ref": "#/definitions/CoordinateSystem"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "PositionPoints": {
+                      "description": "Sequence of position points describing this location, expressed in coordinate system 'Location.CoordinateSystem'.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Location.PositionPoints",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/PositionPoint"
+                      }
+                  }
+              }
+          },
+          "MaintenanceOrder": {
+              "$id": "#MaintenanceOrder",
+              "title": "MaintenanceOrder",
+              "description": "A MaintenanceOrder is a WorkOrder for either maintenance, repair or inspection generally of an asset or a facility.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceOrder",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "createdDateTime": {
+                      "description": "Date and time that this document was created.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.createdDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "lastModifiedDateTime": {
+                      "description": "Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.lastModifiedDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "maintenanceWorkKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceOrder.maintenanceWorkKind",
+                      "$ref": "#/definitions/MaintenanceWorkKind"
+                  },
+                  "maintenanceWorkKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceOrder.maintenanceWorkKindOther",
+                      "type": "string"
+                  },
+                  "priorityKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.priorityKind",
+                      "$ref": "#/definitions/WorkPriorityKind"
+                  },
+                  "priorityKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.priorityKindOther",
+                      "type": "string"
+                  },
+                  "revisionNumber": {
+                      "description": "Revision number for this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.revisionNumber",
+                      "type": "string"
+                  },
+                  "subject": {
+                      "description": "Document subject.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.subject",
+                      "type": "string"
+                  },
+                  "title": {
+                      "description": "Document title.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.title",
+                      "type": "string"
+                  },
+                  "type": {
+                      "description": "Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.type",
+                      "type": "string"
+                  },
+                  "url": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.url",
+                      "type": "string"
+                  },
+                  "Approver": {
+                      "description": "Approver of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.Approver",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Approver"
+                      }
+                  },
+                  "Author": {
+                      "description": "Author of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.Author",
+                      "$ref": "#/definitions/Author"
+                  },
+                  "docStatus": {
+                      "description": "Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.Example values for 'docStatus.status' are draft, approved, cancelled, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.docStatus",
+                      "$ref": "#/definitions/Status"
+                  },
+                  "EquipmentContainer": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.EquipmentContainer",
+                      "$ref": "#/definitions/EquipmentContainer"
+                  },
+                  "Facility": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.Facility",
+                      "$ref": "#/definitions/Facility"
+                  },
+                  "InternalLocation": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.InternalLocation",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/InternalLocation"
+                      }
+                  },
+                  "Location": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.Location",
+                      "$ref": "#/definitions/Location"
+                  },
+                  "MaintenanceRequirement": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceOrder.MaintenanceRequirement",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/MaintenanceRequirement"
+                      }
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "RelatedDocument": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.RelatedDocument",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/DocumentRef"
+                      }
+                  },
+                  "TimeSchedule": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.TimeSchedule",
+                      "$ref": "#/definitions/TimeSchedule"
+                  },
+                  "WorkActivityRecords": {
+                      "description": "All activity records for this work or work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.WorkActivityRecords",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/WorkActivityRecord"
+                      }
+                  },
+                  "WorkOrganisation": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.WorkOrganisation",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/WorkOrganisation"
+                      }
+                  },
+                  "WorkTasks": {
+                      "description": "All tasks in this work.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrder.WorkTasks",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/WorkTask"
+                      }
+                  }
+              }
+          },
+          "MaintenanceRequirement": {
+              "$id": "#MaintenanceRequirement",
+              "title": "MaintenanceRequirement",
+              "description": "MaintenanceRequirement defines the requirement for maintenance or inspection, typically of an Asset, based either on a time schedule or triggers based on measurements or a combination of both (e.g. exceeding a measurement of use or a specific time period whichever occurs first).",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceRequirement",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "maintenanceWorkKind": {
+                      "description": "Defines the specific kind of maintenance or inspection required.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceRequirement.maintenanceWorkKind",
+                      "$ref": "#/definitions/MaintenanceWorkKind"
+                  },
+                  "maintenanceWorkKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceRequirement.maintenanceWorkKindOther",
+                      "type": "string"
+                  },
+                  "nextMaintenanceDate": {
+                      "description": "For time based maintenance the next date for the maintenance to be scheduled.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceRequirement.nextMaintenanceDate",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "AssetMeasurementTrigger": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceRequirement.AssetMeasurementTrigger",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/AssetMeasurementTrigger"
+                      }
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "TimeSchedule": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaintenanceRequirement.TimeSchedule",
+                      "$ref": "#/definitions/TimeSchedule"
+                  }
+              }
+          },
+          "MaintenanceWorkKind": {
+              "$id": "#MaintenanceWorkKind",
+              "title": "MaintenanceWorkKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "inspection",
+                  "other",
+                  "patrol",
+                  "refurbish",
+                  "repair",
+                  "service",
+                  "test"
+              ]
+          },
+          "Manufacturer": {
+              "$id": "#Manufacturer",
+              "title": "Manufacturer",
+              "description": "Organisation that manufactures asset products.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Manufacturer",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "MaterialItem": {
+              "$id": "#MaterialItem",
+              "title": "MaterialItem",
+              "description": "The physical consumable supply used for work and other purposes. It includes items such as nuts, bolts, brackets, glue, etc.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaterialItem",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "quantity": {
+                      "description": "Quantity of material used.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaterialItem.quantity",
+                      "$ref": "#/definitions/IntegerQuantity"
+                  },
+                  "TypeMaterial": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#MaterialItem.TypeMaterial",
+                      "$ref": "#/definitions/TypeMaterial"
+                  }
+              }
+          },
+          "Money": {
+              "$id": "#Money",
+              "title": "Money",
+              "description": "Amount of money.",
+              "type": "object",
+              "properties": {
+                  "multiplier": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Money.multiplier",
+                      "$ref": "#/definitions/UnitMultiplier"
+                  },
+                  "unit": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Money.unit",
+                      "$ref": "#/definitions/Currency"
+                  },
+                  "value": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Money.value",
+                      "type": "number"
+                  }
+              }
+          },
+          "Name": {
+              "$id": "#Name",
+              "title": "Name",
+              "description": "The Name class provides the means to define any number of human readable names for an object. A name is <b>not</b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Name",
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "description": "Any free text that name the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Name.name",
+                      "type": "string"
+                  },
+                  "NameType": {
+                      "description": "Type of this name.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Name.NameType",
+                      "$ref": "#/definitions/NameType"
+                  }
+              },
+              "required": [
+                  "name",
+                  "NameType"
+              ]
+          },
+          "NameType": {
+              "$id": "#NameType",
+              "title": "NameType",
+              "description": "Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is: The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameType",
+              "type": "object",
+              "properties": {
+                  "description": {
+                      "description": "Description of the name type.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameType.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "Name of the name type.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameType.name",
+                      "type": "string"
+                  },
+                  "NameTypeAuthority": {
+                      "description": "Authority responsible for managing names of this type.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameType.NameTypeAuthority",
+                      "$ref": "#/definitions/NameTypeAuthority"
+                  }
+              },
+              "required": [
+                  "name"
+              ]
+          },
+          "NameTypeAuthority": {
+              "$id": "#NameTypeAuthority",
+              "title": "NameTypeAuthority",
+              "description": "Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameTypeAuthority",
+              "type": "object",
+              "properties": {
+                  "description": {
+                      "description": "Description of the name type authority.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameTypeAuthority.description",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "Name of the name type authority.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#NameTypeAuthority.name",
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "name"
+              ]
+          },
+          "Person": {
+              "$id": "#Person",
+              "title": "Person",
+              "description": "General purpose information for name and other information to contact people.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "firstName": {
+                      "description": "Person's first name.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.firstName",
+                      "type": "string"
+                  },
+                  "lastName": {
+                      "description": "Person's last (family, sir) name.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.lastName",
+                      "type": "string"
+                  },
+                  "mName": {
+                      "description": "Middle name(s) or initial(s).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.mName",
+                      "type": "string"
+                  },
+                  "prefix": {
+                      "description": "A prefix or title for the person's name, such as Miss, Mister, Doctor, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.prefix",
+                      "type": "string"
+                  },
+                  "suffix": {
+                      "description": "A suffix for the person's name, such as II, III, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.suffix",
+                      "type": "string"
+                  },
+                  "Document": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.Document",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/DocumentRef"
+                      }
+                  },
+                  "electronicAddress": {
+                      "description": "Electronic address.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Person.electronicAddress",
+                      "$ref": "#/definitions/EmailAddress"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "PositionPoint": {
+              "$id": "#PositionPoint",
+              "title": "PositionPoint",
+              "description": "Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to desribe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PositionPoint",
+              "type": "object",
+              "properties": {
+                  "groupNumber": {
+                      "description": "Zero-relative sequence number of this group within a series of points; used when there is a need to express disjoint groups of points that are considered to be part of a single location.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PositionPoint.groupNumber",
+                      "type": "integer"
+                  },
+                  "sequenceNumber": {
+                      "description": "Zero-relative sequence number of this point within a series of points.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PositionPoint.sequenceNumber",
+                      "type": "integer"
+                  },
+                  "xPosition": {
+                      "description": "X axis position.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PositionPoint.xPosition",
+                      "type": "string"
+                  },
+                  "yPosition": {
+                      "description": "Y axis position.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PositionPoint.yPosition",
+                      "type": "string"
+                  },
+                  "zPosition": {
+                      "description": "(if applicable) Z axis position.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PositionPoint.zPosition",
+                      "type": "string"
+                  }
+              }
+          },
+          "Priority": {
+              "$id": "#Priority",
+              "title": "Priority",
+              "description": "Priority definition.",
+              "type": "object",
+              "properties": {
+                  "justification": {
+                      "description": "Justification for 'rank'.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Priority.justification",
+                      "type": "string"
+                  },
+                  "rank": {
+                      "description": "Priority level; usually, lower number means high priority, but the details are provided in 'type'.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Priority.rank",
+                      "type": "integer"
+                  },
+                  "type": {
+                      "description": "Type describing 'rank'; e.g., high, emergency, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Priority.type",
+                      "type": "string"
+                  }
+              }
+          },
+          "Procedure": {
+              "$id": "#Procedure",
+              "title": "Procedure",
+              "description": "Documented procedure for various types of work or work tasks on assets.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Procedure",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "instruction": {
+                      "description": "Textual description of this procedure.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Procedure.instruction",
+                      "type": "string"
+                  },
+                  "lastModifiedDateTime": {
+                      "description": "Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.lastModifiedDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "procedureKind": {
+                      "description": "Kind of procedure.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Procedure.procedureKind",
+                      "$ref": "#/definitions/ProcedureKind"
+                  },
+                  "procedureKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Procedure.procedureKindOther",
+                      "type": "string"
+                  },
+                  "revisionNumber": {
+                      "description": "Revision number for this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.revisionNumber",
+                      "type": "string"
+                  },
+                  "title": {
+                      "description": "Document title.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.title",
+                      "type": "string"
+                  },
+                  "type": {
+                      "description": "Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.type",
+                      "type": "string"
+                  },
+                  "url": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.url",
+                      "type": "string"
+                  },
+                  "Approver": {
+                      "description": "Approver of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.Approver",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Approver"
+                      }
+                  },
+                  "Author": {
+                      "description": "Author of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.Author",
+                      "$ref": "#/definitions/Author"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "ProcedureStep": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Procedure.ProcedureStep",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/ProcedureStep"
+                      }
+                  },
+                  "RelatedDocument": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document.RelatedDocument",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Document"
+                      }
+                  }
+              }
+          },
+          "ProcedureKind": {
+              "$id": "#ProcedureKind",
+              "title": "ProcedureKind",
+              "description": "Kind of procedure.",
+              "type": "string",
+              "enum": [
+                  "diagnosis",
+                  "inspection",
+                  "maintenance",
+                  "other",
+                  "test"
+              ]
+          },
+          "ProcedureStep": {
+              "$id": "#ProcedureStep",
+              "title": "ProcedureStep",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProcedureStep",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "instruction": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProcedureStep.instruction",
+                      "type": "string"
+                  },
+                  "isFreeSequence": {
+                      "description": "ProcedureSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of ProcedureSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the ProcedureSteps in that group may be executed in any order. For example, assume we have a Procedure having six ProcedureSteps with sequenceNumber values 1 – 6. ProcedureSteps 1, 2, 5 and 6 have isFreeSequence values of false. ProcedureSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProcedureStep.isFreeSequence",
+                      "type": "boolean"
+                  },
+                  "sequenceNumber": {
+                      "description": "ProcedureSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of ProcedureSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the ProcedureSteps in that group may be executed in any order. For example, assume we have a Procedure having six ProcedureSteps with sequenceNumber values 1 – 6. ProcedureSteps 1, 2, 5 and 6 have isFreeSequence values of false. ProcedureSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProcedureStep.sequenceNumber",
+                      "type": "integer"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "ProductAssetModel": {
+              "$id": "#ProductAssetModel",
+              "title": "ProductAssetModel",
+              "description": "Asset model by a specific manufacturer.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "catalogueNumber": {
+                      "description": "Catalogue number for asset model.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.catalogueNumber",
+                      "type": "string"
+                  },
+                  "corporateStandardKind": {
+                      "description": "Kind of corporate standard for this asset model.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.corporateStandardKind",
+                      "$ref": "#/definitions/CorporateStandardKind"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "modelNumber": {
+                      "description": "Manufacturer's model number.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.modelNumber",
+                      "type": "string"
+                  },
+                  "modelVersion": {
+                      "description": "Version number for product model, which indicates vintage of the product.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.modelVersion",
+                      "type": "string"
+                  },
+                  "styleNumber": {
+                      "description": "Style number of asset model.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.styleNumber",
+                      "type": "string"
+                  },
+                  "usageKind": {
+                      "description": "Intended usage for this asset model.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.usageKind",
+                      "$ref": "#/definitions/AssetModelUsageKind"
+                  },
+                  "Document": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.Document",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Document"
+                      }
+                  },
+                  "Manufacturer": {
+                      "description": "Manufacturer of this asset model.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ProductAssetModel.Manufacturer",
+                      "$ref": "#/definitions/Manufacturer"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "Status": {
+              "$id": "#Status",
+              "title": "Status",
+              "description": "Current status information relevant to an entity.",
+              "type": "object",
+              "properties": {
+                  "dateTime": {
+                      "description": "Date and time for which status 'value' applies.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Status.dateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "reason": {
+                      "description": "Reason code or explanation for why an object went to the current status 'value'.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Status.reason",
+                      "type": "string"
+                  },
+                  "remark": {
+                      "description": "Pertinent information regarding the current 'value', as free form text.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Status.remark",
+                      "type": "string"
+                  },
+                  "value": {
+                      "description": "Status value at 'dateTime'; prior status changes may have been kept in instances of activity records associated with the object to which this status applies.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Status.value",
+                      "type": "string"
+                  }
+              }
+          },
+          "System": {
+              "$id": "#System",
+              "title": "System",
+              "description": "A collection of things (e.g., equipment) within a generation unit that work together to perform a function.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#System",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "TelephoneNumber": {
+              "$id": "#TelephoneNumber",
+              "title": "TelephoneNumber",
+              "description": "Telephone number.",
+              "type": "object",
+              "properties": {
+                  "areaCode": {
+                      "description": "(if applicable) Area or region code.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.areaCode",
+                      "type": "string"
+                  },
+                  "cityCode": {
+                      "description": "City code.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.cityCode",
+                      "type": "string"
+                  },
+                  "countryCode": {
+                      "description": "Country code.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.countryCode",
+                      "type": "string"
+                  },
+                  "dialOut": {
+                      "description": "(if applicable) Dial out code, for instance to call outside an enterprise.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.dialOut",
+                      "type": "string"
+                  },
+                  "extension": {
+                      "description": "(if applicable) Extension for this telephone number.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.extension",
+                      "type": "string"
+                  },
+                  "internationalPrefix": {
+                      "description": "(if applicable) Prefix used when calling an international number.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.internationalPrefix",
+                      "type": "string"
+                  },
+                  "ituPhone": {
+                      "description": "Phone number according to ITU E.164.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.ituPhone",
+                      "type": "string"
+                  },
+                  "localNumber": {
+                      "description": "Main (local) part of this telephone number.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.localNumber",
+                      "type": "string"
+                  },
+                  "telephoneNumberKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.telephoneNumberKind",
+                      "$ref": "#/definitions/TelephoneNumberKind"
+                  },
+                  "telephoneNumberKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.telephoneNumberKindOther",
+                      "type": "string"
+                  },
+                  "telephoneNumberPriority": {
+                      "description": "Order in which phone number should be used.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TelephoneNumber.telephoneNumberPriority",
+                      "type": "integer"
+                  }
+              }
+          },
+          "TelephoneNumberKind": {
+              "$id": "#TelephoneNumberKind",
+              "title": "TelephoneNumberKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "fax",
+                  "home",
+                  "landline",
+                  "mobile",
+                  "other",
+                  "work"
+              ]
+          },
+          "TimeSchedule": {
+              "$id": "#TimeSchedule",
+              "title": "TimeSchedule",
+              "description": "Description of anything that changes through time. Time schedule is used to perform a single-valued function of time. Use inherited 'type' attribute to give additional information on this schedule, such as: periodic (hourly, daily, weekly, monthly, etc.), day of the month, by date, calendar (specific times and dates).",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule",
+              "type": "object",
+              "properties": {
+                  "dayOfWeek": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.dayOfWeek",
+                      "$ref": "#/definitions/DayOfWeekKind"
+                  },
+                  "disabled": {
+                      "description": "True if this schedule is deactivated (disabled).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.disabled",
+                      "type": "boolean"
+                  },
+                  "scheduleDayOccurence": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleDayOccurence",
+                      "type": "integer"
+                  },
+                  "scheduleFrequency": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleFrequency",
+                      "$ref": "#/definitions/FrequencyKind"
+                  },
+                  "scheduleHour": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleHour",
+                      "type": "integer"
+                  },
+                  "scheduleMinute": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleMinute",
+                      "type": "integer"
+                  },
+                  "scheduleMonth": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleMonth",
+                      "type": "integer"
+                  },
+                  "scheduleMonthDay": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleMonthDay",
+                      "type": "integer"
+                  },
+                  "scheduleWeekNumber": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleWeekNumber",
+                      "type": "integer"
+                  },
+                  "scheduleYear": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleYear",
+                      "type": "integer"
+                  },
+                  "scheduleYearDay": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleYearDay",
+                      "type": "integer"
+                  },
+                  "timeScheduleKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.timeScheduleKind",
+                      "$ref": "#/definitions/TimeScheduleKind"
+                  },
+                  "scheduleInterval": {
+                      "description": "Schedule date and time interval.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TimeSchedule.scheduleInterval",
+                      "$ref": "#/definitions/DateTimeInterval"
+                  }
+              }
+          },
+          "TimeScheduleKind": {
+              "$id": "#TimeScheduleKind",
+              "title": "TimeScheduleKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "actual",
+                  "earliest",
+                  "estimate",
+                  "immediate",
+                  "latest",
+                  "request"
+              ]
+          },
+          "TypeMaterial": {
+              "$id": "#TypeMaterial",
+              "title": "TypeMaterial",
+              "description": "Documentation for a generic material item that may be used for design, work and other purposes. Any number of MaterialItems manufactured by various vendors may be used to perform this TypeMaterial. Note that class analagous to AssetModel is not used for material items. This is because in some cases, for example, a utility sets up a Master material record for a 3 inch long half inch diameter steel bolt and they do not necessarily care what specific supplier is providing the material item. As different vendors are used to supply the part, the Stock Code of the material item can stay the same. In other cases, each time the vendor changes, a new stock code is set up so they can track material used by vendor. Therefore a Material Item Model is not typically needed.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TypeMaterial",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "costType": {
+                      "description": "The type of cost to which this Material Item belongs.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TypeMaterial.costType",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "quantity": {
+                      "description": "The value, unit of measure, and multiplier for the quantity.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TypeMaterial.quantity",
+                      "type": "string"
+                  },
+                  "stockItem": {
+                      "description": "True if item is a stock item (default).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TypeMaterial.stockItem",
+                      "type": "boolean"
+                  },
+                  "estUnitCost": {
+                      "description": "The estimated unit cost of this type of material, either for a unit cost or cost per unit length. Cost is for material or asset only and does not include labor to install/construct or configure it.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#TypeMaterial.estUnitCost",
+                      "$ref": "#/definitions/Money"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "UnitMultiplier": {
+              "$id": "#UnitMultiplier",
+              "title": "UnitMultiplier",
+              "description": "The unit multipliers defined for the CIM. When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. For example, if a unit symbol is m2Pers and the multiplier is k, then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol Þ represents the derived unit m2Pers, then applying the multiplier k can be conceptualized simply as kÞ. For example, the SI unit for mass is kg and not g. If the unit symbol is defined as kg, then the multiplier is applied to kg as a whole and does not replace the k in front of the g. In this case, the multiplier of m would be used with the unit symbol of kg to represent one gram. As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the kg as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the kg were replaced by a symbol Þ, then it is easier to conceptualize the multiplier m as creating the proper unit mÞ, and not the forbidden unit mkg.",
+              "type": "string",
+              "enum": [
+                  "E",
+                  "G",
+                  "M",
+                  "P",
+                  "T",
+                  "Y",
+                  "Z",
+                  "a",
+                  "c",
+                  "d",
+                  "da",
+                  "f",
+                  "h",
+                  "k",
+                  "m",
+                  "micro",
+                  "n",
+                  "none",
+                  "p",
+                  "y",
+                  "z"
+              ]
+          },
+          "UnitSymbol": {
+              "$id": "#UnitSymbol",
+              "title": "UnitSymbol",
+              "description": "The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as F instead of CPerV. In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as kgPerm3. With the exception of the kg, which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol. To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol / is replaced by the letters Per. Exponents are written in plain text after the unit as m3 instead of being formatted as in m<sup>3</sup> or introducing a symbol as in m^3. The degree symbol ° is replaced with the letters deg. Any clarification of the meaning for a substitution is included in the description for the unit symbol. Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units.",
+              "type": "string",
+              "enum": [
+                  "A",
+                  "A2",
+                  "A2h",
+                  "A2s",
+                  "APerA",
+                  "APerm",
+                  "Ah",
+                  "As",
+                  "Bq",
+                  "Btu",
+                  "BtuPerh",
+                  "C",
+                  "CPerkg",
+                  "CPerm2",
+                  "CPerm3",
+                  "Ci",
+                  "CiPerl",
+                  "F",
+                  "FPerm",
+                  "G",
+                  "Gy",
+                  "GyPers",
+                  "H",
+                  "HPerm",
+                  "Hz",
+                  "HzPerHz",
+                  "HzPers",
+                  "J",
+                  "JPerK",
+                  "JPerkg",
+                  "JPerkgK",
+                  "JPerm2",
+                  "JPerm3",
+                  "JPermol",
+                  "JPermolK",
+                  "JPers",
+                  "K",
+                  "KPers",
+                  "M",
+                  "Mx",
+                  "N",
+                  "NPerm",
+                  "NTU",
+                  "Nm",
+                  "Oe",
+                  "Pa",
+                  "PaPers",
+                  "Pas",
+                  "Q",
+                  "Qh",
+                  "S",
+                  "SPercm",
+                  "SPerm",
+                  "Sv",
+                  "T",
+                  "V",
+                  "V2",
+                  "V2h",
+                  "VA",
+                  "VAh",
+                  "VAr",
+                  "VArh",
+                  "VPerHz",
+                  "VPerV",
+                  "VPerVA",
+                  "VPerVAr",
+                  "VPerm",
+                  "Vh",
+                  "Vs",
+                  "W",
+                  "WPerA",
+                  "WPerW",
+                  "WPerm2",
+                  "WPerm2sr",
+                  "WPermK",
+                  "WPers",
+                  "WPersr",
+                  "Wb",
+                  "Wh",
+                  "anglemin",
+                  "anglesec",
+                  "bar",
+                  "ccPerkg",
+                  "cd",
+                  "charPers",
+                  "character",
+                  "cosPhi",
+                  "count",
+                  "d",
+                  "dB",
+                  "dBm",
+                  "deg",
+                  "degC",
+                  "degF",
+                  "ft",
+                  "ft2",
+                  "ft3",
+                  "gPerg",
+                  "gPerl",
+                  "gal",
+                  "galPerd",
+                  "galPerh",
+                  "h",
+                  "ha",
+                  "in",
+                  "in2",
+                  "in3",
+                  "kat",
+                  "katPerm3",
+                  "kg",
+                  "kgPerJ",
+                  "kgPerd",
+                  "kgPerh",
+                  "kgPerm3",
+                  "kgm",
+                  "kgm2",
+                  "kn",
+                  "l",
+                  "lPerh",
+                  "lPerkg",
+                  "lPerl",
+                  "lPers",
+                  "lm",
+                  "lx",
+                  "m",
+                  "m2",
+                  "m2Pers",
+                  "m3",
+                  "m3Compensated",
+                  "m3Perh",
+                  "m3Perkg",
+                  "m3Pers",
+                  "m3Uncompensated",
+                  "mPerm3",
+                  "mPers",
+                  "mPers2",
+                  "min",
+                  "mmHg",
+                  "mol",
+                  "molPerkg",
+                  "molPerm3",
+                  "molPermol",
+                  "none",
+                  "ohm",
+                  "ohmPerm",
+                  "ohmm",
+                  "onePerHz",
+                  "onePerm",
+                  "pH",
+                  "perCent",
+                  "ppm",
+                  "psia",
+                  "psig",
+                  "rad",
+                  "radPers",
+                  "radPers2",
+                  "rev",
+                  "rotPers",
+                  "s",
+                  "sPers",
+                  "sr",
+                  "therm",
+                  "tonne"
+              ]
+          },
+          "WorkActivityRecord": {
+              "$id": "#WorkActivityRecord",
+              "title": "WorkActivityRecord",
+              "description": "Records information about the status of work or work task at a point in time.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkActivityRecord",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "createdDateTime": {
+                      "description": "Date and time this activity record has been created (different from the 'status.dateTime', which is the time of a status change of the associated object, if applicable).",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ActivityRecord.createdDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "percentComplete": {
+                      "description": "Estimated percentage of completion of this individual work task or overall work order.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkActivityRecord.percentComplete",
+                      "$ref": "#/definitions/PerCent"
+                  },
+                  "reason": {
+                      "description": "Reason for event resulting in this activity record, typically supplied when user initiated.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ActivityRecord.reason",
+                      "type": "string"
+                  },
+                  "severity": {
+                      "description": "Severity level of event resulting in this activity record.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ActivityRecord.severity",
+                      "type": "string"
+                  },
+                  "type": {
+                      "description": "Type of event resulting in this activity record.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ActivityRecord.type",
+                      "type": "string"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "status": {
+                      "description": "Information on consequence of event resulting in this activity record.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#ActivityRecord.status",
+                      "$ref": "#/definitions/Status"
+                  }
+              }
+          },
+          "WorkOrganisation": {
+              "$id": "#WorkOrganisation",
+              "title": "WorkOrganisation",
+              "description": "Identifies a specific organization that will be responsible for performing the work.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrganisation",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "isContractor": {
+                      "description": "Set to true if this organization is a 3rd party contractor.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Organisation.isContractor",
+                      "type": "boolean"
+                  },
+                  "workOrganisationType": {
+                      "description": "The type of work organisation e.g. electrical contractor, maintenance department, engineering department, etc.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrganisation.workOrganisationType",
+                      "type": "string"
+                  },
+                  "Crew": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkOrganisation.Crew",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Crew"
+                      }
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  }
+              }
+          },
+          "WorkPriorityKind": {
+              "$id": "#WorkPriorityKind",
+              "title": "WorkPriorityKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "emergency",
+                  "high",
+                  "low",
+                  "medium",
+                  "other"
+              ]
+          },
+          "WorkStatus": {
+              "$id": "#WorkStatus",
+              "title": "WorkStatus",
+              "description": "Indicates the status of a WorkOrder at a specific point in time.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkStatus",
+              "type": "object",
+              "properties": {
+                  "dateTime": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkStatus.dateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "workStatusKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkStatus.workStatusKind",
+                      "$ref": "#/definitions/WorkStatusKind"
+                  },
+                  "workStatusKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkStatus.workStatusKindOther",
+                      "type": "string"
+                  }
+              }
+          },
+          "WorkStatusKind": {
+              "$id": "#WorkStatusKind",
+              "title": "WorkStatusKind",
+              "description": "Kind of status, specific to work.",
+              "type": "string",
+              "enum": [
+                  "approved",
+                  "cancelled",
+                  "closed",
+                  "completed",
+                  "dispatched",
+                  "enroute",
+                  "inProgress",
+                  "onSite",
+                  "other",
+                  "scheduled",
+                  "waitingOnApproval",
+                  "waitingOnMaterial",
+                  "waitingToBeScheduled"
+              ]
+          },
+          "WorkTask": {
+              "$id": "#WorkTask",
+              "title": "WorkTask",
+              "description": "A task within a set of work.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "completedDateTime": {
+                      "description": "Date and time work task was completed.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.completedDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "costAccount": {
+                      "description": "Account number of the capital or O&amp;M account to which the costs associated with the work task are assigned.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.costAccount",
+                      "type": "string"
+                  },
+                  "costCategoryKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.costCategoryKind",
+                      "$ref": "#/definitions/CostCategoryKind"
+                  },
+                  "costCategoryKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.costCategoryKindOther",
+                      "type": "string"
+                  },
+                  "crewETA": {
+                      "description": "Estimated time of arrival, so that customer or police/fire department can be informed when the crew will arrive.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.crewETA",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "instruction": {
+                      "description": "Instructions for performing this task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.instruction",
+                      "type": "string"
+                  },
+                  "isFreeSequence": {
+                      "description": "WorkTasks must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTasks having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTasks in that group may be executed in any order. For example, assume we have six WorkTasks with sequenceNumber values 1 – 6. WorkTasks 1, 2, 5 and 6 have isFreeSequence values of false. WorkTasks 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.isFreeSequence",
+                      "type": "boolean"
+                  },
+                  "laborHours": {
+                      "description": "Hours of labor expended under work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.laborHours",
+                      "type": "number"
+                  },
+                  "schedOverride": {
+                      "description": "If specified, override schedule and perform this task in accordance with instructions specified here.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.schedOverride",
+                      "type": "string"
+                  },
+                  "sequenceNumber": {
+                      "description": "WorkTasks must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTasks having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTasks in that group may be executed in any order. For example, assume we have six WorkTasks with sequenceNumber values 1 – 6. WorkTasks 1, 2, 5 and 6 have isFreeSequence values of false. WorkTasks 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.sequenceNumber",
+                      "type": "integer"
+                  },
+                  "startedDateTime": {
+                      "description": "Date and time work task was started.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.startedDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "type": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.type",
+                      "type": "string"
+                  },
+                  "Asset": {
+                      "description": "All assets on which this non-replacement work task is performed.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.Asset",
+                      "$ref": "#/definitions/Asset"
+                  },
+                  "contractorCost": {
+                      "description": "Total contractor costs associated with the work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.contractorCost",
+                      "$ref": "#/definitions/Money"
+                  },
+                  "Crews": {
+                      "description": "All crews participating in this work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.Crews",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Crew"
+                      }
+                  },
+                  "Document": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.Document",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/DocumentRef"
+                      }
+                  },
+                  "InternalLocation": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.InternalLocation",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/InternalLocation"
+                      }
+                  },
+                  "laborCost": {
+                      "description": "Total labor costs associated with the work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.laborCost",
+                      "$ref": "#/definitions/Money"
+                  },
+                  "Location": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.Location",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Location"
+                      }
+                  },
+                  "materialCost": {
+                      "description": "Total material costs associated with the work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.materialCost",
+                      "$ref": "#/definitions/Money"
+                  },
+                  "MaterialItems": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.MaterialItems",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/MaterialItem"
+                      }
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "OldAsset": {
+                      "description": "Old asset replaced by this work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.OldAsset",
+                      "$ref": "#/definitions/Asset"
+                  },
+                  "priority": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.priority",
+                      "$ref": "#/definitions/Priority"
+                  },
+                  "TimeSchedule": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.TimeSchedule",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/TimeSchedule"
+                      }
+                  },
+                  "toolCost": {
+                      "description": "Total tool costs associated with the work task.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.toolCost",
+                      "$ref": "#/definitions/Money"
+                  },
+                  "WorkActivityRecord": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.WorkActivityRecord",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/WorkActivityRecord"
+                      }
+                  },
+                  "WorkStatus": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.WorkStatus",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/WorkStatus"
+                      }
+                  },
+                  "WorkTaskStep": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTask.WorkTaskStep",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/WorkTaskStep"
+                      }
+                  }
+              }
+          },
+          "WorkTaskStep": {
+              "$id": "#WorkTaskStep",
+              "title": "WorkTaskStep",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTaskStep",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "isFreeSequence": {
+                      "description": "WorkTaskSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTaskSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTaskSteps in that group may be executed in any order. For example, assume we have a WorkTask having six WorkTaskSteps with sequenceNumber values 1 – 6. WorkTaskSteps 1, 2, 5 and 6 have isFreeSequence values of false. WorkTaskSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTaskStep.isFreeSequence",
+                      "type": "boolean"
+                  },
+                  "sequenceNumber": {
+                      "description": "WorkTaskSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTaskSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTaskSteps in that group may be executed in any order. For example, assume we have a WorkTask having six WorkTaskSteps with sequenceNumber values 1 – 6. WorkTaskSteps 1, 2, 5 and 6 have isFreeSequence values of false. WorkTaskSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTaskStep.sequenceNumber",
+                      "type": "integer"
+                  },
+                  "Names": {
+                      "description": "All names of this identified object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#IdentifiedObject.Names",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Name"
+                      }
+                  },
+                  "Procedure": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#WorkTaskStep.Procedure",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/Procedure"
+                      }
+                  }
+              }
+          },
+          "PerCent": {
+              "$id": "#PerCent",
+              "title": "PerCent",
+              "description": "Percentage on a defined base. For example, specify as 100 to indicate at the defined base.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PerCent",
+              "type": "object",
+              "properties": {
+                  "value": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#PerCent.value",
+                      "type" : "number"
+                  }
+              },
+              "required": [
+                  "value"
+              ]
+          },
+          "DocumentRef": {
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document",
+              "type": "object",
+              "properties": {
+                  "ref": {
+                      "type": "string"
+                  },
+                  "referenceType": {
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "ref"
+              ]
+          },
+          "DocumentRef": {
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document",
+              "type": "object",
+              "properties": {
+                  "ref": {
+                      "type": "string"
+                  },
+                  "referenceType": {
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "ref"
+              ]
+          },
+          "DocumentRef": {
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document",
+              "type": "object",
+              "properties": {
+                  "ref": {
+                      "type": "string"
+                  },
+                  "referenceType": {
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "ref"
+              ]
+          },
+          "DocumentRef": {
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document",
+              "type": "object",
+              "properties": {
+                  "ref": {
+                      "type": "string"
+                  },
+                  "referenceType": {
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "ref"
+              ]
+          },
+          "DocumentRef": {
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-cim16#Document",
+              "type": "object",
+              "properties": {
+                  "ref": {
+                      "type": "string"
+                  },
+                  "referenceType": {
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "ref"
+              ]
+          },
+          "MaintenanceOrders": {
+               "$ref": "#"
+          }
+     }
+}

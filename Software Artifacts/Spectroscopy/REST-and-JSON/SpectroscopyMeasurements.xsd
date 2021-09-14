@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2021/SpectroscopyMeasurements#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2021/SpectroscopyMeasurements#">
+<xs:annotation/>
+<xs:element name="SpectroscopyMeasurements" type="m:SpectroscopyMeasurements"/>
+<xs:complexType name="SpectroscopyMeasurements">
+<xs:sequence>
+<xs:element name="NuclearGenerationUnit" type="m:NuclearGenerationUnit" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Equipment">
+<xs:annotation>
+<xs:documentation>The parts of a power system that are physical devices, electronic or mechanical.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description">
+<xs:annotation>
+<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="Measurements" minOccurs="1" maxOccurs="unbounded" type="m:SpecificActivityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Equipment.Measurements">
+<xs:annotation/>
+</xs:element>
+<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.Names">
+<xs:annotation>
+<xs:documentation>All names of this identified object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="MeasurementDevice" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementDevice">
+<xs:annotation>
+<xs:documentation>A tool (detector, probe, meter, sensor, etc.) used to count any quantitative information such as temperature, pressure, flow rate, etc.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description">
+<xs:annotation>
+<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name">
+<xs:annotation>
+<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="MeasurementsDeviceConditions" minOccurs="0" maxOccurs="1" type="m:MeasurementDeviceConditions" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementDevice.MeasurementsDeviceConditions">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="MeasurementDeviceConditions" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementDeviceConditions">
+<xs:annotation>
+<xs:documentation>Parameters that are not permanent but do not change frequently for a device such as calibration information.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="bias" minOccurs="1" maxOccurs="1" type="m:PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementDeviceConditions.bias">
+<xs:annotation>
+<xs:documentation>EPDs are generally biased to read higher than predicted dose rates. EPD biasing procedures can vary between plants but the general goal is to ensure the difference between the real-time EPD and final DOLR value as determined by LTD/OSTD is minimized. An EPD bias value of 5 to 10% relative to a Cs-137 standard is typical, however, subsequent differences in accumulated dose values for personnel are usually only a few percent.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="effectiveStarting" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementDeviceConditions.effectiveStarting">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPoint">
+<xs:annotation>
+<xs:documentation>The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed. The name and description should be used from the inherited IdentifiedObject class.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description">
+<xs:annotation>
+<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name">
+<xs:annotation>
+<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="MeasurementPointConditions" minOccurs="1" maxOccurs="1" type="m:MeasurementPointConditions" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPoint.MeasurementPointConditions">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="MeasurementPointConditions" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="affectedByHotSpots" minOccurs="1" maxOccurs="1" type="xs:boolean" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.affectedByHotSpots">
+<xs:annotation/>
+</xs:element>
+<xs:element name="effectiveStarting" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.effectiveStarting">
+<xs:annotation/>
+</xs:element>
+<xs:element name="locationChanged" minOccurs="1" maxOccurs="1" type="xs:boolean" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.locationChanged">
+<xs:annotation/>
+</xs:element>
+<xs:element name="locationMarked" minOccurs="1" maxOccurs="1" type="xs:boolean" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.locationMarked">
+<xs:annotation/>
+</xs:element>
+<xs:element name="shieldingBetweenDeviceAndTarget" minOccurs="1" maxOccurs="1" type="xs:boolean" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.shieldingBetweenDeviceAndTarget">
+<xs:annotation/>
+</xs:element>
+<xs:element name="shieldingChanged" minOccurs="1" maxOccurs="1" type="xs:boolean" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#MeasurementPointConditions.shieldingChanged">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Name">
+<xs:annotation>
+<xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b&gt;not&lt;/b&gt; to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Name.name">
+<xs:annotation>
+<xs:documentation>Any free text that name the object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="NameType" minOccurs="1" maxOccurs="1" type="m:NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Name.NameType">
+<xs:annotation>
+<xs:documentation>Type of this name.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameType">
+<xs:annotation>
+<xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:</xs:documentation>
+<xs:documentation>The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameType.description">
+<xs:annotation>
+<xs:documentation>Description of the name type.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameType.name">
+<xs:annotation>
+<xs:documentation>Name of the name type.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="NameTypeAuthority" minOccurs="0" maxOccurs="1" type="m:NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameType.NameTypeAuthority">
+<xs:annotation>
+<xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameTypeAuthority">
+<xs:annotation>
+<xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameTypeAuthority.description">
+<xs:annotation>
+<xs:documentation>Description of the name type authority.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NameTypeAuthority.name">
+<xs:annotation>
+<xs:documentation>Name of the name type authority.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="NuclearGenerationUnit" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#NuclearGenerationUnit">
+<xs:annotation>
+<xs:documentation>A GenerationUnit that generates electricity using nuclear energy</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.description">
+<xs:annotation>
+<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name">
+<xs:annotation>
+<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="Equipments" minOccurs="1" maxOccurs="unbounded" type="m:Equipment" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#EquipmentContainer.Equipments">
+<xs:annotation>
+<xs:documentation>Contained equipment.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="SpecificActivityAnalog" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog">
+<xs:annotation>
+<xs:documentation>This is a measurement of the activity present in a specific volume. If the element, compound, or isotope is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the specific activity of iron, then name = "Fe-59". If the name field is left empty or is not used, it is implied to be a total specific activity from all radioactive constituents.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name">
+<xs:annotation>
+<xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="unitOfMeasure" minOccurs="1" maxOccurs="1" type="m:SpecificActivityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog.unitOfMeasure">
+<xs:annotation/>
+</xs:element>
+<xs:element name="MeasurementDevice" minOccurs="0" maxOccurs="1" type="m:MeasurementDevice" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Measurement.MeasurementDevice">
+<xs:annotation/>
+</xs:element>
+<xs:element name="MeasurementPoint" minOccurs="0" maxOccurs="1" type="m:MeasurementPoint" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#Measurement.MeasurementPoint">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="SpecificActivityUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#SpecificActivityUnitSymbol">
+<xs:annotation/>
+<xs:restriction base="xs:string">
+<xs:enumeration value="µCi/ml">
+<xs:annotation/>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema-16#PerCent">
+<xs:annotation>
+<xs:documentation>Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.</xs:documentation>
+</xs:annotation>
+<xs:restriction base="xs:float"/>
+</xs:simpleType>
+</xs:schema>

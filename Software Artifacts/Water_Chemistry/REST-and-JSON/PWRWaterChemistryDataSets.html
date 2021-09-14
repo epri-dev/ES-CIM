@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<head>
+<title>Profile Documentation</title>
+<style type="text/css">
+/* typography: fonts */
+body { font-family: arial, sans-serif; }
+
+.name, .type, .cardinality, .superclass, .xsdtype, .namespace { font-family: courier, monospace; }
+
+
+/* typography: emphasis */
+h1 { color: white; background: gray;}
+
+h2, h3 { color: gray; text-decoration: none;}
+
+h2.abstract, h2.enumerated, h2.domain {font-style: italic } 
+
+p.note { background-color: #ddd }
+
+p.declaration { color: gray }
+
+:link { color: purple; }
+
+.xsdtype { color: black; font-weight: bold; }
+
+.namespace { color: black }
+
+.package { font-size: x-large; color: gray }
+
+
+/* borders */
+div.group {
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	
+}
+
+th, td {
+	border-top-style : solid;
+	border-top-width : 1px;
+	border-color: gray;
+ }
+
+
+/* spacing and alignment */
+body {padding: 5px; }
+
+h1 { padding: 5px;}
+
+div.group {
+	margin-top: 10px;
+	padding: 5px;
+	position: relative;
+}
+th, td {
+	text-align : left;
+	vertical-align : top;
+}
+th, td.type { width: 15em; overflow: visible; }
+
+p.cardinality { width: 4em; }
+
+p.package { position: absolute; right: 10px; top: 0px}				
+</style>
+</head>
+<body>
+<h1>Profile Documentation</h1>
+<p/>
+<p class="declaration">
+					Profile namespace:
+					<span class="namespace">http://iec.ch/TC57/2021/PWRWaterChemistryDataSets#</span>
+</p>
+<h1>Concrete Classes</h1>
+<div id="PWRWaterChemistryDataSet" class="group">
+<a href="#PWRWaterChemistryDataSet">
+<h2 class="concrete">PWRWaterChemistryDataSet</h2>
+</a>
+<p class="package">ES-CIM</p>
+<p class="comment">A set of data and measurements resulting from laboratory analysis of water samples taken from a pressurised water reactor nuclear generating plant</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="PWRWaterChemistryDataSet.MeasurementPoint">MeasurementPoint</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#MeasurementPoint">MeasurementPoint</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="PWRWaterChemistryDataSet.NuclearOperatingCycles">NuclearOperatingCycles</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#NuclearOperatingCycle">NuclearOperatingCycle</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="PWRWaterChemistryDataSet.PWRNuclearGenerationUnit">PWRNuclearGenerationUnit</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#PWRNuclearGenerationUnit">PWRNuclearGenerationUnit</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Abstract Classes</h1>
+<div id="AlkalinityAnalog" class="group">
+<a href="#AlkalinityAnalog">
+<h2 class="abstract">AlkalinityAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="AlkalinityAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="AlkalinityAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AlkalinityUnitSymbol">AlkalinityUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="AlkalinityAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="BacterialCountAnalog" class="group">
+<a href="#BacterialCountAnalog">
+<h2 class="abstract">BacterialCountAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<p class="comment">This is a measurement of the bacteria level present in a specific volume. If the bacteria type is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the bacteria count of plankton, then name = "Planktonic". If the name field is left empty or is not used, it is implied to be the total bacteria count.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="BacterialCountAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="BacterialCountAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#BacterialCountUnitSymbol">BacterialCountUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="BacterialCountAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="ConcentrationAnalog" class="group">
+<a href="#ConcentrationAnalog">
+<h2 class="abstract">ConcentrationAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<p class="comment">This is a measurement of the concentration of an element, compound, or isotope in a specific volume. If the element, compound, or isotope is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the concentration of iron, then name = "Fe". If the name field is left empty or is not used, it is implied to be the total concentration from all constituents.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ConcentrationAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ConcentrationAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ConcentrationUnitSymbol">ConcentrationUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ConcentrationAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="ConductivityAnalog" class="group">
+<a href="#ConductivityAnalog">
+<h2 class="abstract">ConductivityAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ConductivityAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ConductivityAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ConductivityUnitSymbol">ConductivityUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ConductivityAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="CorrosionRateAnalog" class="group">
+<a href="#CorrosionRateAnalog">
+<h2 class="abstract">CorrosionRateAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="CorrosionRateAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CorrosionRateAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CorrosionRateUnitSymbol">CorrosionRateUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="CorrosionRateAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="HardnessAnalog" class="group">
+<a href="#HardnessAnalog">
+<h2 class="abstract">HardnessAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="HardnessAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="HardnessAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#HardnessUnitSymbol">HardnessUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="HardnessAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="MassAnalog" class="group">
+<a href="#MassAnalog">
+<h2 class="abstract">MassAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="MassAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MassAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#MassUnitSymbol">MassUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MassAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="MeasurementPoint" class="group">
+<a href="#MeasurementPoint">
+<h2 class="abstract">MeasurementPoint</h2>
+</a>
+<p class="package">ES-CIM</p>
+<p class="comment">The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed. The name and description should be used from the inherited IdentifiedObject class.</p>
+</div>
+<div id="NormalizedLevelAnalog" class="group">
+<a href="#NormalizedLevelAnalog">
+<h2 class="abstract">NormalizedLevelAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="NormalizedLevelAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="NormalizedLevelAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#NormalizedLevelUnitSymbol">NormalizedLevelUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="NormalizedLevelAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="NuclearOperatingCycle" class="group">
+<a href="#NuclearOperatingCycle">
+<h2 class="abstract">NuclearOperatingCycle</h2>
+</a>
+<p class="package">ES-CIM</p>
+<p class="comment">Period of time between refueling outages that a nuclear generating plant is operational</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="NuclearOperatingCycle.cycleNumber">cycleNumber</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="PercentAnalog" class="group">
+<a href="#PercentAnalog">
+<h2 class="abstract">PercentAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<p class="comment">To identify the item being measured, the name field inherited from IdentifiedObject should be used, e.g. if the current power output relative to the maximum power output is being measured, name = "PowerOutput".</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="PercentAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PercentAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#PercentUnitSymbol">PercentUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="PercentAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="pHAnalog" class="group">
+<a href="#pHAnalog">
+<h2 class="abstract">pHAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="pHAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="pHAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#pHUnitSymbol">pHUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="pHAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="PressureAnalog" class="group">
+<a href="#PressureAnalog">
+<h2 class="abstract">PressureAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="PressureAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PressureAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#PressureUnitSymbol">PressureUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="PressureAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="PWRNuclearGenerationUnit" class="group">
+<a href="#PWRNuclearGenerationUnit">
+<h2 class="abstract">PWRNuclearGenerationUnit</h2>
+</a>
+<p class="package">ES-CIM</p>
+<p class="comment">A pressurized water reactor nuclear generation unit</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="PWRNuclearGenerationUnit.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PWRNuclearGenerationUnit.name">name</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="QualifiedAnalogValue" class="group">
+<a href="#QualifiedAnalogValue">
+<h2 class="abstract">QualifiedAnalogValue</h2>
+</a>
+<p class="package">ES-CIM</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="QualifiedAnalogValue.analogValueQualifierKind">analogValueQualifierKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AnalogValueQualifierKind">AnalogValueQualifierKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="QualifiedAnalogValue.analogValueQualifierKindOther">analogValueQualifierKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="QualifiedAnalogValue.timeStamp">timeStamp</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">The time when the value was last updated.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="QualifiedAnalogValue.value">value</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">float</p>
+</td>
+<td>
+<p class="comment">The value to supervise.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="ScalingIndexAnalog" class="group">
+<a href="#ScalingIndexAnalog">
+<h2 class="abstract">ScalingIndexAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ScalingIndexAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ScalingIndexAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ScalingIndexUnitSymbol">ScalingIndexUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ScalingIndexAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="SpecificActivityAnalog" class="group">
+<a href="#SpecificActivityAnalog">
+<h2 class="abstract">SpecificActivityAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<p class="comment">This is a measurement of the activity present in a specific volume. If the element, compound, or isotope is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the specific activity of iron, then name = "Fe-59". If the name field is left empty or is not used, it is implied to be a total specific activity from all radioactive constituents.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="SpecificActivityAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="SpecificActivityAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#SpecificActivityUnitSymbol">SpecificActivityUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="SpecificActivityAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="TemperatureAnalog" class="group">
+<a href="#TemperatureAnalog">
+<h2 class="abstract">TemperatureAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="TemperatureAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TemperatureAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TemperatureUnitSymbol">TemperatureUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TemperatureAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="TurbidityAnalog" class="group">
+<a href="#TurbidityAnalog">
+<h2 class="abstract">TurbidityAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="TurbidityAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TurbidityAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TurbidityUnitSymbol">TurbidityUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TurbidityAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="VolumeFlowRateAnalog" class="group">
+<a href="#VolumeFlowRateAnalog">
+<h2 class="abstract">VolumeFlowRateAnalog</h2>
+</a>
+<p class="package">Analogs</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="VolumeFlowRateAnalog.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="VolumeFlowRateAnalog.unitOfMeasure">unitOfMeasure</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#VolumeFlowRateUnitSymbol">VolumeFlowRateUnitSymbol</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="VolumeFlowRateAnalog.AnalogValues">AnalogValues</p>
+</th>
+<td>
+<p class="cardinality">1..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#QualifiedAnalogValue">QualifiedAnalogValue</a>
+</p>
+</td>
+<td>
+<p class="comment">The values connected to this measurement.</p>
+</td>
+</tr>
+</table>
+</div>
+<h1>Enumerations</h1>
+<div id="AlkalinityUnitSymbol" class="group">
+<a href="#AlkalinityUnitSymbol">
+<h2 class="enumerated">AlkalinityUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">mg/l</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="AnalogValueQualifierKind" class="group">
+<a href="#AnalogValueQualifierKind">
+<h2 class="enumerated">AnalogValueQualifierKind</h2>
+</a>
+<p class="package">ES-CIM</p>
+<table>
+<tr>
+<th>
+<p class="name">greaterThan</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">greaterThanOrEqualTo</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">lessThan</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">lessThanOrEqualTo</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">limitOfQuantitation</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="BacterialCountUnitSymbol" class="group">
+<a href="#BacterialCountUnitSymbol">
+<h2 class="enumerated">BacterialCountUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">planktonicCount</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">sessileCount</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">speciesCount</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="ConcentrationUnitSymbol" class="group">
+<a href="#ConcentrationUnitSymbol">
+<h2 class="enumerated">ConcentrationUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">cm3/kg</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">ppb</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">ppm</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="ConductivityUnitSymbol" class="group">
+<a href="#ConductivityUnitSymbol">
+<h2 class="enumerated">ConductivityUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">µS/cm</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="CorrosionRateUnitSymbol" class="group">
+<a href="#CorrosionRateUnitSymbol">
+<h2 class="enumerated">CorrosionRateUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">mils/yr</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="HardnessUnitSymbol" class="group">
+<a href="#HardnessUnitSymbol">
+<h2 class="enumerated">HardnessUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">mg/l</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="MassUnitSymbol" class="group">
+<a href="#MassUnitSymbol">
+<h2 class="enumerated">MassUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">g</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="NormalizedLevelUnitSymbol" class="group">
+<a href="#NormalizedLevelUnitSymbol">
+<h2 class="enumerated">NormalizedLevelUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="PercentUnitSymbol" class="group">
+<a href="#PercentUnitSymbol">
+<h2 class="enumerated">PercentUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="pHUnitSymbol" class="group">
+<a href="#pHUnitSymbol">
+<h2 class="enumerated">pHUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="PressureUnitSymbol" class="group">
+<a href="#PressureUnitSymbol">
+<h2 class="enumerated">PressureUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">psi</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="ScalingIndexUnitSymbol" class="group">
+<a href="#ScalingIndexUnitSymbol">
+<h2 class="enumerated">ScalingIndexUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="SpecificActivityUnitSymbol" class="group">
+<a href="#SpecificActivityUnitSymbol">
+<h2 class="enumerated">SpecificActivityUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">µCi/ml</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="TemperatureUnitSymbol" class="group">
+<a href="#TemperatureUnitSymbol">
+<h2 class="enumerated">TemperatureUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">degF</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="TurbidityUnitSymbol" class="group">
+<a href="#TurbidityUnitSymbol">
+<h2 class="enumerated">TurbidityUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">NTU</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="VolumeFlowRateUnitSymbol" class="group">
+<a href="#VolumeFlowRateUnitSymbol">
+<h2 class="enumerated">VolumeFlowRateUnitSymbol</h2>
+</a>
+<p class="package">Analogs</p>
+<table>
+<tr>
+<th>
+<p class="name">gal/d</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">gal/min</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Compound Types</h1>
+<h1>Datatypes</h1>
+</body>
+</html>

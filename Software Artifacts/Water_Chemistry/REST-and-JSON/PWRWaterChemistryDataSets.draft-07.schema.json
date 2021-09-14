@@ -1,0 +1,935 @@
+{
+     "$id": "http://iec.ch/TC57/2021/PWRWaterChemistryDataSets.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "PWRWaterChemistryDataSets",
+     "description": "",
+     "namespace": "http://iec.ch/TC57/2021/PWRWaterChemistryDataSets#",
+     "type": "object",
+     "properties": {
+         "PWRWaterChemistryDataSet": {
+             "$ref": "#/definitions/PWRWaterChemistryDataSet"
+         }
+     },
+     "required": [
+         "PWRWaterChemistryDataSet"
+     ],
+     "definitions": {
+          "AlkalinityAnalog": {
+              "$id": "#AlkalinityAnalog",
+              "title": "AlkalinityAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#AlkalinityAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "AlkalinityAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#AlkalinityAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/AlkalinityUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "AlkalinityUnitSymbol": {
+              "$id": "#AlkalinityUnitSymbol",
+              "title": "AlkalinityUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "mg/l"
+              ]
+          },
+          "AnalogValueQualifierKind": {
+              "$id": "#AnalogValueQualifierKind",
+              "title": "AnalogValueQualifierKind",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "greaterThan",
+                  "greaterThanOrEqualTo",
+                  "lessThan",
+                  "lessThanOrEqualTo",
+                  "limitOfQuantitation",
+                  "none",
+                  "other"
+              ]
+          },
+          "BacterialCountAnalog": {
+              "$id": "#BacterialCountAnalog",
+              "title": "BacterialCountAnalog",
+              "description": "This is a measurement of the bacteria level present in a specific volume. If the bacteria type is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the bacteria count of plankton, then name = Planktonic. If the name field is left empty or is not used, it is implied to be the total bacteria count.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#BacterialCountAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "BacterialCountAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#BacterialCountAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/BacterialCountUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "BacterialCountUnitSymbol": {
+              "$id": "#BacterialCountUnitSymbol",
+              "title": "BacterialCountUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "planktonicCount",
+                  "sessileCount",
+                  "speciesCount"
+              ]
+          },
+          "ConcentrationAnalog": {
+              "$id": "#ConcentrationAnalog",
+              "title": "ConcentrationAnalog",
+              "description": "This is a measurement of the concentration of an element, compound, or isotope in a specific volume. If the element, compound, or isotope is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the concentration of iron, then name = Fe. If the name field is left empty or is not used, it is implied to be the total concentration from all constituents.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#ConcentrationAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "ConcentrationAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#ConcentrationAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/ConcentrationUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "ConcentrationUnitSymbol": {
+              "$id": "#ConcentrationUnitSymbol",
+              "title": "ConcentrationUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "cm3/kg",
+                  "ppb",
+                  "ppm"
+              ]
+          },
+          "ConductivityAnalog": {
+              "$id": "#ConductivityAnalog",
+              "title": "ConductivityAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#ConductivityAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "ConductivityAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#ConductivityAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/ConductivityUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "ConductivityUnitSymbol": {
+              "$id": "#ConductivityUnitSymbol",
+              "title": "ConductivityUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "µS/cm"
+              ]
+          },
+          "CorrosionRateAnalog": {
+              "$id": "#CorrosionRateAnalog",
+              "title": "CorrosionRateAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#CorrosionRateAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "CorrosionRateAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#CorrosionRateAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/CorrosionRateUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "CorrosionRateUnitSymbol": {
+              "$id": "#CorrosionRateUnitSymbol",
+              "title": "CorrosionRateUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "mils/yr"
+              ]
+          },
+          "HardnessAnalog": {
+              "$id": "#HardnessAnalog",
+              "title": "HardnessAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#HardnessAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "HardnessAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#HardnessAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/HardnessUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "HardnessUnitSymbol": {
+              "$id": "#HardnessUnitSymbol",
+              "title": "HardnessUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "mg/l"
+              ]
+          },
+          "MassAnalog": {
+              "$id": "#MassAnalog",
+              "title": "MassAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#MassAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "MassAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MassAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/MassUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "MassUnitSymbol": {
+              "$id": "#MassUnitSymbol",
+              "title": "MassUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "g"
+              ]
+          },
+          "MeasurementPoint": {
+              "$id": "#MeasurementPoint",
+              "title": "MeasurementPoint",
+              "description": "The point in a non-electrical network where a measurement is carried out where measurements can be taken and to which calculated values can be attributed. The name and description should be used from the inherited IdentifiedObject class.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPoint",
+              "type": "object",
+              "properties": {
+                  "Measurements": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementPoint.Measurements",
+                      "$comment": "Options for the choice corresponding to the 'Measurements' property.",
+                      "type": "array",
+                      "items": {
+                          "oneOf": [
+                              {
+                                  "$ref": "#/definitions/AlkalinityAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/BacterialCountAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/ConcentrationAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/ConductivityAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/CorrosionRateAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/HardnessAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/MassAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/NormalizedLevelAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/PercentAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/PressureAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/ScalingIndexAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/SpecificActivityAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/TemperatureAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/TurbidityAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/VolumeFlowRateAnalog"
+                              },
+                              {
+                                  "$ref": "#/definitions/pHAnalog"
+                              }
+                          ]
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "Measurements"
+              ]
+          },
+          "NormalizedLevelAnalog": {
+              "$id": "#NormalizedLevelAnalog",
+              "title": "NormalizedLevelAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#NormalizedLevelAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "NormalizedLevelAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NormalizedLevelAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/NormalizedLevelUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "NormalizedLevelUnitSymbol": {
+              "$id": "#NormalizedLevelUnitSymbol",
+              "title": "NormalizedLevelUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "none"
+              ]
+          },
+          "NuclearOperatingCycle": {
+              "$id": "#NuclearOperatingCycle",
+              "title": "NuclearOperatingCycle",
+              "description": "Period of time between refueling outages that a nuclear generating plant is operational",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#NuclearOperatingCycle",
+              "type": "object",
+              "properties": {
+                  "cycleNumber": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#NuclearOperatingCycle.cycleNumber",
+                      "type": "integer"
+                  }
+              },
+              "required": [
+                  "cycleNumber"
+              ]
+          },
+          "PWRNuclearGenerationUnit": {
+              "$id": "#PWRNuclearGenerationUnit",
+              "title": "PWRNuclearGenerationUnit",
+              "description": "A pressurized water reactor nuclear generation unit",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#PWRNuclearGenerationUnit",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  }
+              }
+          },
+          "PWRWaterChemistryDataSet": {
+              "$id": "#PWRWaterChemistryDataSet",
+              "title": "PWRWaterChemistryDataSet",
+              "description": "A set of data and measurements resulting from laboratory analysis of water samples taken from a pressurised water reactor nuclear generating plant",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet",
+              "type": "object",
+              "properties": {
+                  "MeasurementPoint": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet.MeasurementPoint",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/MeasurementPoint"
+                      },
+                      "minItems": 1
+                  },
+                  "NuclearOperatingCycles": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#ProcedureDataSet.NuclearOperatingCycles",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/NuclearOperatingCycle"
+                      }
+                  },
+                  "PWRNuclearGenerationUnit": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet.PWRNuclearGenerationUnit",
+                      "$ref": "#/definitions/PWRNuclearGenerationUnit"
+                  }
+              },
+              "required": [
+                  "MeasurementPoint",
+                  "PWRNuclearGenerationUnit"
+              ]
+          },
+          "PercentAnalog": {
+              "$id": "#PercentAnalog",
+              "title": "PercentAnalog",
+              "description": "To identify the item being measured, the name field inherited from IdentifiedObject should be used, e.g. if the current power output relative to the maximum power output is being measured, name = PowerOutput.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#PercentAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "PercentAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#PercentAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/PercentUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "PercentUnitSymbol": {
+              "$id": "#PercentUnitSymbol",
+              "title": "PercentUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "none"
+              ]
+          },
+          "PressureAnalog": {
+              "$id": "#PressureAnalog",
+              "title": "PressureAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#PressureAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "PressureAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#PressureAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/PressureUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "PressureUnitSymbol": {
+              "$id": "#PressureUnitSymbol",
+              "title": "PressureUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "psi"
+              ]
+          },
+          "QualifiedAnalogValue": {
+              "$id": "#QualifiedAnalogValue",
+              "title": "QualifiedAnalogValue",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#QualifiedAnalogValue",
+              "type": "object",
+              "properties": {
+                  "analogValueQualifierKind": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#QualifiedAnalogValue.analogValueQualifierKind",
+                      "$ref": "#/definitions/AnalogValueQualifierKind"
+                  },
+                  "analogValueQualifierKindOther": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#QualifiedAnalogValue.analogValueQualifierKindOther",
+                      "type": "string"
+                  },
+                  "timeStamp": {
+                      "description": "The time when the value was last updated.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#MeasurementValue.timeStamp",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "value": {
+                      "description": "The value to supervise.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#AnalogValue.value",
+                      "type": "number"
+                  }
+              },
+              "required": [
+                  "timeStamp",
+                  "value"
+              ]
+          },
+          "ScalingIndexAnalog": {
+              "$id": "#ScalingIndexAnalog",
+              "title": "ScalingIndexAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#ScalingIndexAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "ScalingIndexAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#ScalingIndexAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/ScalingIndexUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "ScalingIndexUnitSymbol": {
+              "$id": "#ScalingIndexUnitSymbol",
+              "title": "ScalingIndexUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "none"
+              ]
+          },
+          "SpecificActivityAnalog": {
+              "$id": "#SpecificActivityAnalog",
+              "title": "SpecificActivityAnalog",
+              "description": "This is a measurement of the activity present in a specific volume. If the element, compound, or isotope is known, the name field inherited from IdentifiedObject should be used, e.g. if measuring the specific activity of iron, then name = Fe-59. If the name field is left empty or is not used, it is implied to be a total specific activity from all radioactive constituents.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "SpecificActivityAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/SpecificActivityUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "SpecificActivityUnitSymbol": {
+              "$id": "#SpecificActivityUnitSymbol",
+              "title": "SpecificActivityUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "µCi/ml"
+              ]
+          },
+          "TemperatureAnalog": {
+              "$id": "#TemperatureAnalog",
+              "title": "TemperatureAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#TemperatureAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "TemperatureAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#TemperatureAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/TemperatureUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "TemperatureUnitSymbol": {
+              "$id": "#TemperatureUnitSymbol",
+              "title": "TemperatureUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "degF"
+              ]
+          },
+          "TurbidityAnalog": {
+              "$id": "#TurbidityAnalog",
+              "title": "TurbidityAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#TurbidityAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "TurbidityAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#TurbidityAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/TurbidityUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "TurbidityUnitSymbol": {
+              "$id": "#TurbidityUnitSymbol",
+              "title": "TurbidityUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "NTU"
+              ]
+          },
+          "VolumeFlowRateAnalog": {
+              "$id": "#VolumeFlowRateAnalog",
+              "title": "VolumeFlowRateAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "VolumeFlowRateAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/VolumeFlowRateUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "VolumeFlowRateUnitSymbol": {
+              "$id": "#VolumeFlowRateUnitSymbol",
+              "title": "VolumeFlowRateUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "gal/d",
+                  "gal/min"
+              ]
+          },
+          "pHAnalog": {
+              "$id": "#pHAnalog",
+              "title": "pHAnalog",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema-16#pHAnalog",
+              "type": "object",
+              "properties": {
+                  "@type": {
+                      "const" : "pHAnalog"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "unitOfMeasure": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#pHAnalog.unitOfMeasure",
+                      "$ref": "#/definitions/pHUnitSymbol"
+                  },
+                  "AnalogValues": {
+                      "description": "The values connected to this measurement.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/QualifiedAnalogValue"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "@type",
+                  "name",
+                  "unitOfMeasure",
+                  "AnalogValues"
+              ]
+          },
+          "pHUnitSymbol": {
+              "$id": "#pHUnitSymbol",
+              "title": "pHUnitSymbol",
+              "description": "",
+              "type": "string",
+              "enum": [
+                  "none"
+              ]
+          },
+          "PWRWaterChemistryDataSets": {
+               "$ref": "#"
+          }
+     }
+}
