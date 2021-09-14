@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://epri.com/es-cim/2021/RadiationMeasurementsWsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg1="http://epri.com/es-cim/2021/RadiationMeasurementsMessage" xmlns:msg2="http://epri.com/es-cim/2021/GetRadiationMeasurementsMessage" targetNamespace="http://epri.com/es-cim/2021/RadiationMeasurementsWsdl">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://epri.com/es-cim/2021/ReceiveRadiationMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/es-cim/2021/RadiationMeasurementsMessage" schemaLocation="Message_XSDs/RadiationMeasurementsMessage.xsd"/>
+    </xs:schema>
+    <xs:schema targetNamespace="http://epri.com/es-cim/2021/GetRadiationMeasurements" elementFormDefault="qualified">
+      <xs:import namespace="http://epri.com/es-cim/2021/GetRadiationMeasurementsMessage" schemaLocation="Message_XSDs/GetRadiationMeasurementsMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelRadiationMeasurementsRequestMessage">
+    <wsdl:part name="CancelRadiationMeasurementsRequestMessage" element="msg1:CancelRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CanceledRadiationMeasurementsEventMessage">
+    <wsdl:part name="CanceledRadiationMeasurementsEventMessage" element="msg1:CanceledRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeRadiationMeasurementsRequestMessage">
+    <wsdl:part name="ChangeRadiationMeasurementsRequestMessage" element="msg1:ChangeRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ChangedRadiationMeasurementsEventMessage">
+    <wsdl:part name="ChangedRadiationMeasurementsEventMessage" element="msg1:ChangedRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CloseRadiationMeasurementsRequestMessage">
+    <wsdl:part name="CloseRadiationMeasurementsRequestMessage" element="msg1:CloseRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="ClosedRadiationMeasurementsEventMessage">
+    <wsdl:part name="ClosedRadiationMeasurementsEventMessage" element="msg1:ClosedRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreateRadiationMeasurementsRequestMessage">
+    <wsdl:part name="CreateRadiationMeasurementsRequestMessage" element="msg1:CreateRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="CreatedRadiationMeasurementsEventMessage">
+    <wsdl:part name="CreatedRadiationMeasurementsEventMessage" element="msg1:CreatedRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeleteRadiationMeasurementsRequestMessage">
+    <wsdl:part name="DeleteRadiationMeasurementsRequestMessage" element="msg1:DeleteRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="DeletedRadiationMeasurementsEventMessage">
+    <wsdl:part name="DeletedRadiationMeasurementsEventMessage" element="msg1:DeletedRadiationMeasurements"/>
+  </wsdl:message>
+  <wsdl:message name="GetRadiationMeasurementsRequestMessage">
+    <wsdl:part name="GetRadiationMeasurementsRequestMessage" element="msg2:GetRadiationMeasurementsRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="GetRadiationMeasurementsResponseMessage">
+    <wsdl:part name="GetRadiationMeasurementsResponseMessage" element="msg2:GetRadiationMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="msg1:RadiationMeasurementsResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="msg1:RadiationMeasurementsFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="RadiationMeasurements_Port">
+    <wsdl:operation name="CancelRadiationMeasurements">
+      <wsdl:input name="CancelRadiationMeasurementsRequest" message="tns:CancelRadiationMeasurementsRequestMessage"/>
+      <wsdl:output name="CancelRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CancelRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledRadiationMeasurements">
+      <wsdl:input name="CanceledRadiationMeasurementsEvent" message="tns:CanceledRadiationMeasurementsEventMessage"/>
+      <wsdl:output name="CanceledRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CanceledRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeRadiationMeasurements">
+      <wsdl:input name="ChangeRadiationMeasurementsRequest" message="tns:ChangeRadiationMeasurementsRequestMessage"/>
+      <wsdl:output name="ChangeRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangeRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedRadiationMeasurements">
+      <wsdl:input name="ChangedRadiationMeasurementsEvent" message="tns:ChangedRadiationMeasurementsEventMessage"/>
+      <wsdl:output name="ChangedRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ChangedRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRadiationMeasurements">
+      <wsdl:input name="CloseRadiationMeasurementsRequest" message="tns:CloseRadiationMeasurementsRequestMessage"/>
+      <wsdl:output name="CloseRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CloseRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedRadiationMeasurements">
+      <wsdl:input name="ClosedRadiationMeasurementsEvent" message="tns:ClosedRadiationMeasurementsEventMessage"/>
+      <wsdl:output name="ClosedRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ClosedRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRadiationMeasurements">
+      <wsdl:input name="DeleteRadiationMeasurementsRequest" message="tns:DeleteRadiationMeasurementsRequestMessage"/>
+      <wsdl:output name="DeleteRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeleteRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedRadiationMeasurements">
+      <wsdl:input name="DeletedRadiationMeasurementsEvent" message="tns:DeletedRadiationMeasurementsEventMessage"/>
+      <wsdl:output name="DeletedRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="DeletedRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRadiationMeasurements">
+      <wsdl:input name="CreateRadiationMeasurementsRequest" message="tns:CreateRadiationMeasurementsRequestMessage"/>
+      <wsdl:output name="CreateRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedRadiationMeasurements">
+      <wsdl:input name="CreatedRadiationMeasurementsEvent" message="tns:CreatedRadiationMeasurementsEventMessage"/>
+      <wsdl:output name="CreatedRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreatedRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadiationMeasurements">
+      <wsdl:input name="GetRadiationMeasurementsRequest" message="tns:GetRadiationMeasurementsRequestMessage"/>
+      <wsdl:output name="GetRadiationMeasurementsResponse" message="tns:GetRadiationMeasurementsResponseMessage"/>
+      <wsdl:fault name="GetRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseRadiationMeasurements">
+      <wsdl:input name="ResponseRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:output name="ResponseRadiationMeasurementsResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="ResponseRadiationMeasurementsFault" message="tns:FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RadiationMeasurements_Binding" type="tns:RadiationMeasurements_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/CancelRadiationMeasurements" style="document"/>
+      <wsdl:input name="CancelRadiationMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CancelRadiationMeasurementsFault">
+        <soap:fault name="CancelRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/CanceledRadiationMeasurements" style="document"/>
+      <wsdl:input name="CanceledRadiationMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CanceledRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CanceledRadiationMeasurementsFault">
+        <soap:fault name="CanceledRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/ChangeRadiationMeasurements" style="document"/>
+      <wsdl:input name="ChangeRadiationMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangeRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangeRadiationMeasurementsFault">
+        <soap:fault name="ChangeRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangedRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/ChangedRadiationMeasurements" style="document"/>
+      <wsdl:input name="ChangedRadiationMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ChangedRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ChangedRadiationMeasurementsFault">
+        <soap:fault name="ChangedRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloseRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/CloseRadiationMeasurements" style="document"/>
+      <wsdl:input name="CloseRadiationMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CloseRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CloseRadiationMeasurementsFault">
+        <soap:fault name="CloseRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClosedRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/ClosedRadiationMeasurements" style="document"/>
+      <wsdl:input name="ClosedRadiationMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ClosedRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ClosedRadiationMeasurementsFault">
+        <soap:fault name="ClosedRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/CreateRadiationMeasurements" style="document"/>
+      <wsdl:input name="CreateRadiationMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreateRadiationMeasurementsFault">
+        <soap:fault name="CreateRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatedRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/CreatedRadiationMeasurements" style="document"/>
+      <wsdl:input name="CreatedRadiationMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreatedRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CreatedRadiationMeasurementsFault">
+        <soap:fault name="CreatedRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/DeleteRadiationMeasurements" style="document"/>
+      <wsdl:input name="DeleteRadiationMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeleteRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeleteRadiationMeasurementsFault">
+        <soap:fault name="DeleteRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletedRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/DeletedRadiationMeasurements" style="document"/>
+      <wsdl:input name="DeletedRadiationMeasurementsEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="DeletedRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DeletedRadiationMeasurementsFault">
+        <soap:fault name="DeletedRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/GetRadiationMeasurements/GetRadiationMeasurements" style="document"/>
+      <wsdl:input name="GetRadiationMeasurementsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GetRadiationMeasurementsFault">
+        <soap:fault name="GetRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResponseRadiationMeasurements">
+      <soap:operation soapAction="http://epri.com/powergeneration/2020/RadiationMeasurements/ResponseRadiationMeasurementsResponse" style="document"/>
+      <wsdl:input name="ResponseRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ResponseRadiationMeasurementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ResponseRadiationMeasurementsFault">
+        <soap:fault name="ResponseRadiationMeasurementsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveRadiationMeasurements">
+    <wsdl:port name="RadiationMeasurements_Port" binding="tns:RadiationMeasurements_Binding">
+      <soap:address location="http://www.example.com"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

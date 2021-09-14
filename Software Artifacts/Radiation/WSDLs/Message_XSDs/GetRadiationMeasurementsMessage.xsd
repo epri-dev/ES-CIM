@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://epri.com/es-cim/2021/GetRadiationMeasurementsMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj1="http://epri.com/es-cim/2021/RadiationMeasurements#" xmlns:obj2="http://epri.com/es-cim/2021/GetRadiationMeasurements#" targetNamespace="http://epri.com/es-cim/2021/GetRadiationMeasurementsMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+  <!-- Base Message Definitions -->
+  <xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="../../../Part100_XSDs/Message.xsd"/>
+  <!-- CIM Information Object Definition -->
+  <xs:import namespace="http://epri.com/es-cim/2021/RadiationMeasurements#" schemaLocation="../XSDs/RadiationMeasurements.xsd"/>
+  <xs:import namespace="http://epri.com/es-cim/2021/GetRadiationMeasurements#" schemaLocation="../XSDs/GetRadiationMeasurements.xsd"/>
+  <!-- RequestType Definition -->
+  <xs:element name="GetRadiationMeasurementsRequestMessage" type="tns:GetRadiationMeasurementsRequestMessageType"/>
+  <xs:element name="GetRadiationMeasurementsResponseMessage" type="tns:GetRadiationMeasurementsResponseMessageType"/>
+  <xs:element name="GetRadiationMeasurementsFaultMessage" type="tns:GetRadiationMeasurementsFaultMessageType"/>
+  <xs:complexType name="GetRadiationMeasurementsRequestMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Request" type="tns:GetRadiationMeasurementsRequestType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRadiationMeasurementsResponseMessageType">
+    <xs:sequence>
+      <!-- Remove this Element if there is no "Get" Profile associated with this Object. -->
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+      <xs:element name="Payload" type="tns:RadiationMeasurementsPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRadiationMeasurementsFaultMessageType">
+    <xs:sequence>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRadiationMeasurementsRequestType">
+    <xs:sequence>
+      <xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Start time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>End time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Option" type="msg:OptionType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Request type specialization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Object ID for request</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!-- Remove this Element if there is no "Get" Profile associated with this Object. -->
+      <xs:element ref="obj2:GetRadiationMeasurements"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>This can be a CIM profile defined as an XSD with a CIM-specific namespace</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRadiationMeasurementsResponseType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+      <xs:element name="Payload" type="tns:RadiationMeasurementsPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RadiationMeasurementsPayloadType">
+    <xs:sequence>
+      <xs:element ref="obj1:RadiationMeasurements" minOccurs="0"/>
+      <xs:element name="OperationSet" type="msg:OperationType" minOccurs="0"/>
+      <xs:element name="Compressed" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Format" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

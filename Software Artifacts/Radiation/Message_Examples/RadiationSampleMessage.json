@@ -1,0 +1,65 @@
+{
+	"NuclearGenerationUnit": {
+		"mRID": "06a5b579-a996-44b1-ad59-12d90aecdcf2",
+		"description": "A unit in San Verde, CA, USA",
+		"name": "San Verde-1",
+		"Equipments": [
+			{
+				"mRID": "5d8355e3-e303-497a-a862-71eceeec6b31",
+				"Names": [
+					{
+						"name": "SG-2 Loop 2",
+						"NameType": {
+							"description": "The human-readable name of the equipment",
+							"name": "Steam Generator Loop Piping",
+							"NameTypeAuthority": {
+								"description": "EPRI's internal database for Radiation data",
+								"name": "EPRI SRMP Database"
+							}
+						}
+					}
+				],
+				"RadiationDoseRateAnalog": [
+					{
+						"name": "String",
+						"unitOfMeasure": "rem/h",
+						"AnalogValues": [
+							{
+								"timeStamp": "2021-01-17T09:30:00",
+								"value": 5.62
+							},
+							{
+								"timeStamp": "2021-01-17T09:30:00",
+								"value": 7.62
+							}
+						],
+						"MeasurementDevice": {
+							"mRID": "79fe75dc-2001-46e1-9d33-9604e9725038",
+							"description": "Radiation Probe 23",
+							"name": "2021-05-19T19:34:33.697",
+							"MeasurementsDeviceConditions": {
+								"bias": {
+									"value": 10.1
+								},
+								"effectiveStarting": "1000-01-01T00:00:00"
+							}
+						},
+						"MeasurementPoint": {
+							"mRID": "bfff1727-212c-4cd9-bf39-0a6f0108b5c1",
+							"description": "HL-1",
+							"name": "Measurement location",
+							"MeasurementPointConditions": {
+								"affectedByHotSpots": true,
+								"effectiveStarting": "2021-01-01T12:00:00",
+								"locationChanged": true,
+								"locationMarked": true,
+								"shieldingBetweenDeviceAndTarget": true,
+								"shieldingChanged": true
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

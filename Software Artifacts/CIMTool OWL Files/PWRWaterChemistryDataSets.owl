@@ -1,0 +1,1462 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:msg="http://langdale.com.au/2005/Message#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:uml="http://langdale.com.au/2005/UML#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://iec.ch/TC57/2021/PWRWaterChemistryDataSets#"
+  xml:base="http://iec.ch/TC57/2021/PWRWaterChemistryDataSets" > 
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d47">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d40"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#HardnessUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0e">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d56">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#ConductivityUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d66">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5b">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d33">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d34"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#NormalizedLevelAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a56">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db1">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db2"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#NuclearOperatingCycle.cycleNumber"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d95">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d96"/>
+    <rdf:first rdf:resource="#pHAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d96">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d97"/>
+    <rdf:first rdf:resource="#VolumeFlowRateAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3b">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3c"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d86">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d87"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#QualifiedAnalogValue.analogValueQualifierKindOther"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9d">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9e"/>
+    <rdf:first rdf:resource="#NormalizedLevelAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d27">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PercentAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2e">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d13">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0a"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#pHUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da1">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da2"/>
+    <rdf:first rdf:resource="#ConductivityAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8d">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8e"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce3">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce4"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6b">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d61"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConcentrationUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d76">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1a">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1b"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d48">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8e">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BacterialCountUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#BacterialCountUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d55">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4c"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#CorrosionRateUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6c">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#AlkalinityUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce2">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5c">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5d"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf2">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce9"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#TemperatureUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d65">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db2">
+    <rdfs:label>cycleNumber</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d84">
+    <rdfs:label>value</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0d">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d34">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2b"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#NormalizedLevelUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TurbidityAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdf"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce0"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce2"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce3"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce5"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce6"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#TurbidityAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3c">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d36"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#draft-07.schema.json">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TurbidityUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#TurbidityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d14">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2d">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2e"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9e">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9f"/>
+    <rdf:first rdf:resource="#MassAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d28">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d29"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PercentAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da2">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da3"/>
+    <rdf:first rdf:resource="#ConcentrationAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4c">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#CorrosionRateUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d75">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#BacterialCountUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce1">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6d">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#AlkalinityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d54">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d55"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#CorrosionRateAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdb">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdc"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d45">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#HardnessAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#VolumeFlowRateUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d35">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#MassUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0c">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0d"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d68">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d62"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#QualifiedAnalogValue">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d83"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d86"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d80"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d89"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d82"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#QualifiedAnalogValue"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9f">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da0"/>
+    <rdf:first rdf:resource="#HardnessAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2c">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf5">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cef">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce8"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d15">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#PressureUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dab">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d74">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <owl:imports rdf:resource="http://iec.ch/TC57/CIM-schema-16"/>
+    <rdfs:label>PWRWaterChemistryDataSets</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cda">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4d">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da3">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da4"/>
+    <rdf:first rdf:resource="#BacterialCountAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d25">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d26"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1c">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PressureAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d53">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#CorrosionRateAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6e">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6f"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#AlkalinityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce0">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce1"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PWRNuclearGenerationUnit">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7daa"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dad"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRNuclearGenerationUnit"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d46">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d47"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#HardnessAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdc">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0b">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db0">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#NuclearOperatingCycle.cycleNumber"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d67">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d68"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d36">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MassUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#MassUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d92">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#AlkalinityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CorrosionRateAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4d"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4e"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d50"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d51"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d53"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d54"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#CorrosionRateAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#SpecificActivityUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7daa">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dab"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5a">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a52">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d87">
+    <rdfs:label>analogValueQualifierKindOther</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3a">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#NormalizedLevelUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#AlkalinityAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#pHUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#pHUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1b">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d14"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d26">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1f"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d16">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8c">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4e">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4f"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db5">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db6"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ProcedureDataSet.NuclearOperatingCycles"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d91">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8b"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5f">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d60"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConductivityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0a">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#pHUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d37">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdd">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-79a1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfc">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfd"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d52">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4b"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6f">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6c"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AlkalinityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1e">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d15"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PressureUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d51">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d52"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfd">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf4"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#SpecificActivityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d23">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ConcentrationAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d63"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d64"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d66"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d67"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d69"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6a"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConcentrationAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ScalingIndexUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ScalingIndexUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd8">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd9"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce7">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cde"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#TurbidityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#VolumeFlowRateAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd4"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd5"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd7"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd8"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cda"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdb"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dad">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dae"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.mRID"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MassAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d37"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d38"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3a"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3b"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3d"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3e"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#MassAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf7">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d61">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#ConcentrationUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ced">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d90">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d91"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db6">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db3"/>
+    <rdfs:label>NuclearOperatingCycles</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#NuclearOperatingCycle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ConductivityAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d58"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d59"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5b"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5c"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5e"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5f"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConductivityAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cde">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#TurbidityUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d38">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d39"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-797f">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d79">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8a">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d70"/>
+    <rdfs:label>analogValueQualifierKind</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValueQualifierKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d24">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce6">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce7"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#TurbidityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d50">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1d">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1e"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PressureAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfe">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd9">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd3"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d10">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d09"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9a">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9b"/>
+    <rdf:first rdf:resource="#ScalingIndexAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cee">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cef"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d60">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d56"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConductivityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PercentAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d21"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d22"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d24"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d25"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d27"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d28"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PercentAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d89">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8a"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#QualifiedAnalogValue.analogValueQualifierKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf6">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf7"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ConcentrationUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConcentrationUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d49">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4a"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5d">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d57"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#NuclearOperatingCycle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cea">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d64">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d65"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdf">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d39">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd6">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd2"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7daf">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#PWRNuclearGenerationUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d21">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce5">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#TurbidityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cff">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#ScalingIndexUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TemperatureAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cea"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ceb"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ced"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cee"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf0"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf1"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#TemperatureAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d78">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ConductivityUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConductivityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9b">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9c"/>
+    <rdf:first rdf:resource="#PressureAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d11">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#pHAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf9">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfa"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d63">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ceb">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cec"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5e">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConductivityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-798b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#xml">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d22">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d23"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d77">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d78"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4a">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd7">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#VolumeFlowRateAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce4">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cdd"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#html">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da0">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da1"/>
+    <rdf:first rdf:resource="#CorrosionRateAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AlkalinityAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6d"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6e"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8d"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8f"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d90"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d92"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8c"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AlkalinityAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9c">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9d"/>
+    <rdf:first rdf:resource="#PercentAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1f">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2f">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cec">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d62">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d12">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d13"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#pHAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf8">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dae">
+    <rdfs:label>mRID</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d00">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd4">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ScalingIndexAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d00"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d01"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d03"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d04"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d06"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d07"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ScalingIndexAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da8">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#MeasurementPoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db8">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db9"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet.PWRNuclearGenerationUnit"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfb">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a47">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a48"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a5a">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PWRWaterChemistryDataSet">
+    <uml:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</uml:hasMaxCardinality>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dbb"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dba"/>
+    <uml:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</uml:hasMinCardinality>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db5"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db8"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db7"/>
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd5">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd6"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d09">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d20">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#PercentUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da7">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d95"/>
+    <rdfs:label>Measurements</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d29">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d20"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PercentUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a48">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db7">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet.PWRNuclearGenerationUnit"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CorrosionRateUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#CorrosionRateUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfa">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf3"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#NormalizedLevelAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2c"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2d"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2f"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d30"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d32"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d33"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#NormalizedLevelAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AlkalinityUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AlkalinityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce9">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#TemperatureUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd2">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da6">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da7"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#MeasurementPoint.Measurements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a49">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a4a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PressureAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d16"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d17"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d19"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1a"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1c"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d1d"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PressureAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7996">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7ce8">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cd3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#VolumeFlowRateUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#pHAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0b"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0c"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0e"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0f"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d11"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d12"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#pHAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#SpecificActivityUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#SpecificActivityUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da5">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#MeasurementPoint.Measurements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db9">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7daf"/>
+    <rdfs:label>PWRNuclearGenerationUnit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRNuclearGenerationUnit"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d4f">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d06">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ScalingIndexAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7a">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7b"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d04">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d05"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#HardnessUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#HardnessUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6a">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d6b"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConcentrationAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2a">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3f">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d35"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#MassUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d99">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d9a"/>
+    <rdf:first rdf:resource="#SpecificActivityAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dbc">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da8"/>
+    <rdfs:label>MeasurementPoint</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d80">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d81"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#MeasurementValue.timeStamp"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a4a">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a4b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d43">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d44"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d70">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#AnalogValueQualifierKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d05">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfe"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7980">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d19">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BacterialCountAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d76"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d77"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d79"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7a"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7c"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7d"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#BacterialCountAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d03">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AnalogValueQualifierKind">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValueQualifierKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d30">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d31"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d81">
+    <rdfs:label>timeStamp</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d69">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ConcentrationAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d8f">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#NormalizedLevelUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#NormalizedLevelUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d59">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d5a"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7f">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#MeasurementValue.timeStamp"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d44">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d41"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7c">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#BacterialCountAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d08">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cff"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#ScalingIndexUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d40">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#HardnessUnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#NuclearOperatingCycle">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db0"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7db1"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#NuclearOperatingCycle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d97">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d98"/>
+    <rdf:first rdf:resource="#TurbidityAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#SpecificActivityAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf5"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf6"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf8"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf9"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfb"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cfc"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#SpecificActivityAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PercentUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PercentUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3d">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#MassAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dba">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet.MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d02">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d18">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a45">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf0">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#TemperatureAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d82">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue.value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d31">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d2a"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d41">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d0f">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d10"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d58">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7e">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d75"/>
+    <rdfs:label>unitOfMeasure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#BacterialCountUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#xsd">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d07">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d08"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#ScalingIndexAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7b">
+    <owl:unionOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d74"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3e">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d3f"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#MassAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d98">
+    <rdf:rest rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d99"/>
+    <rdf:first rdf:resource="#TemperatureAnalog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d01">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d02"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-79b7">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d17">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d18"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#IdentifiedObject.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dbb">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7dbc"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#PWRWaterChemistryDataSet.MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MeasurementPoint">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da5"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7da6"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf1">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7cf2"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#TemperatureAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a46">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-79ac">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d32">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#NormalizedLevelAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d83">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d84"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#AnalogValue.value"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TemperatureUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#TemperatureUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d42">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#Analog.AnalogValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PressureUnitSymbol">
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#PressureUnitSymbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7d">
+    <owl:allValuesFrom rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d7e"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/CIM-schema-16#BacterialCountAnalog.unitOfMeasure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#HardnessAnalog">
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d42"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d43"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d45"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d46"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d48"/>
+    <rdfs:subClassOf rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d49"/>
+    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/CIM-schema-16#HardnessAnalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7a4b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X43X51d58c2Xa3X17ba19552f0Xa3X-7d57">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#QualifiedAnalogValue"/>
+  </rdf:Description>
+</rdf:RDF>

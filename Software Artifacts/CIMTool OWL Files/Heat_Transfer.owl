@@ -1,0 +1,882 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://epri.com/powergeneration/2020/Heat_Transfer#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:msg="http://langdale.com.au/2005/Message#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:uml="http://langdale.com.au/2005/UML#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://epri.com/powergeneration/2020/Heat_Transfer" > 
+  <rdf:Description rdf:about="#Asset">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Asset"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Analog.AnalogValues"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dbc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.mRID"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dbd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4b">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4c"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d69">
+    <rdf:first rdf:resource="#MeasurementPoint"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b89">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b8a"/>
+    <rdf:first rdf:resource="#StringMeasurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d79">
+    <rdf:first rdf:resource="#UnitSymbol"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d60">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValue.sensorAccuracy"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d42">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b51">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b74">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b71"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#IdentifiedObject">
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dbf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dbc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3b">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3c"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.name"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b84">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#AccumulatorValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b41">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#AnalogValue.value"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b43">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b44"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Discrete">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b53"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Discrete"/>
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b88">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b89"/>
+    <rdf:first rdf:resource="#Accumulator"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5b">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5c"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d68">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#StringMeasurementValue"/>
+    <rdfs:label>StringMeasurementValues</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Analog">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b47"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Analog"/>
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6b">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6c"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Asset"/>
+    <rdfs:label>Asset</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GenerationStation">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5b"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b77"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#GenerationStation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdfs:label>Names</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#UnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db6">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b73">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b74"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#draft-07.schema.json">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Measurement">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d85"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7f"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d77"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d74"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6e"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d82"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d71"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#UnitMultiplier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#UnitMultiplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d57">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#System">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#System"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b83">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#NameTypeAuthority"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d67">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#StringMeasurement.StringMeasurementValues"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d68"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b87">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b84"/>
+    <rdfs:label>AccumulatorValues</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#AccumulatorValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d72">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementPoint"/>
+    <rdfs:label>MeasurementPoint</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d69"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b54">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b51"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AnalogValue">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b43"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#AnalogValue"/>
+    <rdfs:subClassOf rdf:resource="#MeasurementValue"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6c">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b69"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d5e">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>timeStamp</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Accumulator">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3f"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b86"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Accumulator"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/CIM-schema-16#Accumulator"/>
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6a">
+    <rdf:first rdf:resource="#System"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b48">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b45"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Name.name"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b8b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Analog"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b53">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b54"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#NameType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#NameType"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dae"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7da8"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StringMeasurement">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b37"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#StringMeasurement"/>
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d67"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d54">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b86">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b87"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Accumulator.AccumulatorValues"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4d">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#MeasurementValueSource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b68">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b65"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7b">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7c"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#GenerationUnit.GenerationStation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dbd">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>mRID</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label>Heat_Transfer</rdfs:label>
+    <owl:imports rdf:resource="http://epri.com/powergeneration/2020"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#AnalogValue"/>
+    <rdfs:label>AnalogValues</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d71">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.MeasurementPoint"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d72"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b55">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d86">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>measurementType</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6d">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#MeasurementValueSource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b71">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6b">
+    <rdf:first rdf:resource="#Equipment"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b49">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Equipment">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b67"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Equipment"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Name.name"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b8a">
+    <rdf:rest rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b8b"/>
+    <rdf:first rdf:resource="#Discrete"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.unitMultiplier"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b38">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b35"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d55">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.name"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b40">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3d"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b69">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4c">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b49"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6c">
+    <rdf:first rdf:resource="#Asset"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MeasurementValue">
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValue"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d60"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d5d"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b50">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4d"/>
+    <rdfs:label>MeasurementValueSource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValueSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b75">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#MeasurementPoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d85">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.measurementType"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d86"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5f">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b60"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d9c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#PowerSystemResource.Measurement"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d9d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Name.NameType"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3f">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6f">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b70"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValue.MeasurementValueSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.unitSymbol"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b60">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5d"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4b">
+    <rdf:first rdf:resource="#Name"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4f">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b50"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValue.MeasurementValueSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d75">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Equipment"/>
+    <rdfs:label>Equipment</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b37">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b38"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d51">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>mRID</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db5"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db4"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db2"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dac">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d65">
+    <rdf:first rdf:resource="#StringMeasurementValue"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3f">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b40"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b70">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6d"/>
+    <rdfs:label>MeasurementValueSource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValueSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b57">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b58"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.description"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d9d">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b88"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Measurement"/>
+    <rdfs:label>Measurement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#DiscreteValue.value"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d5d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValue.timeStamp"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d5e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#NameType"/>
+    <rdfs:label>NameType</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b47">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b48"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b67">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b68"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7c">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b79"/>
+    <rdfs:label>GenerationStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#GenerationStation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#DiscreteValue"/>
+    <rdfs:label>DiscreteValues</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d47"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GenerationUnit">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b57"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#GenerationUnit"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d9c"/>
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d74">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.Equipment"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d75"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#UnitSymbol"/>
+    <rdfs:label>unitSymbol</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d64">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dae">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#NameType.description"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7daf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#NameType.name"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dac"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d47">
+    <rdf:first rdf:resource="#DiscreteValue"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b77">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b78"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Asset.MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d83">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://epri.com/powergeneration/2020/#UncefactUnitCode"/>
+    <rdfs:label>uncefactUnitCode</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5d">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b58">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b55"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d9a">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.System"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7f">
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b63">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b64"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.Names"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b44">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b41"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7a">
+    <rdf:first rdf:resource="#UnitMultiplier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db0">
+    <rdf:first rdf:resource="#NameType"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b39">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b35">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.Asset"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7daf">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dbf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.description"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dc0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d39">
+    <rdf:first rdf:resource="#AnalogValue"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b82">
+    <rdfs:label>description</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3d">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MeasurementValueSource">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d55"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d53"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4d"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d50"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementValueSource"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d82">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Measurement.uncefactUnitCode"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7dc0">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b78">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b75"/>
+    <rdfs:label>MeasurementPoint</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementPoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7da9">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b83"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#NameTypeAuthority"/>
+    <rdfs:label>NameTypeAuthority</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StringMeasurementValue">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b6f"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b73"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#StringMeasurementValue"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d63"/>
+    <rdfs:subClassOf rdf:resource="#MeasurementValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#StringMeasurementValue.value"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d64"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#xsd">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d61">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://epri.com/powergeneration/2020/#PerCent"/>
+    <rdfs:label>sensorAccuracy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AccumulatorValue">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#AccumulatorValue"/>
+    <rdfs:subClassOf rdf:resource="#MeasurementValue"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#System"/>
+    <rdfs:label>System</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d6a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b59">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b64">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b61"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b61">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#AccumulatorValue.value"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b45">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#NameTypeAuthority">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7e"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b81"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#NameTypeAuthority"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7db1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Name.NameType"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DiscreteValue">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4b"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b4f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#DiscreteValue"/>
+    <rdfs:subClassOf rdf:resource="#MeasurementValue"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d3e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b81">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b82"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#NameTypeAuthority.description"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#Discrete.DiscreteValues"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d4a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b65">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#html">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d38">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label>value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7e">
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b7f"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#NameTypeAuthority.name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b79">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#GenerationStation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b3c">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b39"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MeasurementPoint">
+    <rdfs:subClassOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b63"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#MeasurementPoint"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d50">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#IdentifiedObject.mRID"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7da8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://epri.com/powergeneration/2020/#NameType.NameTypeAuthority"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7da9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b5c">
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7b59"/>
+    <rdfs:label>Names</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#Name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d80">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://epri.com/powergeneration/2020/#UnitMultiplier"/>
+    <rdfs:label>unitMultiplier</rdfs:label>
+    <owl:unionOf rdf:nodeID="Xd2X6d385f70Xa3X17ad369afc6Xa3X-7d7a"/>
+  </rdf:Description>
+</rdf:RDF>

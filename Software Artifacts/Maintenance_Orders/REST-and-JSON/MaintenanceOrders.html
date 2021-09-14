@@ -1,0 +1,9326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<head>
+<title>Profile Documentation</title>
+<style type="text/css">
+/* typography: fonts */
+body { font-family: arial, sans-serif; }
+
+.name, .type, .cardinality, .superclass, .xsdtype, .namespace { font-family: courier, monospace; }
+
+
+/* typography: emphasis */
+h1 { color: white; background: gray;}
+
+h2, h3 { color: gray; text-decoration: none;}
+
+h2.abstract, h2.enumerated, h2.domain {font-style: italic } 
+
+p.note { background-color: #ddd }
+
+p.declaration { color: gray }
+
+:link { color: purple; }
+
+.xsdtype { color: black; font-weight: bold; }
+
+.namespace { color: black }
+
+.package { font-size: x-large; color: gray }
+
+
+/* borders */
+div.group {
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	
+}
+
+th, td {
+	border-top-style : solid;
+	border-top-width : 1px;
+	border-color: gray;
+ }
+
+
+/* spacing and alignment */
+body {padding: 5px; }
+
+h1 { padding: 5px;}
+
+div.group {
+	margin-top: 10px;
+	padding: 5px;
+	position: relative;
+}
+th, td {
+	text-align : left;
+	vertical-align : top;
+}
+th, td.type { width: 15em; overflow: visible; }
+
+p.cardinality { width: 4em; }
+
+p.package { position: absolute; right: 10px; top: 0px}				
+</style>
+</head>
+<body>
+<h1>Profile Documentation</h1>
+<p/>
+<p class="declaration">
+					Profile namespace:
+					<span class="namespace">http://epri.com/powergeneration/2020/MaintenanceOrders#</span>
+</p>
+<h1>Concrete Classes</h1>
+<div id="Document" class="group">
+<a href="#Document">
+<h2 class="concrete">Document</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Parent class for different groupings of information collected and managed as a part of a business process. It will frequently contain references to other objects, such as assets, people and power system resources.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Document.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.comment">comment</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Free text comment.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.createdDateTime">createdDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time that this document was created.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.documentKind">documentKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#DocumentKind">DocumentKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.documentKindOther">documentKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.isRecord">isRecord</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.lastModifiedDateTime">lastModifiedDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.revisionNumber">revisionNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Revision number for this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.subject">subject</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Document subject.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.title">title</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Document title.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.url">url</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.Approver">Approver</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Approver">Approver</a>
+</p>
+</td>
+<td>
+<p class="comment">Approver of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.Author">Author</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Author">Author</a>
+</p>
+</td>
+<td>
+<p class="comment">Author of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.docStatus">docStatus</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Status">Status</a>
+</p>
+</td>
+<td>
+<p class="comment">Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.</p>
+<p class="comment">Example values for 'docStatus.status' are draft, approved, cancelled, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.RelatedDocument">RelatedDocument</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Document.status">status</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Status">Status</a>
+</p>
+</td>
+<td>
+<p class="comment">Status of subject matter (e.g., Agreement, Work) this document represents. For status of the document itself, use 'docStatus' attribute.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="MaintenanceOrder" class="group">
+<a href="#MaintenanceOrder">
+<h2 class="concrete">MaintenanceOrder</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">A MaintenanceOrder is a WorkOrder for either maintenance, repair or inspection generally of an asset or a facility.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.createdDateTime">createdDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time that this document was created.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.lastModifiedDateTime">lastModifiedDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.maintenanceWorkKind">maintenanceWorkKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#MaintenanceWorkKind">MaintenanceWorkKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.maintenanceWorkKindOther">maintenanceWorkKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.priorityKind">priorityKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkPriorityKind">WorkPriorityKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.priorityKindOther">priorityKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.revisionNumber">revisionNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Revision number for this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.subject">subject</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Document subject.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.title">title</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Document title.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.url">url</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.Approver">Approver</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Approver">Approver</a>
+</p>
+</td>
+<td>
+<p class="comment">Approver of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.Author">Author</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Author">Author</a>
+</p>
+</td>
+<td>
+<p class="comment">Author of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.docStatus">docStatus</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Status">Status</a>
+</p>
+</td>
+<td>
+<p class="comment">Status of this document. For status of subject matter this document represents (e.g., Agreement, Work), use 'status' attribute.</p>
+<p class="comment">Example values for 'docStatus.status' are draft, approved, cancelled, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.EquipmentContainer">EquipmentContainer</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#EquipmentContainer">EquipmentContainer</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.Facility">Facility</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Facility">Facility</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.InternalLocation">InternalLocation</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#InternalLocation">InternalLocation</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.Location">Location</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Location">Location</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.MaintenanceRequirement">MaintenanceRequirement</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#MaintenanceRequirement">MaintenanceRequirement</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.RelatedDocument">RelatedDocument</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.TimeSchedule">TimeSchedule</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TimeSchedule">TimeSchedule</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.WorkActivityRecords">WorkActivityRecords</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkActivityRecord">WorkActivityRecord</a>
+</p>
+</td>
+<td>
+<p class="comment">All activity records for this work or work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.WorkOrganisation">WorkOrganisation</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkOrganisation">WorkOrganisation</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceOrder.WorkTasks">WorkTasks</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkTask">WorkTask</a>
+</p>
+</td>
+<td>
+<p class="comment">All tasks in this work.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Procedure" class="group">
+<a href="#Procedure">
+<h2 class="concrete">Procedure</h2>
+</a>
+<p class="package">Work Order Business Objects</p>
+<p class="comment">Documented procedure for various types of work or work tasks on assets.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Procedure.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.instruction">instruction</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Textual description of this procedure.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.lastModifiedDateTime">lastModifiedDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time this document was last modified. Documents may potentially be modified many times during their lifetime.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.procedureKind">procedureKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ProcedureKind">ProcedureKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Kind of procedure.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.procedureKindOther">procedureKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.revisionNumber">revisionNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Revision number for this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.title">title</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Document title.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Utility-specific classification of this document, according to its corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.url">url</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.Approver">Approver</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Approver">Approver</a>
+</p>
+</td>
+<td>
+<p class="comment">Approver of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.Author">Author</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Author">Author</a>
+</p>
+</td>
+<td>
+<p class="comment">Author of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.ProcedureStep">ProcedureStep</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ProcedureStep">ProcedureStep</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Procedure.RelatedDocument">RelatedDocument</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Abstract Classes</h1>
+<div id="Address" class="group">
+<a href="#Address">
+<h2 class="abstract">Address</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">General purpose street and postal address information.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Address.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.addressKind">addressKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AddressKind">AddressKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.addressKindOther">addressKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.cityCode">cityCode</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">City code.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.cityName">cityName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">City name.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.country">country</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of the country.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.nearestIntersection">nearestIntersection</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The names of streets at the nearest intersection to work area.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.poBox">poBox</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Post office box.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.postalCode">postalCode</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Postal code for the address.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.stateOrProvince">stateOrProvince</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of the state or province.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.streetCode">streetCode</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">(if applicable) Utilities often make use of external reference systems, such as those of the town-planner's department or surveyor general's mapping system, that allocate global reference codes to streets.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.streetName">streetName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of the street.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.streetNumber">streetNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Designator of the specific location on the street.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.streetPrefix">streetPrefix</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Prefix to the street name. For example: North, South, East, West.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.streetSuffix">streetSuffix</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Suffix to the street name. For example: North, South, East, West.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.streetType">streetType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Type of street. Examples include: street, circle, boulevard, avenue, road, drive, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.suiteNumber">suiteNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Number of the apartment or suite.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.withinCityLimits">withinCityLimits</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">True if this street is within the legal geographical boundaries of the specified town (default).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Address.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Approver" class="group">
+<a href="#Approver">
+<h2 class="abstract">Approver</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Person who accepted/signed or rejected the document.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Approver.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Approver.name">name</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Approver.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Approver.Person">Person</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Person">Person</a>
+</p>
+</td>
+<td>
+<p class="comment">Person having this role.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Asset" class="group">
+<a href="#Asset">
+<h2 class="abstract">Asset</h2>
+</a>
+<p class="package">Work Order Business Objects</p>
+<p class="comment">The Asset business object includes legal (e.g. ownership), commercial, (e.g. supplier), financial (e.g. different type of cost), technical and managerial information for substation and network, energy resource (including distributed energy resource (DER), and non-electrical assets.</p>
+<p class="comment">Identification numbers (specification number, product number, serial number) are central items that allows for collection of additional information associated with the asset.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Asset.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.baselineCondition">baselineCondition</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Condition of asset at last baseline. Examples include new, rebuilt, overhaul required, other. Refer to inspection data for information on the most current condition of the asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.baselineLossOfLife">baselineLossOfLife</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#PerCent">PerCent</a>
+</p>
+</td>
+<td>
+<p class="comment">Percentage of initial life expectancy that has been lost as of the last life expectancy baseline. Represents</p>
+<p class="comment">(initial life expectancy - current life expectancy) / initial life expectancy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.critical">critical</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">True if asset is considered critical for some reason (for example, a pole with critical attachments).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.inUseState">inUseState</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#InUseStateKind">InUseStateKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Indication of whether asset is currently deployed (in use), ready to be put into use or not available for use.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.kind">kind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AssetKind">AssetKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Kind of asset. Used in description of asset components in asset instance templates.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.kindOther">kindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.lifecycleState">lifecycleState</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AssetLifecycleStateKind">AssetLifecycleStateKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Current lifecycle state of asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.lotNumber">lotNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Lot number for this asset. Even for the same model and version number, many assets are manufactured in lots.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.position">position</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Position of asset or asset component. May often be in relation to other assets or components.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.serialNumber">serialNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Serial number of this asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Utility-specific classification of Asset and its subtypes, according to their corporate standards, practices, and existing IT systems (e.g., for management of assets, maintenance, work, outage, customers, etc.).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.utcNumber">utcNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Uniquely tracked commodity (UTC) number.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.AssetContainer">AssetContainer</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AssetContainer">AssetContainer</a>
+</p>
+</td>
+<td>
+<p class="comment">Container of this asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.AssetStatus">AssetStatus</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AssetStatus">AssetStatus</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.Document">Document</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.ElectronicAddress">ElectronicAddress</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ElectronicAddress">ElectronicAddress</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.InternalLocation">InternalLocation</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#InternalLocation">InternalLocation</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.inUseDate">inUseDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#InUseDate">InUseDate</a>
+</p>
+</td>
+<td>
+<p class="comment">In use dates for this asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.lifecycleDate">lifecycleDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#LifecycleDate">LifecycleDate</a>
+</p>
+</td>
+<td>
+<p class="comment">&lt;was lifecycle&gt;</p>
+<p class="comment">Lifecycle dates for this asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.Location">Location</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Location">Location</a>
+</p>
+</td>
+<td>
+<p class="comment">Location of this asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.PowerSystemResource">PowerSystemResource</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Equipment">Equipment</a>
+</p>
+</td>
+<td>
+<p class="comment">All power system resources used to electrically model this asset. For example, transformer asset is electrically modelled with a transformer and its windings and tap changer.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.ProductAssetModel">ProductAssetModel</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#ProductAssetModel">ProductAssetModel</a>
+</p>
+</td>
+<td>
+<p class="comment">The model of this asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.purchasePrice">purchasePrice</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Money">Money</a>
+</p>
+</td>
+<td>
+<p class="comment">Purchase price of asset.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Asset.status">status</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Status">Status</a>
+</p>
+</td>
+<td>
+<p class="comment">Status of this asset.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="AssetContainer" class="group">
+<a href="#AssetContainer">
+<h2 class="abstract">AssetContainer</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Asset that is aggregation of other assets such as conductors, transformers, switchgear, land, fences, buildings, equipment, vehicles, etc.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="AssetContainer.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="AssetContainer.name">name</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="AssetContainer.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="AssetMeasurementTrigger" class="group">
+<a href="#AssetMeasurementTrigger">
+<h2 class="abstract">AssetMeasurementTrigger</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">Defines a condition trigger that will require maintenance to be performed.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="AssetMeasurementTrigger.conditionOccurenceLimit">conditionOccurenceLimit</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Indicates the number of times a condition must occur before the maintenance is required (e.g. 5 breaker operations).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="AssetMeasurementTrigger.conditionOccurenceTimePeriod">conditionOccurenceTimePeriod</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Indicates the number of occurences of the conditionOccurrenceTimeUnit within which the condition occur (e.g.  6 in conjunction with conditionOccurrenceTimeUnit  = Months).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="AssetMeasurementTrigger.conditionOccurenceTimeUnit">conditionOccurenceTimeUnit</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Indicates the unit of time (e.g. day, week, etc.) in which the condition occurs.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="AssetMeasurementTrigger.conditionType">conditionType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Indicates the specific type of condition in terms of a measurement that the trigger is based on.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="AssetStatus" class="group">
+<a href="#AssetStatus">
+<h2 class="abstract">AssetStatus</h2>
+</a>
+<p class="package">ES-CIM</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="AssetStatus.statusType">statusType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="AssetStatus.assetStatus">assetStatus</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Status">Status</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="Author" class="group">
+<a href="#Author">
+<h2 class="abstract">Author</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Person who created document or activity record.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Author.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Author.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Author.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Author.Person">Person</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Person">Person</a>
+</p>
+</td>
+<td>
+<p class="comment">Person having this role.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="CoordinateSystem" class="group">
+<a href="#CoordinateSystem">
+<h2 class="abstract">CoordinateSystem</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Coordinate reference system.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="CoordinateSystem.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CoordinateSystem.crsUrn">crsUrn</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">A Uniform Resource Name (URN) for the coordinate reference system (crs) used to define 'Location.PositionPoints'.</p>
+<p class="comment">An example would be the European Petroleum Survey Group (EPSG) code for a coordinate reference system, defined in URN under the Open Geospatial Consortium (OGC) namespace as: urn:ogc:def:crs:EPSG::XXXX, where XXXX is an EPSG code (a full list of codes can be found at the EPSG Registry web site http://www.epsg-registry.org/). To define the coordinate system as being WGS84 (latitude, longitude) using an EPSG OGC, this attribute would be urn:ogc:def:crs:EPSG::4236.</p>
+<p class="comment">A profile should limit this code to a set of allowed URNs agreed to by all sending and receiving parties.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CoordinateSystem.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CoordinateSystem.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Crew" class="group">
+<a href="#Crew">
+<h2 class="abstract">Crew</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Group of people with specific skills, tools, and vehicles.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Crew.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Crew.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Crew.CrewAssignment">CrewAssignment</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CrewAssignment">CrewAssignment</a>
+</p>
+</td>
+<td>
+<p class="comment">All members of this crew.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Crew.CrewType">CrewType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CrewType">CrewType</a>
+</p>
+</td>
+<td>
+<p class="comment">Type of this crew.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Crew.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="CrewAssignment" class="group">
+<a href="#CrewAssignment">
+<h2 class="abstract">CrewAssignment</h2>
+</a>
+<p class="package">ES-CIM</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="CrewAssignment.CrewMember">CrewMember</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CrewMember">CrewMember</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="CrewAssignment.effectiveDateTimeInterval">effectiveDateTimeInterval</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#DateTimeInterval">DateTimeInterval</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="CrewMember" class="group">
+<a href="#CrewMember">
+<h2 class="abstract">CrewMember</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Member of a crew.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="CrewMember.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CrewMember.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CrewMember.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CrewMember.Person">Person</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Person">Person</a>
+</p>
+</td>
+<td>
+<p class="comment">Person having this role.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="CrewType" class="group">
+<a href="#CrewType">
+<h2 class="abstract">CrewType</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Custom description of the type of crew. This may be used to determine the type of work the crew can be assigned to. Examples include repair, tree trimming, switching, etc.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="CrewType.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CrewType.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="CrewType.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="ElectronicAddress" class="group">
+<a href="#ElectronicAddress">
+<h2 class="abstract">ElectronicAddress</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">Electronic address information.</p>
+<p class="note"/>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ElectronicAddress.lan">lan</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Address on local area network.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ElectronicAddress.mac">mac</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">MAC (Media Access Control) address.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ElectronicAddress.password">password</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Password needed to log in.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ElectronicAddress.radio">radio</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Radio address.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ElectronicAddress.userID">userID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">User ID needed to log in, which can be for an individual person, an organisation, a location, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ElectronicAddress.web">web</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">World wide web address.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Equipment" class="group">
+<a href="#Equipment">
+<h2 class="abstract">Equipment</h2>
+</a>
+<p class="package">Core</p>
+<p class="comment">The parts of a power system that are physical devices, electronic or mechanical.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Equipment.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Equipment.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Equipment.inService">inService</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">If true, the equipment is in service.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Equipment.normallyInService">normallyInService</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">If true, the equipment is normally in service.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Equipment.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Equipment.System">System</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#System">System</a>
+</p>
+</td>
+<td>
+<p class="comment">System that contains Equipment</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="EquipmentContainer" class="group">
+<a href="#EquipmentContainer">
+<h2 class="abstract">EquipmentContainer</h2>
+</a>
+<p class="package">Core</p>
+<p class="comment">A modelling construct to provide a root class for containing equipment.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="EquipmentContainer.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="EquipmentContainer.name">name</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The name is any free human readable and possibly non unique text naming the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="EquipmentContainer.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Facility" class="group">
+<a href="#Facility">
+<h2 class="abstract">Facility</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">A facility may contain buildings, storage facilities, switching facilities, power generation, manufacturing facilities, maintenance facilities, etc.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Facility.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Facility.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Facility.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="InternalLocation" class="group">
+<a href="#InternalLocation">
+<h2 class="abstract">InternalLocation</h2>
+</a>
+<p class="package">Work</p>
+<p class="comment">Description of location internal to a building.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="InternalLocation.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.buildingName">buildingName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of building where location is.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.buildingNumber">buildingNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Number of building where location is.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.floor">floor</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Floor of location.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.roomNumber">roomNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Room number of location.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InternalLocation.TelephoneNumber">TelephoneNumber</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TelephoneNumber">TelephoneNumber</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="Location" class="group">
+<a href="#Location">
+<h2 class="abstract">Location</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more postition points (coordinates) in a given coordinate system.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Location.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.accessMethod">accessMethod</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Method for the service person to access this service location. For example, a description of where to obtain a key if the facility is unmanned and secured</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.directions">directions</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Directions for finding a given location. For example, the location of a streetlight may be located at the 'NW' (northwest) corner of the customer's site or the location of a usage point may be located on the second floor of an apartment building.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.locationType">locationType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Classification of what the location represents (e.g. a utility service territory or region within the territory, political boundary).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.siteAccessProblem">siteAccessProblem</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Problems previously encountered when visiting or performing work on this location. Examples include: bad dog, violent customer, verbally abusive occupant, obstructions, safety hazards, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.Address">Address</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Address">Address</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.CoordinateSystem">CoordinateSystem</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CoordinateSystem">CoordinateSystem</a>
+</p>
+</td>
+<td>
+<p class="comment">Coordinate system used to describe position points of this location.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Location.PositionPoints">PositionPoints</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#PositionPoint">PositionPoint</a>
+</p>
+</td>
+<td>
+<p class="comment">Sequence of position points describing this location, expressed in coordinate system 'Location.CoordinateSystem'.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="MaintenanceRequirement" class="group">
+<a href="#MaintenanceRequirement">
+<h2 class="abstract">MaintenanceRequirement</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">MaintenanceRequirement defines the requirement for maintenance or inspection, typically of an Asset, based either on a time schedule or triggers based on measurements or a combination of both (e.g. exceeding a measurement of use or a specific time period whichever occurs first).</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.maintenanceWorkKind">maintenanceWorkKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#MaintenanceWorkKind">MaintenanceWorkKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Defines the specific kind of maintenance or inspection required.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.maintenanceWorkKindOther">maintenanceWorkKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.nextMaintenanceDate">nextMaintenanceDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">For time based maintenance the next date for the maintenance to be scheduled.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.AssetMeasurementTrigger">AssetMeasurementTrigger</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AssetMeasurementTrigger">AssetMeasurementTrigger</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaintenanceRequirement.TimeSchedule">TimeSchedule</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TimeSchedule">TimeSchedule</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="Manufacturer" class="group">
+<a href="#Manufacturer">
+<h2 class="abstract">Manufacturer</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Organisation that manufactures asset products.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Manufacturer.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Manufacturer.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Manufacturer.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="MaterialItem" class="group">
+<a href="#MaterialItem">
+<h2 class="abstract">MaterialItem</h2>
+</a>
+<p class="package">Work</p>
+<p class="comment">The physical consumable supply used for work and other purposes. It includes items such as nuts, bolts, brackets, glue, etc.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="MaterialItem.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaterialItem.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaterialItem.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaterialItem.quantity">quantity</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#IntegerQuantity">IntegerQuantity</a>
+</p>
+</td>
+<td>
+<p class="comment">Quantity of material used.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="MaterialItem.TypeMaterial">TypeMaterial</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TypeMaterial">TypeMaterial</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="Name" class="group">
+<a href="#Name">
+<h2 class="abstract">Name</h2>
+</a>
+<p class="package">Core</p>
+<p class="comment">The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b&gt;not&lt;/b&gt; to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Name.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Any free text that name the object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Name.NameType">NameType</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#NameType">NameType</a>
+</p>
+</td>
+<td>
+<p class="comment">Type of this name.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="NameType" class="group">
+<a href="#NameType">
+<h2 class="abstract">NameType</h2>
+</a>
+<p class="package">Core</p>
+<p class="comment">Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:</p>
+<p class="comment">The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="NameType.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Description of the name type.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="NameType.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of the name type.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="NameType.NameTypeAuthority">NameTypeAuthority</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#NameTypeAuthority">NameTypeAuthority</a>
+</p>
+</td>
+<td>
+<p class="comment">Authority responsible for managing names of this type.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="NameTypeAuthority" class="group">
+<a href="#NameTypeAuthority">
+<h2 class="abstract">NameTypeAuthority</h2>
+</a>
+<p class="package">Core</p>
+<p class="comment">Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="NameTypeAuthority.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Description of the name type authority.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="NameTypeAuthority.name">name</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of the name type authority.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Person" class="group">
+<a href="#Person">
+<h2 class="abstract">Person</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">General purpose information for name and other information to contact people.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Person.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.firstName">firstName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Person's first name.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.lastName">lastName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Person's last (family, sir) name.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.mName">mName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Middle name(s) or initial(s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.prefix">prefix</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">A prefix or title for the person's name, such as Miss, Mister, Doctor, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.suffix">suffix</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">A suffix for the person's name, such as II, III, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.Document">Document</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.electronicAddress">electronicAddress</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#EmailAddress">EmailAddress</a>
+</p>
+</td>
+<td>
+<p class="comment">Electronic address.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Person.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="PositionPoint" class="group">
+<a href="#PositionPoint">
+<h2 class="abstract">PositionPoint</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to desribe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="PositionPoint.groupNumber">groupNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Zero-relative sequence number of this group within a series of points; used when there is a need to express disjoint groups of points that are considered to be part of a single location.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PositionPoint.sequenceNumber">sequenceNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Zero-relative sequence number of this point within a series of points.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PositionPoint.xPosition">xPosition</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">X axis position.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PositionPoint.yPosition">yPosition</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Y axis position.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="PositionPoint.zPosition">zPosition</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">(if applicable) Z axis position.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="ProcedureStep" class="group">
+<a href="#ProcedureStep">
+<h2 class="abstract">ProcedureStep</h2>
+</a>
+<p class="package">Part 6</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ProcedureStep.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProcedureStep.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProcedureStep.instruction">instruction</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProcedureStep.isFreeSequence">isFreeSequence</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">ProcedureSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of ProcedureSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the ProcedureSteps in that group may be executed in any order.</p>
+<p class="comment">For example, assume we have a Procedure having six ProcedureSteps with sequenceNumber values 1 – 6. ProcedureSteps 1, 2, 5 and 6 have isFreeSequence values of false. ProcedureSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProcedureStep.sequenceNumber">sequenceNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">ProcedureSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of ProcedureSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the ProcedureSteps in that group may be executed in any order.</p>
+<p class="comment">For example, assume we have a Procedure having six ProcedureSteps with sequenceNumber values 1 – 6. ProcedureSteps 1, 2, 5 and 6 have isFreeSequence values of false. ProcedureSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProcedureStep.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="ProductAssetModel" class="group">
+<a href="#ProductAssetModel">
+<h2 class="abstract">ProductAssetModel</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Asset model by a specific manufacturer.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.catalogueNumber">catalogueNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Catalogue number for asset model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.corporateStandardKind">corporateStandardKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CorporateStandardKind">CorporateStandardKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Kind of corporate standard for this asset model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.modelNumber">modelNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Manufacturer's model number.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.modelVersion">modelVersion</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Version number for product model, which indicates vintage of the product.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.styleNumber">styleNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Style number of asset model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.usageKind">usageKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#AssetModelUsageKind">AssetModelUsageKind</a>
+</p>
+</td>
+<td>
+<p class="comment">Intended usage for this asset model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.Document">Document</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.Manufacturer">Manufacturer</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Manufacturer">Manufacturer</a>
+</p>
+</td>
+<td>
+<p class="comment">Manufacturer of this asset model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ProductAssetModel.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="System" class="group">
+<a href="#System">
+<h2 class="abstract">System</h2>
+</a>
+<p class="package">ES-CIM</p>
+<p class="comment">A collection of things (e.g., equipment) within a generation unit that work together to perform a function.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="System.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="System.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="System.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="TimeSchedule" class="group">
+<a href="#TimeSchedule">
+<h2 class="abstract">TimeSchedule</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Description of anything that changes through time. Time schedule is used to perform a single-valued function of time. Use inherited 'type' attribute to give additional information on this schedule, such as: periodic (hourly, daily, weekly, monthly, etc.), day of the month, by date, calendar (specific times and dates).</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.dayOfWeek">dayOfWeek</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#DayOfWeekKind">DayOfWeekKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.disabled">disabled</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">True if this schedule is deactivated (disabled).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleDayOccurence">scheduleDayOccurence</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleFrequency">scheduleFrequency</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#FrequencyKind">FrequencyKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleHour">scheduleHour</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleMinute">scheduleMinute</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleMonth">scheduleMonth</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleMonthDay">scheduleMonthDay</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleWeekNumber">scheduleWeekNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleYear">scheduleYear</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleYearDay">scheduleYearDay</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.timeScheduleKind">timeScheduleKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TimeScheduleKind">TimeScheduleKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TimeSchedule.scheduleInterval">scheduleInterval</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#DateTimeInterval">DateTimeInterval</a>
+</p>
+</td>
+<td>
+<p class="comment">Schedule date and time interval.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="TypeMaterial" class="group">
+<a href="#TypeMaterial">
+<h2 class="abstract">TypeMaterial</h2>
+</a>
+<p class="package">InfWork</p>
+<p class="comment">Documentation for a generic material item that may be used for design, work and other purposes. Any number of MaterialItems manufactured by various vendors may be used to perform this TypeMaterial.</p>
+<p class="comment">Note that class analagous to "AssetModel" is not used for material items. This is because in some cases, for example, a utility sets up a Master material record for a 3 inch long half inch diameter steel bolt and they do not necessarily care what specific supplier is providing the material item. As different vendors are used to supply the part, the Stock Code of the material item can stay the same. In other cases, each time the vendor changes, a new stock code is set up so they can track material used by vendor. Therefore a Material Item "Model" is not typically needed.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.costType">costType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The type of cost to which this Material Item belongs.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.quantity">quantity</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The value, unit of measure, and multiplier for the quantity.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.stockItem">stockItem</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">True if item is a stock item (default).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.estUnitCost">estUnitCost</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Money">Money</a>
+</p>
+</td>
+<td>
+<p class="comment">The estimated unit cost of this type of material, either for a unit cost or cost per unit length. Cost is for material or asset only and does not include labor to install/construct or configure it.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TypeMaterial.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="WorkActivityRecord" class="group">
+<a href="#WorkActivityRecord">
+<h2 class="abstract">WorkActivityRecord</h2>
+</a>
+<p class="package">Work</p>
+<p class="comment">Records information about the status of work or work task at a point in time.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.createdDateTime">createdDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time this activity record has been created (different from the 'status.dateTime', which is the time of a status change of the associated object, if applicable).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.percentComplete">percentComplete</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#PerCent">PerCent</a>
+</p>
+</td>
+<td>
+<p class="comment">Estimated percentage of completion of this individual work task or overall work order.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.reason">reason</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Reason for event resulting in this activity record, typically supplied when user initiated.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.severity">severity</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Severity level of event resulting in this activity record.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Type of event resulting in this activity record.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkActivityRecord.status">status</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Status">Status</a>
+</p>
+</td>
+<td>
+<p class="comment">Information on consequence of event resulting in this activity record.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="WorkOrganisation" class="group">
+<a href="#WorkOrganisation">
+<h2 class="abstract">WorkOrganisation</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">Identifies a specific organization that will be responsible for performing the work.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="WorkOrganisation.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkOrganisation.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkOrganisation.isContractor">isContractor</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">Set to true if this organization is a 3rd party contractor.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkOrganisation.workOrganisationType">workOrganisationType</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The type of work organisation e.g. electrical contractor, maintenance department, engineering department, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkOrganisation.Crew">Crew</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Crew">Crew</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkOrganisation.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="WorkStatus" class="group">
+<a href="#WorkStatus">
+<h2 class="abstract">WorkStatus</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">Indicates the status of a WorkOrder at a specific point in time.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="WorkStatus.dateTime">dateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkStatus.workStatusKind">workStatusKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkStatusKind">WorkStatusKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkStatus.workStatusKindOther">workStatusKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="WorkTask" class="group">
+<a href="#WorkTask">
+<h2 class="abstract">WorkTask</h2>
+</a>
+<p class="package">Work</p>
+<p class="comment">A task within a set of work.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="WorkTask.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.completedDateTime">completedDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time work task was completed.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.costAccount">costAccount</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Account number of the capital or O&amp;amp;M account to which the costs associated with the work task are assigned.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.costCategoryKind">costCategoryKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CostCategoryKind">CostCategoryKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.costCategoryKindOther">costCategoryKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.crewETA">crewETA</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Estimated time of arrival, so that customer or police/fire department can be informed when the crew will arrive.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.instruction">instruction</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Instructions for performing this task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.isFreeSequence">isFreeSequence</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">WorkTasks must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTasks having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTasks in that group may be executed in any order.</p>
+<p class="comment">For example, assume we have six WorkTasks with sequenceNumber values 1 – 6. WorkTasks 1, 2, 5 and 6 have isFreeSequence values of false. WorkTasks 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.laborHours">laborHours</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">float</p>
+</td>
+<td>
+<p class="comment">Hours of labor expended under work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.schedOverride">schedOverride</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">If specified, override schedule and perform this task in accordance with instructions specified here.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.sequenceNumber">sequenceNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">WorkTasks must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTasks having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTasks in that group may be executed in any order.</p>
+<p class="comment">For example, assume we have six WorkTasks with sequenceNumber values 1 – 6. WorkTasks 1, 2, 5 and 6 have isFreeSequence values of false. WorkTasks 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.startedDateTime">startedDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time work task was started.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.Asset">Asset</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Asset">Asset</a>
+</p>
+</td>
+<td>
+<p class="comment">All assets on which this non-replacement work task is performed.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.contractorCost">contractorCost</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Money">Money</a>
+</p>
+</td>
+<td>
+<p class="comment">Total contractor costs associated with the work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.Crews">Crews</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Crew">Crew</a>
+</p>
+</td>
+<td>
+<p class="comment">All crews participating in this work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.Document">Document</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Document">Document</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.InternalLocation">InternalLocation</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#InternalLocation">InternalLocation</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.laborCost">laborCost</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Money">Money</a>
+</p>
+</td>
+<td>
+<p class="comment">Total labor costs associated with the work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.Location">Location</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Location">Location</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.materialCost">materialCost</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Money">Money</a>
+</p>
+</td>
+<td>
+<p class="comment">Total material costs associated with the work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.MaterialItems">MaterialItems</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#MaterialItem">MaterialItem</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.OldAsset">OldAsset</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Asset">Asset</a>
+</p>
+</td>
+<td>
+<p class="comment">Old asset replaced by this work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.priority">priority</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Priority">Priority</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.TimeSchedule">TimeSchedule</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TimeSchedule">TimeSchedule</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.toolCost">toolCost</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Money">Money</a>
+</p>
+</td>
+<td>
+<p class="comment">Total tool costs associated with the work task.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.WorkActivityRecord">WorkActivityRecord</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkActivityRecord">WorkActivityRecord</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.WorkStatus">WorkStatus</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkStatus">WorkStatus</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTask.WorkTaskStep">WorkTaskStep</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#WorkTaskStep">WorkTaskStep</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="WorkTaskStep" class="group">
+<a href="#WorkTaskStep">
+<h2 class="abstract">WorkTaskStep</h2>
+</a>
+<p class="package">ES-CIM</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="WorkTaskStep.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</p>
+<p class="comment">For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTaskStep.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTaskStep.isFreeSequence">isFreeSequence</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">WorkTaskSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTaskSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTaskSteps in that group may be executed in any order.</p>
+<p class="comment">For example, assume we have a WorkTask having six WorkTaskSteps with sequenceNumber values 1 – 6. WorkTaskSteps 1, 2, 5 and 6 have isFreeSequence values of false. WorkTaskSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTaskStep.sequenceNumber">sequenceNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">WorkTaskSteps must be executed in the order defined by the sequenceNumber attribute. However, when a group of WorkTaskSteps having consecutive sequenceNumber attributes and with isFreeSequence attributes set to true is encountered, the WorkTaskSteps in that group may be executed in any order.</p>
+<p class="comment">For example, assume we have a WorkTask having six WorkTaskSteps with sequenceNumber values 1 – 6. WorkTaskSteps 1, 2, 5 and 6 have isFreeSequence values of false. WorkTaskSteps 3 and 4 have isFreeSequence values of true. In this case, the two valid sequences of execution are 1, 2, 3, 4, 5, 6 and 1, 2, 4, 3, 5, 6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTaskStep.Names">Names</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Name">Name</a>
+</p>
+</td>
+<td>
+<p class="comment">All names of this identified object.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="WorkTaskStep.Procedure">Procedure</p>
+</th>
+<td>
+<p class="cardinality">0..<item>*</item>
+</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Procedure">Procedure</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Enumerations</h1>
+<div id="AddressKind" class="group">
+<a href="#AddressKind">
+<h2 class="enumerated">AddressKind</h2>
+</a>
+<p class="package">Part 6</p>
+<table>
+<tr>
+<th>
+<p class="name">billing</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">physical</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">postal</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">street</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="AssetKind" class="group">
+<a href="#AssetKind">
+<h2 class="enumerated">AssetKind</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Kinds of assets or asset components.</p>
+<table>
+<tr>
+<th>
+<p class="name">breakerAirBlastBreaker</p>
+</th>
+<td>
+<p class="comment">Air blast circuit breaker.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">breakerBulkOilBreaker</p>
+</th>
+<td>
+<p class="comment">Bulk oil circuit breaker.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">breakerInsulatingStackAssembly</p>
+</th>
+<td>
+<p class="comment">Breaker insulating stack assembly (for live tank breaker).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">breakerMinimumOilBreaker</p>
+</th>
+<td>
+<p class="comment">Minimum oil circuit breaker.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">breakerSF6DeadTankBreaker</p>
+</th>
+<td>
+<p class="comment">SF6 dead tank breaker.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">breakerSF6LiveTankBreaker</p>
+</th>
+<td>
+<p class="comment">SF6 live tank breaker.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">breakerTankAssembly</p>
+</th>
+<td>
+<p class="comment">Breaker tank assembly.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td>
+<p class="comment">Other type of Asset. The type attribute may provide more details in this case.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">transformer</p>
+</th>
+<td>
+<p class="comment">Transformer.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">transformerTank</p>
+</th>
+<td>
+<p class="comment">Transformer tank.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="AssetLifecycleStateKind" class="group">
+<a href="#AssetLifecycleStateKind">
+<h2 class="enumerated">AssetLifecycleStateKind</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Lifecycle states an asset can be in.</p>
+<p class="comment">While the possible lifecycle states are standardized, the allowed transitions are not - they are intended to be defined by the business process requirements of local implementations.</p>
+<table>
+<tr>
+<th>
+<p class="name">disposedOf</p>
+</th>
+<td>
+<p class="comment">Asset disposed of.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">manufactured</p>
+</th>
+<td>
+<p class="comment">Asset manufactured.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">purchased</p>
+</th>
+<td>
+<p class="comment">Asset purchased.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">received</p>
+</th>
+<td>
+<p class="comment">Asset received.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">retired</p>
+</th>
+<td>
+<p class="comment">Asset retired.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="AssetModelUsageKind" class="group">
+<a href="#AssetModelUsageKind">
+<h2 class="enumerated">AssetModelUsageKind</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Usage for an asset model.</p>
+<table>
+<tr>
+<th>
+<p class="name">customerSubstation</p>
+</th>
+<td>
+<p class="comment">Asset model is intended for use in customer substation.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">distributionOverhead</p>
+</th>
+<td>
+<p class="comment">Asset model is intended for use in distribution overhead network.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">distributionUnderground</p>
+</th>
+<td>
+<p class="comment">Asset model is intended for use in underground distribution network.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td>
+<p class="comment">Other kind of asset model usage.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">streetlight</p>
+</th>
+<td>
+<p class="comment">Asset model is intended for use as streetlight.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">substation</p>
+</th>
+<td>
+<p class="comment">Asset model is intended for use in substation.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">transmission</p>
+</th>
+<td>
+<p class="comment">Asset model is intended for use in transmission network.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">unknown</p>
+</th>
+<td>
+<p class="comment">Usage of the asset model is unknown.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="CorporateStandardKind" class="group">
+<a href="#CorporateStandardKind">
+<h2 class="enumerated">CorporateStandardKind</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Kind of corporate standard.</p>
+<table>
+<tr>
+<th>
+<p class="name">experimental</p>
+</th>
+<td>
+<p class="comment">Asset model is used experimentally.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td>
+<p class="comment">Other kind of corporate standard for the asset model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">standard</p>
+</th>
+<td>
+<p class="comment">Asset model is used as corporate standard.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">underEvaluation</p>
+</th>
+<td>
+<p class="comment">Asset model usage is under evaluation.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="CostCategoryKind" class="group">
+<a href="#CostCategoryKind">
+<h2 class="enumerated">CostCategoryKind</h2>
+</a>
+<p class="package">Work</p>
+<table>
+<tr>
+<th>
+<p class="name">capital</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">o&amp;m</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="Currency" class="group">
+<a href="#Currency">
+<h2 class="enumerated">Currency</h2>
+</a>
+<p class="package">Domain</p>
+<p class="comment">Monetary currencies.  ISO 4217 standard including 3-character currency code.</p>
+<table>
+<tr>
+<th>
+<p class="name">AED</p>
+</th>
+<td>
+<p class="comment">United Arab Emirates dirham.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">AFN</p>
+</th>
+<td>
+<p class="comment">Afghan afghani.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ALL</p>
+</th>
+<td>
+<p class="comment">Albanian lek.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">AMD</p>
+</th>
+<td>
+<p class="comment">Armenian dram.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ANG</p>
+</th>
+<td>
+<p class="comment">Netherlands Antillean guilder.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">AOA</p>
+</th>
+<td>
+<p class="comment">Angolan kwanza.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ARS</p>
+</th>
+<td>
+<p class="comment">Argentine peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">AUD</p>
+</th>
+<td>
+<p class="comment">Australian dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">AWG</p>
+</th>
+<td>
+<p class="comment">Aruban florin.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">AZN</p>
+</th>
+<td>
+<p class="comment">Azerbaijani manat.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BAM</p>
+</th>
+<td>
+<p class="comment">Bosnia and Herzegovina convertible mark.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BBD</p>
+</th>
+<td>
+<p class="comment">Barbados dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BDT</p>
+</th>
+<td>
+<p class="comment">Bangladeshi taka.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BGN</p>
+</th>
+<td>
+<p class="comment">Bulgarian lev.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BHD</p>
+</th>
+<td>
+<p class="comment">Bahraini dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BIF</p>
+</th>
+<td>
+<p class="comment">Burundian franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BMD</p>
+</th>
+<td>
+<p class="comment">Bermudian dollar (customarily known as Bermuda dollar).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BND</p>
+</th>
+<td>
+<p class="comment">Brunei dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BOB</p>
+</th>
+<td>
+<p class="comment">Boliviano.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BOV</p>
+</th>
+<td>
+<p class="comment">Bolivian Mvdol (funds code).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BRL</p>
+</th>
+<td>
+<p class="comment">Brazilian real.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BSD</p>
+</th>
+<td>
+<p class="comment">Bahamian dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BTN</p>
+</th>
+<td>
+<p class="comment">Bhutanese ngultrum.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BWP</p>
+</th>
+<td>
+<p class="comment">Botswana pula.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BYR</p>
+</th>
+<td>
+<p class="comment">Belarusian ruble.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BZD</p>
+</th>
+<td>
+<p class="comment">Belize dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CAD</p>
+</th>
+<td>
+<p class="comment">Canadian dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CDF</p>
+</th>
+<td>
+<p class="comment">Congolese franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CHF</p>
+</th>
+<td>
+<p class="comment">Swiss franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CLF</p>
+</th>
+<td>
+<p class="comment">Unidad de Fomento (funds code), Chile.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CLP</p>
+</th>
+<td>
+<p class="comment">Chilean peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CNY</p>
+</th>
+<td>
+<p class="comment">Chinese yuan.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">COP</p>
+</th>
+<td>
+<p class="comment">Colombian peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">COU</p>
+</th>
+<td>
+<p class="comment">Unidad de Valor Real.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CRC</p>
+</th>
+<td>
+<p class="comment">Costa Rican colon.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CUC</p>
+</th>
+<td>
+<p class="comment">Cuban convertible peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CUP</p>
+</th>
+<td>
+<p class="comment">Cuban peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CVE</p>
+</th>
+<td>
+<p class="comment">Cape Verde escudo.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CZK</p>
+</th>
+<td>
+<p class="comment">Czech koruna.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">DJF</p>
+</th>
+<td>
+<p class="comment">Djiboutian franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">DKK</p>
+</th>
+<td>
+<p class="comment">Danish krone.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">DOP</p>
+</th>
+<td>
+<p class="comment">Dominican peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">DZD</p>
+</th>
+<td>
+<p class="comment">Algerian dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">EEK</p>
+</th>
+<td>
+<p class="comment">Estonian kroon.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">EGP</p>
+</th>
+<td>
+<p class="comment">Egyptian pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ERN</p>
+</th>
+<td>
+<p class="comment">Eritrean nakfa.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ETB</p>
+</th>
+<td>
+<p class="comment">Ethiopian birr.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">EUR</p>
+</th>
+<td>
+<p class="comment">Euro.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">FJD</p>
+</th>
+<td>
+<p class="comment">Fiji dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">FKP</p>
+</th>
+<td>
+<p class="comment">Falkland Islands pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GBP</p>
+</th>
+<td>
+<p class="comment">Pound sterling.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GEL</p>
+</th>
+<td>
+<p class="comment">Georgian lari.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GHS</p>
+</th>
+<td>
+<p class="comment">Ghanaian cedi.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GIP</p>
+</th>
+<td>
+<p class="comment">Gibraltar pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GMD</p>
+</th>
+<td>
+<p class="comment">Gambian dalasi.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GNF</p>
+</th>
+<td>
+<p class="comment">Guinean franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GTQ</p>
+</th>
+<td>
+<p class="comment">Guatemalan quetzal.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GYD</p>
+</th>
+<td>
+<p class="comment">Guyanese dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HKD</p>
+</th>
+<td>
+<p class="comment">Hong Kong dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HNL</p>
+</th>
+<td>
+<p class="comment">Honduran lempira.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HRK</p>
+</th>
+<td>
+<p class="comment">Croatian kuna.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HTG</p>
+</th>
+<td>
+<p class="comment">Haitian gourde.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HUF</p>
+</th>
+<td>
+<p class="comment">Hungarian forint.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">IDR</p>
+</th>
+<td>
+<p class="comment">Indonesian rupiah.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ILS</p>
+</th>
+<td>
+<p class="comment">Israeli new sheqel.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">INR</p>
+</th>
+<td>
+<p class="comment">Indian rupee.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">IQD</p>
+</th>
+<td>
+<p class="comment">Iraqi dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">IRR</p>
+</th>
+<td>
+<p class="comment">Iranian rial.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ISK</p>
+</th>
+<td>
+<p class="comment">Icelandic króna.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JMD</p>
+</th>
+<td>
+<p class="comment">Jamaican dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JOD</p>
+</th>
+<td>
+<p class="comment">Jordanian dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPY</p>
+</th>
+<td>
+<p class="comment">Japanese yen.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KES</p>
+</th>
+<td>
+<p class="comment">Kenyan shilling.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KGS</p>
+</th>
+<td>
+<p class="comment">Kyrgyzstani som.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KHR</p>
+</th>
+<td>
+<p class="comment">Cambodian riel.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KMF</p>
+</th>
+<td>
+<p class="comment">Comoro franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KPW</p>
+</th>
+<td>
+<p class="comment">North Korean won.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KRW</p>
+</th>
+<td>
+<p class="comment">South Korean won.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KWD</p>
+</th>
+<td>
+<p class="comment">Kuwaiti dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KYD</p>
+</th>
+<td>
+<p class="comment">Cayman Islands dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KZT</p>
+</th>
+<td>
+<p class="comment">Kazakhstani tenge.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LAK</p>
+</th>
+<td>
+<p class="comment">Lao kip.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LBP</p>
+</th>
+<td>
+<p class="comment">Lebanese pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LKR</p>
+</th>
+<td>
+<p class="comment">Sri Lanka rupee.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LRD</p>
+</th>
+<td>
+<p class="comment">Liberian dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LSL</p>
+</th>
+<td>
+<p class="comment">Lesotho loti.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LTL</p>
+</th>
+<td>
+<p class="comment">Lithuanian litas.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LVL</p>
+</th>
+<td>
+<p class="comment">Latvian lats.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">LYD</p>
+</th>
+<td>
+<p class="comment">Libyan dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MAD</p>
+</th>
+<td>
+<p class="comment">Moroccan dirham.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MDL</p>
+</th>
+<td>
+<p class="comment">Moldovan leu.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MGA</p>
+</th>
+<td>
+<p class="comment">Malagasy ariary.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MKD</p>
+</th>
+<td>
+<p class="comment">Macedonian denar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MMK</p>
+</th>
+<td>
+<p class="comment">Myanma kyat.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MNT</p>
+</th>
+<td>
+<p class="comment">Mongolian tugrik.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MOP</p>
+</th>
+<td>
+<p class="comment">Macanese pataca.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MRO</p>
+</th>
+<td>
+<p class="comment">Mauritanian ouguiya.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MUR</p>
+</th>
+<td>
+<p class="comment">Mauritian rupee.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MVR</p>
+</th>
+<td>
+<p class="comment">Maldivian rufiyaa.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MWK</p>
+</th>
+<td>
+<p class="comment">Malawian kwacha.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MXN</p>
+</th>
+<td>
+<p class="comment">Mexican peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MYR</p>
+</th>
+<td>
+<p class="comment">Malaysian ringgit.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">MZN</p>
+</th>
+<td>
+<p class="comment">Mozambican metical.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NAD</p>
+</th>
+<td>
+<p class="comment">Namibian dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NGN</p>
+</th>
+<td>
+<p class="comment">Nigerian naira.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NIO</p>
+</th>
+<td>
+<p class="comment">Cordoba oro.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NOK</p>
+</th>
+<td>
+<p class="comment">Norwegian krone.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NPR</p>
+</th>
+<td>
+<p class="comment">Nepalese rupee.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NZD</p>
+</th>
+<td>
+<p class="comment">New Zealand dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">OMR</p>
+</th>
+<td>
+<p class="comment">Omani rial.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PAB</p>
+</th>
+<td>
+<p class="comment">Panamanian balboa.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PEN</p>
+</th>
+<td>
+<p class="comment">Peruvian nuevo sol.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PGK</p>
+</th>
+<td>
+<p class="comment">Papua New Guinean kina.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PHP</p>
+</th>
+<td>
+<p class="comment">Philippine peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PKR</p>
+</th>
+<td>
+<p class="comment">Pakistani rupee.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PLN</p>
+</th>
+<td>
+<p class="comment">Polish zloty.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PYG</p>
+</th>
+<td>
+<p class="comment">Paraguayan guaraní.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">QAR</p>
+</th>
+<td>
+<p class="comment">Qatari rial.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">RON</p>
+</th>
+<td>
+<p class="comment">Romanian new leu.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">RSD</p>
+</th>
+<td>
+<p class="comment">Serbian dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">RUB</p>
+</th>
+<td>
+<p class="comment">Russian rouble.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">RWF</p>
+</th>
+<td>
+<p class="comment">Rwandan franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SAR</p>
+</th>
+<td>
+<p class="comment">Saudi riyal.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SBD</p>
+</th>
+<td>
+<p class="comment">Solomon Islands dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SCR</p>
+</th>
+<td>
+<p class="comment">Seychelles rupee.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SDG</p>
+</th>
+<td>
+<p class="comment">Sudanese pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SEK</p>
+</th>
+<td>
+<p class="comment">Swedish krona/kronor.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SGD</p>
+</th>
+<td>
+<p class="comment">Singapore dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SHP</p>
+</th>
+<td>
+<p class="comment">Saint Helena pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SLL</p>
+</th>
+<td>
+<p class="comment">Sierra Leonean leone.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SOS</p>
+</th>
+<td>
+<p class="comment">Somali shilling.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SRD</p>
+</th>
+<td>
+<p class="comment">Surinamese dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">STD</p>
+</th>
+<td>
+<p class="comment">São Tomé and Príncipe dobra.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SYP</p>
+</th>
+<td>
+<p class="comment">Syrian pound.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SZL</p>
+</th>
+<td>
+<p class="comment">Lilangeni.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">THB</p>
+</th>
+<td>
+<p class="comment">Thai baht.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TJS</p>
+</th>
+<td>
+<p class="comment">Tajikistani somoni.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TMT</p>
+</th>
+<td>
+<p class="comment">Turkmenistani manat.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TND</p>
+</th>
+<td>
+<p class="comment">Tunisian dinar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TOP</p>
+</th>
+<td>
+<p class="comment">Tongan pa'anga.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TRY</p>
+</th>
+<td>
+<p class="comment">Turkish lira.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TTD</p>
+</th>
+<td>
+<p class="comment">Trinidad and Tobago dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TWD</p>
+</th>
+<td>
+<p class="comment">New Taiwan dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">TZS</p>
+</th>
+<td>
+<p class="comment">Tanzanian shilling.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">UAH</p>
+</th>
+<td>
+<p class="comment">Ukrainian hryvnia.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">UGX</p>
+</th>
+<td>
+<p class="comment">Ugandan shilling.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">USD</p>
+</th>
+<td>
+<p class="comment">United States dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">UYU</p>
+</th>
+<td>
+<p class="comment">Uruguayan peso.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">UZS</p>
+</th>
+<td>
+<p class="comment">Uzbekistan som.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VEF</p>
+</th>
+<td>
+<p class="comment">Venezuelan bolívar fuerte.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VND</p>
+</th>
+<td>
+<p class="comment">Vietnamese Dong.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VUV</p>
+</th>
+<td>
+<p class="comment">Vanuatu vatu.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WST</p>
+</th>
+<td>
+<p class="comment">Samoan tala.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">XAF</p>
+</th>
+<td>
+<p class="comment">CFA franc BEAC.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">XCD</p>
+</th>
+<td>
+<p class="comment">East Caribbean dollar.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">XOF</p>
+</th>
+<td>
+<p class="comment">CFA Franc BCEAO.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">XPF</p>
+</th>
+<td>
+<p class="comment">CFP franc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">YER</p>
+</th>
+<td>
+<p class="comment">Yemeni rial.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ZAR</p>
+</th>
+<td>
+<p class="comment">South African rand.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ZMK</p>
+</th>
+<td>
+<p class="comment">Zambian kwacha.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ZWL</p>
+</th>
+<td>
+<p class="comment">Zimbabwe dollar.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="DayOfWeekKind" class="group">
+<a href="#DayOfWeekKind">
+<h2 class="enumerated">DayOfWeekKind</h2>
+</a>
+<p class="package">Part 6</p>
+<table>
+<tr>
+<th>
+<p class="name">Friday</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">Monday</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">Saturday</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">Sunday</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">Thursday</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">Tuesday</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">Wednesday</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="DocumentKind" class="group">
+<a href="#DocumentKind">
+<h2 class="enumerated">DocumentKind</h2>
+</a>
+<p class="package">ES-CIM</p>
+<table>
+<tr>
+<th>
+<p class="name">agreement</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">application</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">billOfMaterials</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">blueprint</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">drawing</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">inspectionReport</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">instruction</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">invoice</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">log</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">map</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">partsList</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">photograph</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">procedure</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">specification</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">video</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="FrequencyKind" class="group">
+<a href="#FrequencyKind">
+<h2 class="enumerated">FrequencyKind</h2>
+</a>
+<p class="package">Part 6</p>
+<table>
+<tr>
+<th>
+<p class="name">daily</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">monthly</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">weekly</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">yearly</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="InUseStateKind" class="group">
+<a href="#InUseStateKind">
+<h2 class="enumerated">InUseStateKind</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Possible 'in use' states that an asset can be in.</p>
+<table>
+<tr>
+<th>
+<p class="name">inUse</p>
+</th>
+<td>
+<p class="comment">Asset is deployed (in use) or is being put into use.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">notReadyForUse</p>
+</th>
+<td>
+<p class="comment">Asset is not ready to be put into use.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">readyForUse</p>
+</th>
+<td>
+<p class="comment">Asset is ready to be put into use.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="MaintenanceWorkKind" class="group">
+<a href="#MaintenanceWorkKind">
+<h2 class="enumerated">MaintenanceWorkKind</h2>
+</a>
+<p class="package">Part 6</p>
+<table>
+<tr>
+<th>
+<p class="name">inspection</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">patrol</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">refurbish</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">repair</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">service</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">test</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="ProcedureKind" class="group">
+<a href="#ProcedureKind">
+<h2 class="enumerated">ProcedureKind</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Kind of procedure.</p>
+<table>
+<tr>
+<th>
+<p class="name">diagnosis</p>
+</th>
+<td>
+<p class="comment">Diagnosis procedure.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">inspection</p>
+</th>
+<td>
+<p class="comment">Inspection procedure.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">maintenance</p>
+</th>
+<td>
+<p class="comment">Maintenance procedure.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td>
+<p class="comment">Other procedure.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">test</p>
+</th>
+<td>
+<p class="comment">Test procedure.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="TelephoneNumberKind" class="group">
+<a href="#TelephoneNumberKind">
+<h2 class="enumerated">TelephoneNumberKind</h2>
+</a>
+<p class="package">Part 6</p>
+<table>
+<tr>
+<th>
+<p class="name">fax</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">home</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">landline</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">mobile</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">work</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="TimeScheduleKind" class="group">
+<a href="#TimeScheduleKind">
+<h2 class="enumerated">TimeScheduleKind</h2>
+</a>
+<p class="package">Work</p>
+<table>
+<tr>
+<th>
+<p class="name">actual</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">earliest</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">estimate</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">immediate</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">latest</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">request</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="UnitMultiplier" class="group">
+<a href="#UnitMultiplier">
+<h2 class="enumerated">UnitMultiplier</h2>
+</a>
+<p class="package">Domain</p>
+<p class="comment">The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type.</p>
+<p class="comment">For example, if a unit symbol is "m2Pers" and the multiplier is "k", then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol "Þ" represents the derived unit "m2Pers", then applying the multiplier "k" can be conceptualized simply as "kÞ".</p>
+<p class="comment">For example, the SI unit for mass is "kg" and not "g".  If the unit symbol is defined as "kg", then the multiplier is applied to "kg" as a whole and does not replace the "k" in front of the "g". In this case, the multiplier of "m" would be used with the unit symbol of "kg" to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the "kg" as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the "kg" were replaced by a symbol "Þ", then it is easier to conceptualize the multiplier "m" as creating the proper unit "mÞ", and not the forbidden unit "mkg".</p>
+<table>
+<tr>
+<th>
+<p class="name">E</p>
+</th>
+<td>
+<p class="comment">Exa 10**18.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">G</p>
+</th>
+<td>
+<p class="comment">Giga 10**9.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">M</p>
+</th>
+<td>
+<p class="comment">Mega 10**6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">P</p>
+</th>
+<td>
+<p class="comment">Peta 10**15.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">T</p>
+</th>
+<td>
+<p class="comment">Tera 10**12.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Y</p>
+</th>
+<td>
+<p class="comment">Yotta 10**24.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Z</p>
+</th>
+<td>
+<p class="comment">Zetta 10**21.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">a</p>
+</th>
+<td>
+<p class="comment">Atto 10**-18.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">c</p>
+</th>
+<td>
+<p class="comment">Centi 10**-2.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">d</p>
+</th>
+<td>
+<p class="comment">Deci 10**-1.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">da</p>
+</th>
+<td>
+<p class="comment">Deca 10**1.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">f</p>
+</th>
+<td>
+<p class="comment">Femto 10**-15.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">h</p>
+</th>
+<td>
+<p class="comment">Hecto 10**2.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">k</p>
+</th>
+<td>
+<p class="comment">Kilo 10**3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m</p>
+</th>
+<td>
+<p class="comment">Milli 10**-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">micro</p>
+</th>
+<td>
+<p class="comment">Micro 10**-6.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">n</p>
+</th>
+<td>
+<p class="comment">Nano 10**-9.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td>
+<p class="comment">No multiplier or equivalently multiply by 1.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">p</p>
+</th>
+<td>
+<p class="comment">Pico 10**-12.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">y</p>
+</th>
+<td>
+<p class="comment">Yocto 10**-24.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">z</p>
+</th>
+<td>
+<p class="comment">Zepto 10**-21.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="UnitSymbol" class="group">
+<a href="#UnitSymbol">
+<h2 class="enumerated">UnitSymbol</h2>
+</a>
+<p class="package">Domain</p>
+<p class="comment">The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as "F" instead of "CPerV". In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as "kgPerm3". With the exception of the "kg", which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole.</p>
+<p class="comment">Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.</p>
+<p class="comment">To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol "/" is replaced by the letters "Per". Exponents are written in plain text after the unit as "m3" instead of being formatted as in "m&lt;sup&gt;3&lt;/sup&gt;" or introducing a symbol as in "m^3". The degree symbol "°" is replaced with the letters "deg". Any clarification of the meaning for a substitution is included in the description for the unit symbol.</p>
+<p class="comment">Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units.</p>
+<table>
+<tr>
+<th>
+<p class="name">A</p>
+</th>
+<td>
+<p class="comment">Current in amperes.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">A2</p>
+</th>
+<td>
+<p class="comment">Amperes squared (A²).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">A2h</p>
+</th>
+<td>
+<p class="comment">Ampere-squared hour, ampere-squared hour.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">A2s</p>
+</th>
+<td>
+<p class="comment">Ampere squared time in square amperes (A²s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">APerA</p>
+</th>
+<td>
+<p class="comment">Current, ratio of amperages.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mA/A’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">APerm</p>
+</th>
+<td>
+<p class="comment">A/m, magnetic field strength, amperes per metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Ah</p>
+</th>
+<td>
+<p class="comment">Ampere-hours, ampere-hours.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">As</p>
+</th>
+<td>
+<p class="comment">Ampere seconds (A·s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Bq</p>
+</th>
+<td>
+<p class="comment">Radioactivity in becquerels (1/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Btu</p>
+</th>
+<td>
+<p class="comment">Energy, British Thermal Units.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">BtuPerh</p>
+</th>
+<td>
+<p class="comment">British Thermal Units per hour</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">C</p>
+</th>
+<td>
+<p class="comment">Electric charge in coulombs (A·s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CPerkg</p>
+</th>
+<td>
+<p class="comment">Exposure (x rays), coulombs per kilogram.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CPerm2</p>
+</th>
+<td>
+<p class="comment">Surface charge density, coulombs per square metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CPerm3</p>
+</th>
+<td>
+<p class="comment">Electric charge density, coulombs per cubic metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Ci</p>
+</th>
+<td>
+<p class="comment">Curie, unit of radioactivity</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">CiPerl</p>
+</th>
+<td>
+<p class="comment">Curies per litre</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">F</p>
+</th>
+<td>
+<p class="comment">Electric capacitance in farads (C/V).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">FPerm</p>
+</th>
+<td>
+<p class="comment">Permittivity, farads per metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">G</p>
+</th>
+<td>
+<p class="comment">Magnetic flux density, gausses (1 G = 10-4 T).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Gy</p>
+</th>
+<td>
+<p class="comment">Absorbed dose in grays (J/kg).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">GyPers</p>
+</th>
+<td>
+<p class="comment">Absorbed dose rate, grays per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">H</p>
+</th>
+<td>
+<p class="comment">Electric inductance in henrys (Wb/A).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HPerm</p>
+</th>
+<td>
+<p class="comment">Permeability, henrys per metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Hz</p>
+</th>
+<td>
+<p class="comment">Frequency in hertz (1/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HzPerHz</p>
+</th>
+<td>
+<p class="comment">Frequency, rate of frequency change.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mHz/Hz’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">HzPers</p>
+</th>
+<td>
+<p class="comment">Rate of change of frequency in hertz per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">J</p>
+</th>
+<td>
+<p class="comment">Energy in joules (N·m = C·V = W·s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPerK</p>
+</th>
+<td>
+<p class="comment">Heat capacity in joules/kelvin.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPerkg</p>
+</th>
+<td>
+<p class="comment">Specific energy, Joules / kg.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPerkgK</p>
+</th>
+<td>
+<p class="comment">Specific heat capacity, specific entropy, joules per kilogram Kelvin.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPerm2</p>
+</th>
+<td>
+<p class="comment">Insulation energy density, joules per square metre or watt second per square metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPerm3</p>
+</th>
+<td>
+<p class="comment">Energy density, joules per cubic metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPermol</p>
+</th>
+<td>
+<p class="comment">Molar energy, joules per mole.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPermolK</p>
+</th>
+<td>
+<p class="comment">Molar entropy, molar heat capacity, joules per mole kelvin.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">JPers</p>
+</th>
+<td>
+<p class="comment">Energy rate in joules per second (J/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">K</p>
+</th>
+<td>
+<p class="comment">Temperature in kelvins.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">KPers</p>
+</th>
+<td>
+<p class="comment">Temperature change rate in kelvins per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">M</p>
+</th>
+<td>
+<p class="comment">Length, nautical miles (1 M = 1852 m).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Mx</p>
+</th>
+<td>
+<p class="comment">Magnetic flux, maxwells (1 Mx = 10-8 Wb).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">N</p>
+</th>
+<td>
+<p class="comment">Force in newtons (kg·m/s²).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NPerm</p>
+</th>
+<td>
+<p class="comment">Surface tension, newton per metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">NTU</p>
+</th>
+<td>
+<p class="comment">Nephelometric Turbidity</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Nm</p>
+</th>
+<td>
+<p class="comment">Moment of force, newton metres.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Oe</p>
+</th>
+<td>
+<p class="comment">Magnetic field in oersteds, (1 Oe = (103/4p) A/m).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Pa</p>
+</th>
+<td>
+<p class="comment">Pressure in pascals (N/m²). Note: the absolute or relative measurement of pressure is implied with this entry. See below for more explicit forms.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">PaPers</p>
+</th>
+<td>
+<p class="comment">Pressure change rate in pascals per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Pas</p>
+</th>
+<td>
+<p class="comment">Dynamic viscosity, pascal seconds.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Q</p>
+</th>
+<td>
+<p class="comment">Quantity power, Q.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Qh</p>
+</th>
+<td>
+<p class="comment">Quantity energy, Qh.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">S</p>
+</th>
+<td>
+<p class="comment">Conductance in siemens.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SPercm</p>
+</th>
+<td>
+<p class="comment">Conductance per length (S/cm).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">SPerm</p>
+</th>
+<td>
+<p class="comment">Conductance per length (S/m).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Sv</p>
+</th>
+<td>
+<p class="comment">Dose equivalent in sieverts (J/kg).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">T</p>
+</th>
+<td>
+<p class="comment">Magnetic flux density in teslas (Wb/m2).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">V</p>
+</th>
+<td>
+<p class="comment">Electric potential in volts (W/A).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">V2</p>
+</th>
+<td>
+<p class="comment">Volt squared (W²/A²).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">V2h</p>
+</th>
+<td>
+<p class="comment">Volt-squared hour, volt-squared-hours.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VA</p>
+</th>
+<td>
+<p class="comment">Apparent power in volt amperes. See also real power and reactive power.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VAh</p>
+</th>
+<td>
+<p class="comment">Apparent energy in volt ampere hours.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VAr</p>
+</th>
+<td>
+<p class="comment">Reactive power in volt amperes reactive. The “reactive” or “imaginary” component of electrical power (VIsin(phi)). (See also real power and apparent power).</p>
+<p class="comment">Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VArh</p>
+</th>
+<td>
+<p class="comment">Reactive energy in volt ampere reactive hours.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VPerHz</p>
+</th>
+<td>
+<p class="comment">Magnetic flux in volt per hertz.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VPerV</p>
+</th>
+<td>
+<p class="comment">Voltage, ratio of voltages.  Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mV/V’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VPerVA</p>
+</th>
+<td>
+<p class="comment">Power factor, PF, the ratio of the active power to the apparent power.  Note: The sign convention used for power factor will differ between IEC meters and EEI (ANSI) meters. It is assumed that the data consumers understand the type of meter being used and agree on the sign convention in use at any given utility.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VPerVAr</p>
+</th>
+<td>
+<p class="comment">Power factor, PF, the ratio of the active power to the apparent power. Note: The sign convention used for power factor will differ between IEC meters and EEI (ANSI) meters. It is assumed that the data consumers understand the type of meter being used and agree on the sign convention in use at any given utility.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">VPerm</p>
+</th>
+<td>
+<p class="comment">Electric field strength, volts per metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Vh</p>
+</th>
+<td>
+<p class="comment">Volt-hour, Volt hours.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Vs</p>
+</th>
+<td>
+<p class="comment">Volt seconds (Ws/A).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">W</p>
+</th>
+<td>
+<p class="comment">Real power in watts (J/s). Electrical power may have real and reactive components. The real portion of electrical power (I&amp;#178;R or VIcos(phi)), is expressed in Watts. See also apparent power and reactive power.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPerA</p>
+</th>
+<td>
+<p class="comment">Active power per current flow, watts per Ampere.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPerW</p>
+</th>
+<td>
+<p class="comment">Signal Strength, ratio of power.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mW/W’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPerm2</p>
+</th>
+<td>
+<p class="comment">Heat flux density, irradiance, watts per square metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPerm2sr</p>
+</th>
+<td>
+<p class="comment">Radiance, watts per square metre steradian.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPermK</p>
+</th>
+<td>
+<p class="comment">Thermal conductivity in watt/metres kelvin.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPers</p>
+</th>
+<td>
+<p class="comment">Ramp rate in watts per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">WPersr</p>
+</th>
+<td>
+<p class="comment">Radiant intensity, watts per steradian.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Wb</p>
+</th>
+<td>
+<p class="comment">Magnetic flux in webers (V·s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">Wh</p>
+</th>
+<td>
+<p class="comment">Real energy in watt hours.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">anglemin</p>
+</th>
+<td>
+<p class="comment">Plane angle, minutes.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">anglesec</p>
+</th>
+<td>
+<p class="comment">Plane angle, seconds.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">bar</p>
+</th>
+<td>
+<p class="comment">Pressure in bars, (1 bar = 100 kPa).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ccPerkg</p>
+</th>
+<td>
+<p class="comment">Inverse concentration. Cubic centimetres per kilogram.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">cd</p>
+</th>
+<td>
+<p class="comment">Luminous intensity in candelas.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">charPers</p>
+</th>
+<td>
+<p class="comment">Data rate (baud) in characters per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">character</p>
+</th>
+<td>
+<p class="comment">Number of characters.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">cosPhi</p>
+</th>
+<td>
+<p class="comment">Power factor, dimensionless.</p>
+<p class="comment">Note 1: This definition of power factor only holds for balanced systems. See the alternative definition under code 153.</p>
+<p class="comment">Note 2 : Beware of differing sign conventions in use between the IEC and EEI. It is assumed that the data consumer understands the type of meter in use and the sign convention in use by the utility.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">count</p>
+</th>
+<td>
+<p class="comment">Amount of substance, Counter value.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">d</p>
+</th>
+<td>
+<p class="comment">Time in days, day = 24 h = 86400 s.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">dB</p>
+</th>
+<td>
+<p class="comment">Sound pressure level in decibels. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">dBm</p>
+</th>
+<td>
+<p class="comment">Power level (logarithmic ratio of signal strength , Bel-mW), normalized to 1mW. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">deg</p>
+</th>
+<td>
+<p class="comment">Plane angle in degrees.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">degC</p>
+</th>
+<td>
+<p class="comment">Relative temperature in degrees Celsius.</p>
+<p class="comment">In the SI unit system the symbol is °C. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius from coulomb the symbol used in the UML is degC. The reason for not using °C is that the special character ° is difficult to manage in software.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">degF</p>
+</th>
+<td>
+<p class="comment">Temperature in degrees Fahrenheit</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ft</p>
+</th>
+<td>
+<p class="comment">Length in feet</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ft2</p>
+</th>
+<td>
+<p class="comment">Area in square feet</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ft3</p>
+</th>
+<td>
+<p class="comment">Volume, cubic feet.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">gPerg</p>
+</th>
+<td>
+<p class="comment">Concentration, The ratio of the mass of a solute divided by the mass of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µg/g’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">gPerl</p>
+</th>
+<td>
+<p class="comment">Concentration in grams per litre</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">gal</p>
+</th>
+<td>
+<p class="comment">Volume in gallons, US gallon (1 gal = 231 in3 = 128 fl ounce).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">galPerd</p>
+</th>
+<td>
+<p class="comment">Gallons per day</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">galPerh</p>
+</th>
+<td>
+<p class="comment">Gallons per hour</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">h</p>
+</th>
+<td>
+<p class="comment">Time in hours, hour = 60 min = 3600 s.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ha</p>
+</th>
+<td>
+<p class="comment">Area, hectares.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">in</p>
+</th>
+<td>
+<p class="comment">Length in inches</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">in2</p>
+</th>
+<td>
+<p class="comment">Area in square inches</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">in3</p>
+</th>
+<td>
+<p class="comment">Volume in cubic inches</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kat</p>
+</th>
+<td>
+<p class="comment">Catalytic activity, katal = mol / s.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">katPerm3</p>
+</th>
+<td>
+<p class="comment">Catalytic activity concentration, katals per cubic metre.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kg</p>
+</th>
+<td>
+<p class="comment">Mass in kilograms.  Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kgPerJ</p>
+</th>
+<td>
+<p class="comment">Weight per energy in kilograms per joule (kg/J). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kgPerd</p>
+</th>
+<td>
+<p class="comment">kilograms per day</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kgPerh</p>
+</th>
+<td>
+<p class="comment">kilograms per hour</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kgPerm3</p>
+</th>
+<td>
+<p class="comment">Density in kilogram/cubic metres (kg/m³). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kgm</p>
+</th>
+<td>
+<p class="comment">Moment of mass in kilogram metres (kg·m) (first moment of mass). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kgm2</p>
+</th>
+<td>
+<p class="comment">Moment of mass in kilogram square metres (kg·m²) (Second moment of mass, commonly called the moment of inertia). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">kn</p>
+</th>
+<td>
+<p class="comment">Speed, knots (1 kn = 1852/3600) m/s.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">l</p>
+</th>
+<td>
+<p class="comment">Volume in litres, litre = dm3 = m3/1000.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">lPerh</p>
+</th>
+<td>
+<p class="comment">Volumetric flow rate, litres per hour.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">lPerkg</p>
+</th>
+<td>
+<p class="comment">Concentration. Litres per kg.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">lPerl</p>
+</th>
+<td>
+<p class="comment">Concentration, The ratio of the volume of a solute divided by the volume of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µL/L’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">lPers</p>
+</th>
+<td>
+<p class="comment">Volumetric flow rate in litres per second.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">lm</p>
+</th>
+<td>
+<p class="comment">Luminous flux in lumens (cd·sr).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">lx</p>
+</th>
+<td>
+<p class="comment">Illuminance in lux (lm/m²).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m</p>
+</th>
+<td>
+<p class="comment">Length in metres.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m2</p>
+</th>
+<td>
+<p class="comment">Area in square metres (m²).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m2Pers</p>
+</th>
+<td>
+<p class="comment">Viscosity in square metres / second (m²/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m3</p>
+</th>
+<td>
+<p class="comment">Volume in cubic metres (m³).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m3Compensated</p>
+</th>
+<td>
+<p class="comment">Volume, cubic metres, with the value compensated for weather effects.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m3Perh</p>
+</th>
+<td>
+<p class="comment">Volumetric flow rate, cubic metres per hour.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m3Perkg</p>
+</th>
+<td>
+<p class="comment">Specific volume, cubic metres per kilogram, v.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m3Pers</p>
+</th>
+<td>
+<p class="comment">Volumetric flow rate in cubic metres per second (m³/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">m3Uncompensated</p>
+</th>
+<td>
+<p class="comment">Volume, cubic metres, with the value uncompensated for weather effects.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">mPerm3</p>
+</th>
+<td>
+<p class="comment">Fuel efficiency in metres per cubic metres (m/m³).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">mPers</p>
+</th>
+<td>
+<p class="comment">Velocity in metres per second (m/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">mPers2</p>
+</th>
+<td>
+<p class="comment">Acceleration in metres per second squared (m/s²).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">min</p>
+</th>
+<td>
+<p class="comment">Time in minutes, minute  = 60 s.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">mmHg</p>
+</th>
+<td>
+<p class="comment">Pressure, millimetres of mercury (1 mmHg is approximately 133.3 Pa).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">mol</p>
+</th>
+<td>
+<p class="comment">Amount of substance in moles.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">molPerkg</p>
+</th>
+<td>
+<p class="comment">Concentration, Molality, the amount of solute in moles and the amount of solvent in kilograms.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">molPerm3</p>
+</th>
+<td>
+<p class="comment">Concentration, The amount of substance concentration, (c), the amount of solvent in moles divided by the volume of solution in m³.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">molPermol</p>
+</th>
+<td>
+<p class="comment">Concentration, Molar fraction, the ratio of the molar amount of a solute divided by the molar amount of the solution.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">none</p>
+</th>
+<td>
+<p class="comment">Dimension less quantity, e.g. count, per unit, etc.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ohm</p>
+</th>
+<td>
+<p class="comment">Electric resistance in ohms (V/A).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ohmPerm</p>
+</th>
+<td>
+<p class="comment">Electric resistance per length in ohms per metre ((V/A)/m).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ohmm</p>
+</th>
+<td>
+<p class="comment">Resistivity, ohm metres, (rho).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">onePerHz</p>
+</th>
+<td>
+<p class="comment">Reciprocal of frequency (1/Hz).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">onePerm</p>
+</th>
+<td>
+<p class="comment">Wavenumber, reciprocal metres,  (1/m).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">pH</p>
+</th>
+<td>
+<p class="comment">Unit of acidity or alkalinity</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">perCent</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">ppm</p>
+</th>
+<td>
+<p class="comment">Concentration in parts per million.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">psia</p>
+</th>
+<td>
+<p class="comment">Pounds per square inch absolute</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">psig</p>
+</th>
+<td>
+<p class="comment">Pounds per square inch gauge</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">rad</p>
+</th>
+<td>
+<p class="comment">Plane angle in radians (m/m).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">radPers</p>
+</th>
+<td>
+<p class="comment">Angular velocity in radians per second (rad/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">radPers2</p>
+</th>
+<td>
+<p class="comment">Angular acceleration, radians per second squared.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">rev</p>
+</th>
+<td>
+<p class="comment">Amount of rotation, revolutions.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">rotPers</p>
+</th>
+<td>
+<p class="comment">Rotations per second (1/s). See also Hz (1/s).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">s</p>
+</th>
+<td>
+<p class="comment">Time in seconds.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">sPers</p>
+</th>
+<td>
+<p class="comment">Time, Ratio of time.  Note: Users may need to supply a prefix such as ‘&amp;#181;’ to show rates such as ‘&amp;#181;s/s’.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">sr</p>
+</th>
+<td>
+<p class="comment">Solid angle in steradians (m2/m2).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">therm</p>
+</th>
+<td>
+<p class="comment">Energy, therms.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">tonne</p>
+</th>
+<td>
+<p class="comment">Mass in tons, “tonne” or “metric  ton” (1000 kg = 1 Mg).</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="WorkPriorityKind" class="group">
+<a href="#WorkPriorityKind">
+<h2 class="enumerated">WorkPriorityKind</h2>
+</a>
+<p class="package">Part 6</p>
+<table>
+<tr>
+<th>
+<p class="name">emergency</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">high</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">low</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">medium</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+</table>
+</div>
+<div id="WorkStatusKind" class="group">
+<a href="#WorkStatusKind">
+<h2 class="enumerated">WorkStatusKind</h2>
+</a>
+<p class="package">Work</p>
+<p class="comment">Kind of status, specific to work.</p>
+<table>
+<tr>
+<th>
+<p class="name">approved</p>
+</th>
+<td>
+<p class="comment">Work has been approved.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">cancelled</p>
+</th>
+<td>
+<p class="comment">Work has been canceled.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">closed</p>
+</th>
+<td>
+<p class="comment">Work has been closed (typically by a person responsible for work management) and is ready for billing.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">completed</p>
+</th>
+<td>
+<p class="comment">Work has been completed, i.e., crew can leave the work location and is available for another work.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">dispatched</p>
+</th>
+<td>
+<p class="comment">Crew has been dispatched.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">enroute</p>
+</th>
+<td>
+<p class="comment">Crew is 'en route'.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">inProgress</p>
+</th>
+<td>
+<p class="comment">Work is in progress.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">onSite</p>
+</th>
+<td>
+<p class="comment">Crew is on the site.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">other</p>
+</th>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name">scheduled</p>
+</th>
+<td>
+<p class="comment">Work has been scheduled.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">waitingOnApproval</p>
+</th>
+<td>
+<p class="comment">Work approval is pending.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">waitingOnMaterial</p>
+</th>
+<td>
+<p class="comment">Work has been waiting on material.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">waitingToBeScheduled</p>
+</th>
+<td>
+<p class="comment">Work needs to be scheduled.</p>
+</td>
+</tr>
+</table>
+</div>
+<h1>Compound Types</h1>
+<div id="DateTimeInterval" class="group">
+<a href="#DateTimeInterval">
+<h2 class="abstract">DateTimeInterval</h2>
+</a>
+<p class="package">Domain</p>
+<p class="comment">Interval between two date and time points, where the interval includes the start time but excludes end time.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="DateTimeInterval.end">end</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">End date and time of this interval.  The end date and time where the interval is defined up to, but excluded.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="DateTimeInterval.start">start</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Start date and time of this interval.  The start date and time is included in the defined interval.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="EmailAddress" class="group">
+<a href="#EmailAddress">
+<h2 class="abstract">EmailAddress</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Electronic address information.</p>
+<p class="note"/>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="EmailAddress.email1">email1</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Primary email address.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="IntegerQuantity" class="group">
+<a href="#IntegerQuantity">
+<h2 class="abstract">IntegerQuantity</h2>
+</a>
+<p class="package">Domain</p>
+<p class="comment">Quantity with integer value and associated unit information.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="IntegerQuantity.multiplier">multiplier</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#UnitMultiplier">UnitMultiplier</a>
+</p>
+</td>
+<td>
+<p class="comment">Unit multiplier of this quantity.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="IntegerQuantity.unit">unit</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#UnitSymbol">UnitSymbol</a>
+</p>
+</td>
+<td>
+<p class="comment">Unit of this quantity.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="IntegerQuantity.value">value</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Value of this quantity.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="InUseDate" class="group">
+<a href="#InUseDate">
+<h2 class="abstract">InUseDate</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Dates associated with asset 'in use' status. May have multiple in use dates for this device and a compound type allows a query to return multiple dates.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="InUseDate.inUseDate">inUseDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date asset was most recently put in use.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InUseDate.notReadyForUseDate">notReadyForUseDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date of most recent asset transition to not ready for use state.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="InUseDate.readyForUseDate">readyForUseDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date of most recent asset transition to ready for use state.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="LifecycleDate" class="group">
+<a href="#LifecycleDate">
+<h2 class="abstract">LifecycleDate</h2>
+</a>
+<p class="package">Assets</p>
+<p class="comment">Dates for asset lifecycle state changes. May have multiple lifecycle dates for this device and a compound type allows a query to return multiple dates.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="LifecycleDate.installationDate">installationDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date current installation was completed, which may not be the same as the in-service date. Asset may have been installed at other locations previously. Ignored if asset is (1) not currently installed (e.g., stored in a depot) or (2) not intended to be installed (e.g., vehicle, tool).</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="LifecycleDate.manufacturedDate">manufacturedDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date the asset was manufactured.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="LifecycleDate.purchaseDate">purchaseDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date the asset was purchased. Note that even though an asset may have been purchased, it may not have been received into inventory at the time of purchase.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="LifecycleDate.receivedDate">receivedDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date the asset was received and first placed into inventory.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="LifecycleDate.removalDate">removalDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date when the asset was last removed from service. Ignored if (1) not intended to be in service, or (2) currently in service.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="LifecycleDate.retiredDate">retiredDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">date</p>
+</td>
+<td>
+<p class="comment">Date the asset is permanently retired from service and may be scheduled for disposal. Ignored if asset is (1) currently in service, or (2) permanently removed from service.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Money" class="group">
+<a href="#Money">
+<h2 class="abstract">Money</h2>
+</a>
+<p class="package">Domain</p>
+<p class="comment">Amount of money.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Money.multiplier">multiplier</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#UnitMultiplier">UnitMultiplier</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Money.unit">unit</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Currency">Currency</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Money.value">value</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">decimal</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<div id="Priority" class="group">
+<a href="#Priority">
+<h2 class="abstract">Priority</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Priority definition.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Priority.justification">justification</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Justification for 'rank'.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Priority.rank">rank</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Priority level; usually, lower number means high priority, but the details are provided in 'type'.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Priority.type">type</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Type describing 'rank'; e.g., high, emergency, etc.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="Status" class="group">
+<a href="#Status">
+<h2 class="abstract">Status</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">Current status information relevant to an entity.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Status.dateTime">dateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time for which status 'value' applies.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Status.reason">reason</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Reason code or explanation for why an object went to the current status 'value'.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Status.remark">remark</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Pertinent information regarding the current 'value', as free form text.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Status.value">value</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Status value at 'dateTime'; prior status changes may have been kept in instances of activity records associated with the object to which this status applies.</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="TelephoneNumber" class="group">
+<a href="#TelephoneNumber">
+<h2 class="abstract">TelephoneNumber</h2>
+</a>
+<p class="package">Part 6</p>
+<p class="comment">Telephone number.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.areaCode">areaCode</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">(if applicable) Area or region code.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.cityCode">cityCode</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">City code.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.countryCode">countryCode</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Country code.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.dialOut">dialOut</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">(if applicable) Dial out code, for instance to call outside an enterprise.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.extension">extension</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">(if applicable) Extension for this telephone number.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.internationalPrefix">internationalPrefix</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">(if applicable) Prefix used when calling an international number.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.ituPhone">ituPhone</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Phone number according to ITU E.164.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.localNumber">localNumber</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Main (local) part of this telephone number.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.telephoneNumberKind">telephoneNumberKind</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#TelephoneNumberKind">TelephoneNumberKind</a>
+</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.telephoneNumberKindOther">telephoneNumberKindOther</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="TelephoneNumber.telephoneNumberPriority">telephoneNumberPriority</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">Order in which phone number should be used.</p>
+</td>
+</tr>
+</table>
+</div>
+<h1>Datatypes</h1>
+<div id="PerCent" class="group">
+<a href="#PerCent">
+<h2 class="domain">PerCent</h2>
+</a>
+<p class="package"/>
+<p class="comment">Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.</p>
+<p class="declaration">XSD type: <span class="xsdtype">float</span>
+</p>
+</div>
+</body>
+</html>
