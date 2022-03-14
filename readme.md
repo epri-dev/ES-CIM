@@ -3,7 +3,7 @@ The Energy Supply Common Information Model (ES-CIM) is an extension of the IEC C
 Interfaces developed in the following areas:
 
 - [Heat Transfer](Software%20Artifacts/Heat_Transfer)
-- [CoCo] (Software%20Artifacts/Coco)
+- [CoCo](Software%20Artifacts/Coco)
 - [Maintenance Orders](Software%20Artifacts/Maintenance_Orders)
 - [Water Chemistry](Software%20Artifacts/Water_Chemistry)
 - [Radiation](Software%20Artifacts/Radiation)
