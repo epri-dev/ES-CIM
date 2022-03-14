@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<head>
+<title>Profile Documentation</title>
+<style type="text/css">
+/* typography: fonts */
+body { font-family: arial, sans-serif; }
+
+.name, .type, .cardinality, .superclass, .xsdtype, .namespace { font-family: courier, monospace; }
+
+
+/* typography: emphasis */
+h1 { color: white; background: gray;}
+
+h2, h3 { color: gray; text-decoration: none;}
+
+h2.abstract, h2.enumerated, h2.domain {font-style: italic } 
+
+p.note { background-color: #ddd }
+
+p.declaration { color: gray }
+
+:link { color: purple; }
+
+.xsdtype { color: black; font-weight: bold; }
+
+.namespace { color: black }
+
+.package { font-size: x-large; color: gray }
+
+
+/* borders */
+div.group {
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	
+}
+
+th, td {
+	border-top-style : solid;
+	border-top-width : 1px;
+	border-color: gray;
+ }
+
+
+/* spacing and alignment */
+body {padding: 5px; }
+
+h1 { padding: 5px;}
+
+div.group {
+	margin-top: 10px;
+	padding: 5px;
+	position: relative;
+}
+th, td {
+	text-align : left;
+	vertical-align : top;
+}
+th, td.type { width: 15em; overflow: visible; }
+
+p.cardinality { width: 4em; }
+
+p.package { position: absolute; right: 10px; top: 0px}				
+</style>
+</head>
+<body>
+<h1>Profile Documentation</h1>
+<p/>
+<p class="declaration">
+					Profile namespace:
+					<span class="namespace">http://iec.ch/TC57/2007/ImageInfo#</span>
+</p>
+<h1>Concrete Classes</h1>
+<div id="Image" class="group">
+<a href="#Image">
+<h2 class="concrete">Image</h2>
+</a>
+<p class="package">DocumentImage</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Image.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.cocoUrl">cocoUrl</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.createdDateTime">createdDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.fileName">fileName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.flickrUrl">flickrUrl</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.height">height</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.width">width</p>
+</th>
+<td>
+<p class="cardinality">1..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="Image.License">License</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#License">License</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Abstract Classes</h1>
+<div id="License" class="group">
+<a href="#License">
+<h2 class="abstract">License</h2>
+</a>
+<p class="package">DocumentImage</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="License.mRID">mRID</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="License.name">name</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="License.url">url</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Enumerations</h1>
+<h1>Compound Types</h1>
+<h1>Datatypes</h1>
+</body>
+</html>

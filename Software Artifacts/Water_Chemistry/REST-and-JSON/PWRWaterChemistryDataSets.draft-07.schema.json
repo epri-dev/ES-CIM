@@ -361,7 +361,7 @@
                       "$comment": "Options for the choice corresponding to the 'Measurements' property.",
                       "type": "array",
                       "items": {
-                          "oneOf": [
+                          "anyOf": [
                               {
                                   "$ref": "#/definitions/AlkalinityAnalog"
                               },

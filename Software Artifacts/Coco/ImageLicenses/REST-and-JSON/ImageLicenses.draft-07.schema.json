@@ -1,0 +1,49 @@
+{
+     "$id": "http://iec.ch/TC57/2007/ImageLicenses.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "ImageLicenses",
+     "description": "",
+     "namespace": "http://iec.ch/TC57/2007/ImageLicenses#",
+     "type": "object",
+     "properties": {
+         "License": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/License"
+             },
+             "minItems": 1
+         }
+     },
+     "required": [
+         "License"
+     ],
+     "definitions": {
+          "License": {
+              "$id": "#License",
+              "title": "License",
+              "description": "The license(s) that may be associated with a Document or Image Coco requires: name, id, url for license, and these attributes all inherit from IdentifiedObject (via Document class)",
+              "modelReference": "http://iec.ch/TC57/CIM-schema16#License",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "url": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Document.url",
+                      "type": "string"
+                  }
+              }
+          },
+          "ImageLicenses": {
+               "$ref": "#"
+          }
+     }
+}

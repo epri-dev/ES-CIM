@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2007/ImageInfo#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2007/ImageInfo#">
+<xs:annotation>
+<xs:documentation/>
+</xs:annotation>
+<xs:element name="Images" type="m:Images"/>
+<xs:complexType name="Images">
+<xs:sequence>
+<xs:element name="Image" type="m:Image" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Image" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID">
+<xs:annotation/>
+</xs:element>
+<xs:element name="cocoUrl" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.cocoUrl">
+<xs:annotation/>
+</xs:element>
+<xs:element name="createdDateTime" minOccurs="0" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Document.createdDateTime">
+<xs:annotation/>
+</xs:element>
+<xs:element name="fileName" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.fileName">
+<xs:annotation/>
+</xs:element>
+<xs:element name="flickrUrl" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.flickrUrl">
+<xs:annotation/>
+</xs:element>
+<xs:element name="height" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.height">
+<xs:annotation/>
+</xs:element>
+<xs:element name="width" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.width">
+<xs:annotation/>
+</xs:element>
+<xs:element name="License" minOccurs="0" maxOccurs="1" type="m:License" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.License">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="License" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#License">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID">
+<xs:annotation/>
+</xs:element>
+<xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#IdentifiedObject.name">
+<xs:annotation/>
+</xs:element>
+<xs:element name="url" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Document.url">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

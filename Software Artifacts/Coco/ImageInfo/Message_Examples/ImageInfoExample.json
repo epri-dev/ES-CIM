@@ -1,0 +1,17 @@
+{
+	"ImageInfo": [
+		{
+			"authorName": "COCO Consortium",
+			"createdDateTime": "2017-02-01T20Z",
+			"description": "COCO 2017 Dataset",
+			"url": "http://cocodataset.org",
+			"year": 2017,
+			"Version": {
+				"date": "2017-02-01T20Z",
+				"major": 1,
+				"minor": 1,
+				"revision": 1
+			}
+		}
+	]
+}
