@@ -1,0 +1,149 @@
+{
+     "$id": "http://iec.ch/TC57/2022/ImageAnnotations.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "ImageAnnotations",
+     "description": "",
+     "namespace": "http://iec.ch/TC57/2022/ImageAnnotations#",
+     "type": "object",
+     "properties": {
+         "Image": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/Image"
+             }
+         }
+     },
+     "definitions": {
+          "BBox": {
+              "$id": "#BBox",
+              "title": "BBox",
+              "description": "",
+              "type": "object",
+              "properties": {
+                  "height": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#BBox.height",
+                      "type": "number"
+                  },
+                  "width": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#BBox.width",
+                      "type": "number"
+                  },
+                  "x": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#BBox.x",
+                      "type": "number"
+                  },
+                  "y": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#BBox.y",
+                      "type": "number"
+                  }
+              }
+          },
+          "Image": {
+              "$id": "#Image",
+              "title": "Image",
+              "description": "From the CoCo data standard. cocodataset.org/#format-data if we inherit from Image then we get id and name from IdentifiedObject",
+              "modelReference": "http://iec.ch/TC57/CIM-schema16#Image",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "annotations": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Image.annotations",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/ImageAnnotation"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "mRID",
+                  "annotations"
+              ]
+          },
+          "ImageAnnotation": {
+              "$id": "#ImageAnnotation",
+              "title": "ImageAnnotation",
+              "description": "Annotation in CoCo - prefixed with Image to provide context for this class in the CIM id - mRID (from IdentifiedObject) image_id - mRID from the Image class keypoints is a 3k array of points segmentationPolygon will use an array of PositionPoints to define the image segment as a list of X,Y vertices. It is used when isCrowd is false (isCrowd = 0) and is mutually exclusive with segmentationRLE (isCrowd = 1). Run Length Encoding (RLE)",
+              "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageAnnotation",
+              "type": "object",
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "area": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageAnnotation.area",
+                      "type": "number"
+                  },
+                  "categoryID": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageAnnotation.categoryID",
+                      "type": "integer"
+                  },
+                  "isCrowd": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageAnnotation.isCrowd",
+                      "type": "boolean"
+                  },
+                  "bBox": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageAnnotation.bBox",
+                      "$ref": "#/definitions/BBox"
+                  },
+                  "segmentation": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageAnnotation.segmentation",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/SegmentationRLE"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "mRID",
+                  "area",
+                  "categoryID",
+                  "isCrowd",
+                  "bBox",
+                  "segmentation"
+              ]
+          },
+          "SegmentationRLE": {
+              "$id": "#SegmentationRLE",
+              "title": "SegmentationRLE",
+              "description": "",
+              "modelReference": "http://iec.ch/TC57/CIM-schema16#SegmentationRLE",
+              "type": "object",
+              "properties": {
+                  "x": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#SegmentationPolygon.x",
+                      "type": "number"
+                  },
+                  "y": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#SegmentationPolygon.y",
+                      "type": "number"
+                  },
+                  "objectSize": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#SegmentationRLE.objectSize",
+                      "$ref": "#/definitions/BBox"
+                  }
+              }
+          },
+          "ImageAnnotations": {
+               "$ref": "#"
+          }
+     }
+}

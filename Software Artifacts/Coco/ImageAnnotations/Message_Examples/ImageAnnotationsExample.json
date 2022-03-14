@@ -1,0 +1,65 @@
+{
+	"Image": [
+		{
+			"mRID": "a0038c70-e4cb-4801-882c-2d87b385c0e5",
+			"annotations": [
+				{
+					"mRID": "8fadc35c-90a7-4a81-a714-a366073ab870",
+					"area": 702.1057499999998,
+					"categoryID": 18,
+					"isCrowd": false,
+					"bBox": {
+						"height": 473.07,
+						"width": 395.93,
+						"x": 38.65,
+						"y": 28.67
+					},
+					"segmentation": [
+						{
+							"x": 510.66,
+							"y": 423.01
+						},
+						{
+							"x": 511.72,
+							"y": 420.03
+						},
+						{
+							"x": 510.45,
+							"y": 423.01
+						}
+					]
+				},
+				{
+					"mRID": "1184594e-281a-443b-a3e4-7f1a2cc22b5c",
+					"area": 220834,
+					"categoryID": 1,
+					"isCrowd": true,
+					"bBox": {
+						"height": 0,
+						"width": 34,
+						"x": 639,
+						"y": 388
+					},
+					"segmentation": [
+						{
+							"x": 179,
+							"y": 27
+						},
+						{
+							"x": 392,
+							"y": 41
+						},
+						{
+							"x": 55,
+							"y": 20,
+							"objectSize": {
+								"height": 426,
+								"width": 640
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

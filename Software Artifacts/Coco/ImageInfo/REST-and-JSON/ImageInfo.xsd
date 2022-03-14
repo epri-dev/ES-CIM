@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2007/ImageInfo#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2007/ImageInfo#">
+<xs:annotation>
+<xs:documentation/>
+</xs:annotation>
+<xs:element name="ImageInfos" type="m:ImageInfos"/>
+<xs:complexType name="ImageInfos">
+<xs:sequence>
+<xs:element name="ImageInfo" type="m:ImageInfo" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="ImageInfo" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageInfo">
+<xs:annotation>
+<xs:documentation>Coco uses contributor - CIM uses authorName - this is a one-to-one mapping (you can have more than one author and more than one contributor)</xs:documentation>
+<xs:documentation>The Coco class is just "info" which isn't very descriptive in the context of the model as robust as the CIM, so "Image" is appended for use here.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="authorName" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Document.authorName">
+<xs:annotation>
+<xs:documentation>Name of the author of this document.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="createdDateTime" minOccurs="0" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Document.createdDateTime">
+<xs:annotation>
+<xs:documentation>Date and time that this document was created.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#IdentifiedObject.description">
+<xs:annotation>
+<xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="url" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Document.url">
+<xs:annotation/>
+</xs:element>
+<xs:element name="year" minOccurs="0" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageInfo.year">
+<xs:annotation/>
+</xs:element>
+<xs:element name="Version" minOccurs="0" maxOccurs="1" type="m:Version" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageInfo.Version">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Version" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Version">
+<xs:annotation>
+<xs:documentation>This is the version for a group of devices or objects.  This could be used to track the version for any group of objects or devices over time. For example, for a DERGroup, the requesting system may want to get the details of a specific version of a DERGroup.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="date" minOccurs="0" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Version.date">
+<xs:annotation>
+<xs:documentation>date of this version</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="major" minOccurs="0" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Version.major">
+<xs:annotation>
+<xs:documentation>major release level for this version</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="minor" minOccurs="0" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Version.minor">
+<xs:annotation>
+<xs:documentation>minor release level for this version</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="revision" minOccurs="0" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Version.revision">
+<xs:annotation>
+<xs:documentation>revision level for this version</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

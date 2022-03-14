@@ -1,0 +1,93 @@
+{
+     "$id": "ImageInfos.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "ImageInfos",
+     "description": "",
+     "namespace": "http://iec.ch/TC57/2007/ImageInfo#",
+     "type": "object",
+     "properties": {
+         "ImageInfo": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/ImageInfo"
+             },
+             "minItems": 1
+         }
+     },
+     "required": [
+         "ImageInfo"
+     ],
+     "definitions": {
+          "ImageInfo": {
+              "$id": "#ImageInfo",
+              "title": "ImageInfo",
+              "description": "Coco uses contributor - CIM uses authorName - this is a one-to-one mapping (you can have more than one author and more than one contributor) The Coco class is just info which isn't very descriptive in the context of the model as robust as the CIM, so Image is appended for use here.",
+              "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageInfo",
+              "type": "object",
+              "properties": {
+                  "authorName": {
+                      "description": "Name of the author of this document.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Document.authorName",
+                      "type": "string"
+                  },
+                  "createdDateTime": {
+                      "description": "Date and time that this document was created.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Document.createdDateTime",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "description": {
+                      "description": "The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#IdentifiedObject.description",
+                      "type": "string"
+                  },
+                  "url": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Document.url",
+                      "type": "string"
+                  },
+                  "year": {
+                      "description": "",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageInfo.year",
+                      "type": "integer"
+                  },
+                  "Version": {
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#ImageInfo.Version",
+                      "$ref": "#/definitions/Version"
+                  }
+              }
+          },
+          "Version": {
+              "$id": "#Version",
+              "title": "Version",
+              "description": "This is the version for a group of devices or objects. This could be used to track the version for any group of objects or devices over time. For example, for a DERGroup, the requesting system may want to get the details of a specific version of a DERGroup.",
+              "type": "object",
+              "properties": {
+                  "date": {
+                      "description": "date of this version",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Version.date",
+                      "type": "string",
+                      "pattern": "^(([0-9]{4})-(((02)-(0[1-9]|[1][0-9]|2[0-9]))|((0[4689]|(11))-(0[1-9]|[1][0-9]|2[0-9]|(30)))|((0[13578]|(1[02]))-(0[1-9]|[1][0-9]|2[0-9]|(3[0-1])))))T((2[0-3]|[01][0-9])((:([0-5][0-9])((:([0-5][0-9])(([.][0-9]+)?)?)?)?)?)|(24)((:(00)((:(00)(([.][0]+)?)?)?)?)?))(Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9]))?)$"
+                  },
+                  "major": {
+                      "description": "major release level for this version",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Version.major",
+                      "type": "integer"
+                  },
+                  "minor": {
+                      "description": "minor release level for this version",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Version.minor",
+                      "type": "integer"
+                  },
+                  "revision": {
+                      "description": "revision level for this version",
+                      "modelReference": "http://iec.ch/TC57/CIM-schema16#Version.revision",
+                      "type": "integer"
+                  }
+              }
+          },
+          "ImageInfos": {
+               "$ref": "#"
+          }
+     }
+}

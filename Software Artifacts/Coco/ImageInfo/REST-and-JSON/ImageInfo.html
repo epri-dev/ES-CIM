@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<head>
+<title>Profile Documentation</title>
+<style type="text/css">
+/* typography: fonts */
+body { font-family: arial, sans-serif; }
+
+.name, .type, .cardinality, .superclass, .xsdtype, .namespace { font-family: courier, monospace; }
+
+
+/* typography: emphasis */
+h1 { color: white; background: gray;}
+
+h2, h3 { color: gray; text-decoration: none;}
+
+h2.abstract, h2.enumerated, h2.domain {font-style: italic } 
+
+p.note { background-color: #ddd }
+
+p.declaration { color: gray }
+
+:link { color: purple; }
+
+.xsdtype { color: black; font-weight: bold; }
+
+.namespace { color: black }
+
+.package { font-size: x-large; color: gray }
+
+
+/* borders */
+div.group {
+	border-style: solid;
+	border-color: gray;
+	border-width: 1px;
+	
+}
+
+th, td {
+	border-top-style : solid;
+	border-top-width : 1px;
+	border-color: gray;
+ }
+
+
+/* spacing and alignment */
+body {padding: 5px; }
+
+h1 { padding: 5px;}
+
+div.group {
+	margin-top: 10px;
+	padding: 5px;
+	position: relative;
+}
+th, td {
+	text-align : left;
+	vertical-align : top;
+}
+th, td.type { width: 15em; overflow: visible; }
+
+p.cardinality { width: 4em; }
+
+p.package { position: absolute; right: 10px; top: 0px}				
+</style>
+</head>
+<body>
+<h1>Profile Documentation</h1>
+<p/>
+<p class="declaration">
+					Profile namespace:
+					<span class="namespace">http://iec.ch/TC57/2007/ImageInfo#</span>
+</p>
+<h1>Concrete Classes</h1>
+<div id="ImageInfo" class="group">
+<a href="#ImageInfo">
+<h2 class="concrete">ImageInfo</h2>
+</a>
+<p class="package">DocumentImage</p>
+<p class="comment">Coco uses contributor - CIM uses authorName - this is a one-to-one mapping (you can have more than one author and more than one contributor)</p>
+<p class="comment">The Coco class is just "info" which isn't very descriptive in the context of the model as robust as the CIM, so "Image" is appended for use here.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="ImageInfo.authorName">authorName</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">Name of the author of this document.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ImageInfo.createdDateTime">createdDateTime</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">Date and time that this document was created.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ImageInfo.description">description</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td>
+<p class="comment">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="ImageInfo.url">url</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">string</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ImageInfo.year">year</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td/>
+</tr>
+<tr>
+<th>
+<p class="name" id="ImageInfo.Version">Version</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#Version">Version</a>
+</p>
+</td>
+<td/>
+</tr>
+</table>
+</div>
+<h1>Abstract Classes</h1>
+<h1>Enumerations</h1>
+<h1>Compound Types</h1>
+<div id="Version" class="group">
+<a href="#Version">
+<h2 class="abstract">Version</h2>
+</a>
+<p class="package">Common</p>
+<p class="comment">This is the version for a group of devices or objects.  This could be used to track the version for any group of objects or devices over time. For example, for a DERGroup, the requesting system may want to get the details of a specific version of a DERGroup.</p>
+<h3>Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Version.date">date</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">date of this version</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Version.major">major</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">major release level for this version</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Version.minor">minor</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">minor release level for this version</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Version.revision">revision</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">revision level for this version</p>
+</td>
+</tr>
+</table>
+</div>
+<h1>Datatypes</h1>
+</body>
+</html>

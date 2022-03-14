@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2022/ImageAnnotations#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2022/ImageAnnotations#">
+<xs:annotation/>
+<xs:element name="ImageAnnotations" type="m:ImageAnnotations"/>
+<xs:complexType name="ImageAnnotations">
+<xs:sequence>
+<xs:element name="Image" type="m:Image" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="BBox" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#BBox">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="height" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#BBox.height">
+<xs:annotation/>
+</xs:element>
+<xs:element name="width" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#BBox.width">
+<xs:annotation/>
+</xs:element>
+<xs:element name="x" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#BBox.x">
+<xs:annotation/>
+</xs:element>
+<xs:element name="y" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#BBox.y">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Image" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image">
+<xs:annotation>
+<xs:documentation>From the CoCo data standard. cocodataset.org/#format-data</xs:documentation>
+<xs:documentation>if we inherit from Image then we get id and name from IdentifiedObject</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="annotations" minOccurs="1" maxOccurs="unbounded" type="m:ImageAnnotation" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#Image.annotations">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="ImageAnnotation" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageAnnotation">
+<xs:annotation>
+<xs:documentation>Annotation in CoCo - prefixed with "Image" to provide context for this class in the CIM</xs:documentation>
+<xs:documentation>id - mRID (from IdentifiedObject)</xs:documentation>
+<xs:documentation>image_id - mRID from the Image class</xs:documentation>
+<xs:documentation>keypoints is a 3k array of points</xs:documentation>
+<xs:documentation>segmentationPolygon will use an array of PositionPoints to define the image segment as a list of X,Y vertices. It is used when isCrowd is false (isCrowd = 0) and is mutually exclusive with segmentationRLE (isCrowd = 1).</xs:documentation>
+<xs:documentation>Run Length Encoding (RLE)</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="area" minOccurs="1" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageAnnotation.area">
+<xs:annotation/>
+</xs:element>
+<xs:element name="categoryID" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageAnnotation.categoryID">
+<xs:annotation/>
+</xs:element>
+<xs:element name="isCrowd" minOccurs="1" maxOccurs="1" type="xs:boolean" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageAnnotation.isCrowd">
+<xs:annotation/>
+</xs:element>
+<xs:element name="bBox" minOccurs="1" maxOccurs="1" type="m:BBox" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageAnnotation.bBox">
+<xs:annotation/>
+</xs:element>
+<xs:element name="segmentation" minOccurs="1" maxOccurs="unbounded" type="m:SegmentationRLE" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#ImageAnnotation.segmentation">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="SegmentationRLE" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#SegmentationRLE">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="x" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#SegmentationPolygon.x">
+<xs:annotation/>
+</xs:element>
+<xs:element name="y" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#SegmentationPolygon.y">
+<xs:annotation/>
+</xs:element>
+<xs:element name="objectSize" minOccurs="0" maxOccurs="1" type="m:BBox" sawsdl:modelReference="http://iec.ch/TC57/CIM-schema16#SegmentationRLE.objectSize">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

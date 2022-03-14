@@ -1,0 +1,18 @@
+{
+	"Image": [
+		{
+			"mRID": "48de636d-b5ba-4111-a990-eaec53053027",
+			"cocoUrl": "http://images.cocodataset.org/val2017/000000397133.jpg",
+			"createdDateTime": "2017-02-01T20:00:00Z",
+			"fileName": "000000397133.jpg",
+			"flickrUrl": "http://farm7.staticflickr.com/6116/6255196340_da26cf2c9e_z.jpg",
+			"height": 427,
+			"width": 640,
+			"License": {
+				"mRID": "4bc98715-8217-46c7-94a8-fa49d130fdfa",
+				"name": "Attribution-NonCommercial-ShareAlike License",
+				"url": "http://creativecommons.org/licenses/by-nc-sa/2.0/"
+			}
+		}
+	]
+}
