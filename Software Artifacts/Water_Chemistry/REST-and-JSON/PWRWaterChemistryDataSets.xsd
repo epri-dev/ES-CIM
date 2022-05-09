@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2021/PWRWaterChemistryDataSets#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2021/PWRWaterChemistryDataSets#">
 <xs:annotation/>
-<xs:element name="PWRWaterChemistryDataSets" type="m:PWRWaterChemistryDataSets" xmlns=""/>
-<xs:complexType name="PWRWaterChemistryDataSets" xmlns="">
+<xs:element name="PWRWaterChemistryDataSets" type="m:PWRWaterChemistryDataSets"/>
+<xs:complexType name="PWRWaterChemistryDataSets">
 <xs:sequence>
 <xs:element name="PWRWaterChemistryDataSet" type="m:PWRWaterChemistryDataSet" minOccurs="1" maxOccurs="1"/>
 </xs:sequence>
